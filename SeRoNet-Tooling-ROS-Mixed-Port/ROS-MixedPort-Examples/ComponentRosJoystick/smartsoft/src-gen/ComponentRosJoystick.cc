@@ -56,10 +56,12 @@ ComponentRosJoystick::ComponentRosJoystick()
 	connections.joystickActivity.priority = -1;
 	connections.joystickActivity.cpuAffinity = -1;
 	
+	// initialize members of PlainOpcUaComponentRosJoystickExtension
+	
 	// initialize members of ComponentRosJoystickROSExtension
 	rosPorts = 0;
 	
-	// initialize members of PlainOpcUaComponentRosJoystickExtension
+	// initialize members of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -146,9 +148,11 @@ void ComponentRosJoystick::init(int argc, char *argv[])
 		loadParameter(argc, argv);
 		
 		
+		// initializations of PlainOpcUaComponentRosJoystickExtension
+		
 		// initializations of ComponentRosJoystickROSExtension
 		
-		// initializations of PlainOpcUaComponentRosJoystickExtension
+		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		
 		// initialize all registered port-factories
@@ -345,9 +349,11 @@ void ComponentRosJoystick::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of PlainOpcUaComponentRosJoystickExtension
+	
 	// destruction of ComponentRosJoystickROSExtension
 	
-	// destruction of PlainOpcUaComponentRosJoystickExtension
+	// destruction of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -448,9 +454,11 @@ void ComponentRosJoystick::loadParameter(int argc, char *argv[])
 			parameter.getInteger("JoystickActivity", "cpuAffinity", connections.joystickActivity.cpuAffinity);
 		}
 		
+		// load parameters for PlainOpcUaComponentRosJoystickExtension
+		
 		// load parameters for ComponentRosJoystickROSExtension
 		
-		// load parameters for PlainOpcUaComponentRosJoystickExtension
+		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		
 		// load parameters for all registered component-extensions

@@ -29,12 +29,14 @@
 class ComponentRosJoystickPortFactoryInterface;
 class ComponentRosJoystickExtension;
 
-// includes for ComponentRosJoystickROSExtension
-#include "ComponentRosJoystickRosPortBaseClass.hh"
-
 // includes for PlainOpcUaComponentRosJoystickExtension
 // include plain OPC UA device clients
 // include plain OPC UA status servers
+
+// includes for ComponentRosJoystickROSExtension
+#include "ComponentRosJoystickRosPortBaseClass.hh"
+
+// includes for OpcUaBackendComponentGeneratorExtension
 
 
 // include communication objects
@@ -103,10 +105,12 @@ public:
 	
 	// define request-handlers
 	
+	// definitions of PlainOpcUaComponentRosJoystickExtension
+	
 	// definitions of ComponentRosJoystickROSExtension
 	ComponentRosJoystickRosPortBaseClass *rosPorts;
 	
-	// definitions of PlainOpcUaComponentRosJoystickExtension
+	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	
 	// define default slave ports
@@ -211,9 +215,11 @@ public:
 	
 		//--- client port parameter ---
 		
+		// -- parameters for PlainOpcUaComponentRosJoystickExtension
+		
 		// -- parameters for ComponentRosJoystickROSExtension
 		
-		// -- parameters for PlainOpcUaComponentRosJoystickExtension
+		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 	} connections;
 };

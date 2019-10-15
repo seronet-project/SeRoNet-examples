@@ -3,7 +3,7 @@
 
 # ComponentKeyboardJoystick Component
 
-![ComponentKeyboardJoystick-ComponentImage](https://github.com/Servicerobotics-Ulm/ComponentRepository/blob/master/ComponentKeyboardJoystick/model/ComponentKeyboardJoystickComponentDefinition.jpg)
+![ComponentKeyboardJoystick-ComponentImage](model/ComponentKeyboardJoystickComponentDefinition.jpg)
 
 
 | Metaelement | Documentation |

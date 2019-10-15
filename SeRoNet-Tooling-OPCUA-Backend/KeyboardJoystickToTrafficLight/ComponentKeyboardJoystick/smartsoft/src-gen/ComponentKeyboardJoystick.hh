@@ -29,13 +29,13 @@
 class ComponentKeyboardJoystickPortFactoryInterface;
 class ComponentKeyboardJoystickExtension;
 
-// includes for ComponentKeyboardJoystickROSExtension
-
-// includes for SeRoNetSDKComponentGeneratorExtension
-
 // includes for PlainOpcUaComponentKeyboardJoystickExtension
 // include plain OPC UA device clients
 // include plain OPC UA status servers
+
+// includes for ComponentKeyboardJoystickROSExtension
+
+// includes for OpcUaBackendComponentGeneratorExtension
 
 
 // include communication objects
@@ -104,11 +104,11 @@ public:
 	
 	// define request-handlers
 	
+	// definitions of PlainOpcUaComponentKeyboardJoystickExtension
+	
 	// definitions of ComponentKeyboardJoystickROSExtension
 	
-	// definitions of SeRoNetSDKComponentGeneratorExtension
-	
-	// definitions of PlainOpcUaComponentKeyboardJoystickExtension
+	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	
 	// define default slave ports
@@ -119,6 +119,8 @@ public:
 	
 	/// this method is used to register different PortFactory classes (one for each supported middleware framework)
 	void addPortFactory(const std::string &name, ComponentKeyboardJoystickPortFactoryInterface *portFactory);
+	
+	SmartACE::SmartComponent* getComponentImpl();
 	
 	/// this method is used to register different component-extension classes
 	void addExtension(ComponentKeyboardJoystickExtension *extension);
@@ -211,11 +213,11 @@ public:
 	
 		//--- client port parameter ---
 		
+		// -- parameters for PlainOpcUaComponentKeyboardJoystickExtension
+		
 		// -- parameters for ComponentKeyboardJoystickROSExtension
 		
-		// -- parameters for SeRoNetSDKComponentGeneratorExtension
-		
-		// -- parameters for PlainOpcUaComponentKeyboardJoystickExtension
+		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 	} connections;
 };

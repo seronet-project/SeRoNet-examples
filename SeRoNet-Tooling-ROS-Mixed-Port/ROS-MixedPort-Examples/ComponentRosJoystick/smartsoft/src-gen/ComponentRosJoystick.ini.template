@@ -63,11 +63,14 @@ roboticMiddleware ACE_SmartSoft
 # client port parameter
 
 ##########################
+## parameters of PlainOpcUaComponentRosJoystickExtension
+
+
+##########################
 ## parameters of ComponentRosJoystickROSExtension
 
 ##########################
-## parameters of PlainOpcUaComponentRosJoystickExtension
-
+## parameters of OpcUaBackendComponentGeneratorExtension
 
 
 #####################
