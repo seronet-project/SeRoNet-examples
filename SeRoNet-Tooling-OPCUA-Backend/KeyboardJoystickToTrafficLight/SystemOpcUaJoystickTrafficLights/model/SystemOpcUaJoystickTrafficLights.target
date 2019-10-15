@@ -1,0 +1,9 @@
+TargetPlatformModel SystemOpcUaJoystickTrafficLights 
+{
+	TargetPlatformDefinition LocalPC
+	{
+		NetworkInterface eth0 { HostAddress "localhost" }
+		TargetMiddleware OpcUa_SeRoNet
+		TargetMiddleware ACE_SmartSoft
+	}
+}

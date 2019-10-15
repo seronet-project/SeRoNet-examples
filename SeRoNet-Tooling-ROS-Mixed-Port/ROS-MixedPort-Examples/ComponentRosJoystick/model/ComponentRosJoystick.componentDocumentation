@@ -1,0 +1,15 @@
+ComponentDocumentation ComponentRosJoystick {
+	License : "BSD-3 License"
+	Description : "This component is a so called Mixed-Port component that interacts with two different frameworks. 
+		On the one side, this component provides a JoystickServiceOut service that pushes Joystick messages to other components.
+		On the other side, this component interacts with a ROS system to access the Joystick driver implement as a ROS node.\n
+		\n
+		For using the component, the ROS Joystick node needs to be started as follows:\n
+		> rosrun joy joy_node\n
+		for further details o how to operate the ROS Joystick, see: http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick"
+	Purpose : "Bridges between ROS and SeRoNet by proving a Joystick driver implement in ROS as a SeRoNet component"
+	
+	ComponentPort JoystickServiceOut {
+		Description : "Service regularly providing Joystick values"
+	}
+}

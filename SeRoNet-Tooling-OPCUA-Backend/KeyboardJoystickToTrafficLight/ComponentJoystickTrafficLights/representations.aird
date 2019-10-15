@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ComponentDefinition="http://www.ecore.org/component/ComponentDefinition" xmlns:PerformanceExtension="http://www.ecore.org/component/PerformanceExtension" xmlns:SeronetExtension="http://www.ecore.org/component/SeronetExtension" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_4zDLMMGPEeiwW_kQb8HM0A" selectedViews="_44RCYMGPEeiwW_kQb8HM0A" version="12.1.0.201708031200">
+    <semanticResources>model/ComponentJoystickTrafficLights.component</semanticResources>
+    <semanticResources>model/ComponentJoystickTrafficLights.componentDocumentation</semanticResources>
+    <semanticResources>model/ComponentJoystickTrafficLights.componentParameters</semanticResources>
+    <semanticResources>platform:/resource/CommBasicObjects/model/CommBasicObjects.services</semanticResources>
+    <semanticResources>platform:/resource/CommBasicObjects/model/CommBasicObjects.types</semanticResources>
+    <semanticResources>platform:/plugin/org.xtext.base.stateMachine/componentLifecycle/ComponentLifecycle.automaton</semanticResources>
+    <semanticResources>platform:/resource/CommBasicObjects/model/CommBasicObjects.modes</semanticResources>
+    <semanticResources>platform:/plugin/org.xtext.service.parameterDefinition/defaultParameterLib/defaultParameterLib.parameters</semanticResources>
+    <semanticResources>platform:/resource/CommBasicObjects/model/CommBasicObjects.parameters</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_44RCYMGPEeiwW_kQb8HM0A">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_44sgN8GPEeiwW_kQb8HM0A" name="ComponentJoystickTrafficLights" repPath="#_44fr4MGPEeiwW_kQb8HM0A">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']"/>
+        <target xmi:type="ComponentDefinition:ComponentDefModel" href="model/ComponentJoystickTrafficLights.component#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_44sgMMGPEeiwW_kQb8HM0A" name="ComponentJoystickTrafficLights" uid="_44fr4MGPEeiwW_kQb8HM0A">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_44sgMcGPEeiwW_kQb8HM0A" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_44sgMsGPEeiwW_kQb8HM0A"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_44tHQMGPEeiwW_kQb8HM0A" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_44tuUMGPEeiwW_kQb8HM0A" type="Sirius" element="_44sgMMGPEeiwW_kQb8HM0A" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_44tuUsGPEeiwW_kQb8HM0A" type="2002" element="_44sgNMGPEeiwW_kQb8HM0A">
+          <children xmi:type="notation:Node" xmi:id="_44tuVcGPEeiwW_kQb8HM0A" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_44tuVsGPEeiwW_kQb8HM0A" type="7001">
+            <children xmi:type="notation:Node" xmi:id="__5PKwMGPEeiwW_kQb8HM0A" type="3008" element="__4_6MMGPEeiwW_kQb8HM0A">
+              <children xmi:type="notation:Node" xmi:id="__5PKw8GPEeiwW_kQb8HM0A" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="__5PKxMGPEeiwW_kQb8HM0A" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_VWeBAMGTEeiwW_kQb8HM0A" type="3008" element="_VWMUMMGTEeiwW_kQb8HM0A">
+                  <children xmi:type="notation:Node" xmi:id="_VWeoEMGTEeiwW_kQb8HM0A" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_VWeoEcGTEeiwW_kQb8HM0A" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_VWeoEsGTEeiwW_kQb8HM0A"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_VWeoE8GTEeiwW_kQb8HM0A"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_VWeBAcGTEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VWeBAsGTEeiwW_kQb8HM0A" x="19" y="30" width="123" height="39"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="__5PKxcGPEeiwW_kQb8HM0A"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="__5PKxsGPEeiwW_kQb8HM0A"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__5PKwcGPEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8" bold="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__5PKwsGPEeiwW_kQb8HM0A" x="67" y="54" height="87"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_44tuV8GPEeiwW_kQb8HM0A"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_44tuWMGPEeiwW_kQb8HM0A"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_95pRkMGPEeiwW_kQb8HM0A" type="3012" element="_95gusMGPEeiwW_kQb8HM0A">
+            <children xmi:type="notation:Node" xmi:id="_95pRk8GPEeiwW_kQb8HM0A" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_95pRlMGPEeiwW_kQb8HM0A" x="-27" y="31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_95p4oMGPEeiwW_kQb8HM0A" type="3014" element="_95guscGPEeiwW_kQb8HM0A">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_95p4ocGPEeiwW_kQb8HM0A" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_95p4osGPEeiwW_kQb8HM0A"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_y1x5gMGlEeihC-xm4U8BrA" type="3012" element="_y0oqAMGlEeihC-xm4U8BrA">
+              <children xmi:type="notation:Node" xmi:id="_y1x5g8GlEeihC-xm4U8BrA" visible="false" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_y1x5hMGlEeihC-xm4U8BrA" x="21" y="1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_y1ygkMGlEeihC-xm4U8BrA" type="3005" element="_y1SKQMGlEeihC-xm4U8BrA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_y1ygkcGlEeihC-xm4U8BrA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y1ygksGlEeihC-xm4U8BrA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_y1x5gcGlEeihC-xm4U8BrA" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y1x5gsGlEeihC-xm4U8BrA" y="-14" width="20" height="22"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_95pRkcGPEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_95pRksGPEeiwW_kQb8HM0A" x="-22" y="79" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A5hjEMGQEeiwW_kQb8HM0A" type="3012" element="_A5Wj8MGQEeiwW_kQb8HM0A">
+            <children xmi:type="notation:Node" xmi:id="_A5iKIMGQEeiwW_kQb8HM0A" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_A5iKIcGQEeiwW_kQb8HM0A" x="-43" y="31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_A5iKIsGQEeiwW_kQb8HM0A" type="3014" element="_A5Wj8cGQEeiwW_kQb8HM0A">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_A5iKI8GQEeiwW_kQb8HM0A" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5iKJMGQEeiwW_kQb8HM0A"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_zg4E8MGlEeihC-xm4U8BrA" type="3012" element="_zgGo4MGlEeihC-xm4U8BrA">
+              <children xmi:type="notation:Node" xmi:id="_zg4E88GlEeihC-xm4U8BrA" visible="false" type="5010">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_zg4E9MGlEeihC-xm4U8BrA" x="21" y="1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_zg4sAMGlEeihC-xm4U8BrA" type="3005" element="_zgax8MGlEeihC-xm4U8BrA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_zg4sAcGlEeihC-xm4U8BrA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zg4sAsGlEeihC-xm4U8BrA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_zg4E8cGlEeihC-xm4U8BrA" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zg4E8sGlEeihC-xm4U8BrA" x="10" y="-14" width="20" height="22"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_A5hjEcGQEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5hjEsGQEeiwW_kQb8HM0A" x="317" y="79" width="30" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_44tuU8GPEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="10" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_44tuVMGPEeiwW_kQb8HM0A" x="216" y="84" width="327" height="195"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_44tuUcGPEeiwW_kQb8HM0A"/>
+        <edges xmi:type="notation:Edge" xmi:id="_A5ixMMGQEeiwW_kQb8HM0A" type="4001" element="_A5cDgMGQEeiwW_kQb8HM0A" source="__5PKwMGPEeiwW_kQb8HM0A" target="_A5hjEMGQEeiwW_kQb8HM0A">
+          <children xmi:type="notation:Node" xmi:id="_A5ixNMGQEeiwW_kQb8HM0A" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5ixNcGQEeiwW_kQb8HM0A" x="-2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A5jYQMGQEeiwW_kQb8HM0A" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5jYQcGQEeiwW_kQb8HM0A" x="-1" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_A5j_UMGQEeiwW_kQb8HM0A" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A5j_UcGQEeiwW_kQb8HM0A" x="-2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_A5ixMcGQEeiwW_kQb8HM0A"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_A5ixMsGQEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A5ixM8GQEeiwW_kQb8HM0A" points="[87, 0, -182, 0]$[254, 0, -15, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A5l0gMGQEeiwW_kQb8HM0A" id="(0.5,0.4)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A5l0gcGQEeiwW_kQb8HM0A" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_EWG-sMGQEeiwW_kQb8HM0A" type="4001" element="_EV4VMMGQEeiwW_kQb8HM0A" source="_95pRkMGPEeiwW_kQb8HM0A" target="__5PKwMGPEeiwW_kQb8HM0A">
+          <children xmi:type="notation:Node" xmi:id="_EWG-tMGQEeiwW_kQb8HM0A" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EWG-tcGQEeiwW_kQb8HM0A" x="2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EWG-tsGQEeiwW_kQb8HM0A" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EWG-t8GQEeiwW_kQb8HM0A" x="-3" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EWG-uMGQEeiwW_kQb8HM0A" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EWG-ucGQEeiwW_kQb8HM0A" x="-2" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EWG-scGQEeiwW_kQb8HM0A"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EWG-ssGQEeiwW_kQb8HM0A" fontName="Ubuntu" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EWG-s8GQEeiwW_kQb8HM0A" points="[-1, 5, -99, 1]$[64, 5, -34, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EWHlwMGQEeiwW_kQb8HM0A" id="(1.0,0.4)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EWHlwcGQEeiwW_kQb8HM0A" id="(0.19540229885057472,0.4117647058823529)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_44sgNMGPEeiwW_kQb8HM0A" name="ComponentJoystickTrafficLights" tooltipText="ComponentDefinition">
+      <target xmi:type="ComponentDefinition:ComponentDefinition" href="model/ComponentJoystickTrafficLights.component#//@component"/>
+      <semanticElements xmi:type="ComponentDefinition:ComponentDefinition" href="model/ComponentJoystickTrafficLights.component#//@component"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_95gusMGPEeiwW_kQb8HM0A" name="JoystickServiceIn" tooltipText="InputPort" outgoingEdges="_EV4VMMGQEeiwW_kQb8HM0A" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="ComponentDefinition:InputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.0"/>
+        <semanticElements xmi:type="ComponentDefinition:InputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.0"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_y0oqAMGlEeihC-xm4U8BrA" name="OpcUa_SeRoNet" tooltipText="SeRoNet Port" width="-1" height="-1" resizeKind="NSEW">
+          <target xmi:type="SeronetExtension:SupportedMiddleware" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.0/@extensions.0"/>
+          <semanticElements xmi:type="SeronetExtension:SupportedMiddleware" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.0/@extensions.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_y1SxUMGlEeihC-xm4U8BrA"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_y1SKQMGlEeihC-xm4U8BrA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.sirius.component.design/icons/SeRoNetIcon.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='InputPortNodeImport']/@borderedNodeMappings[name='InputMiddlweareExtension']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='InputPortNodeImport']/@borderedNodeMappings[name='InputMiddlweareExtension']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:CustomStyle" xmi:id="_95guscGPEeiwW_kQb8HM0A" showIcon="false" id="input">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@borderedNodeMappings[name='InputPortNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='InputPortNodeImport']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_A5Wj8MGQEeiwW_kQb8HM0A" name="TrafficLightsServiceOut" tooltipText="OutputPort" incomingEdges="_A5cDgMGQEeiwW_kQb8HM0A" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="ComponentDefinition:OutputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2"/>
+        <semanticElements xmi:type="ComponentDefinition:OutputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_zgGo4MGlEeihC-xm4U8BrA" name="OpcUa_SeRoNet" tooltipText="SeRoNet Port" width="-1" height="-1" resizeKind="NSEW">
+          <target xmi:type="SeronetExtension:SupportedMiddleware" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2/@extensions.0"/>
+          <semanticElements xmi:type="SeronetExtension:SupportedMiddleware" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2/@extensions.0"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_zgbZAMGlEeihC-xm4U8BrA"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_zgax8MGlEeihC-xm4U8BrA" showIcon="false" hideLabelByDefault="true" workspacePath="/org.sirius.component.design/icons/SeRoNetIcon.png">
+            <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='OutputPortNodeImport']/@borderedNodeMappings[name='OutputMiddlweareExtension']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='OutputPortNodeImport']/@borderedNodeMappings[name='OutputMiddlweareExtension']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:CustomStyle" xmi:id="_A5Wj8cGQEeiwW_kQb8HM0A" showIcon="false" id="output">
+          <description xmi:type="style:CustomStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@borderedNodeMappings[name='OutputPortNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']/@borderedNodeMappings[name='OutputPortNodeImport']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_44sgNcGPEeiwW_kQb8HM0A" labelSize="10" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']/@containerMappings[name='ComponentContainerImport']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="__4_6MMGPEeiwW_kQb8HM0A" name="JoystickTrafficLightsActivity" tooltipText="Activity" outgoingEdges="_A5cDgMGQEeiwW_kQb8HM0A" incomingEdges="_EV4VMMGQEeiwW_kQb8HM0A">
+        <target xmi:type="ComponentDefinition:Activity" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1"/>
+        <semanticElements xmi:type="ComponentDefinition:Activity" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="__4_6McGPEeiwW_kQb8HM0A" borderSize="1" borderSizeComputationExpression="1">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subContainerMappings[name='ActivityContainer']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subContainerMappings[name='ActivityContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_VWMUMMGTEeiwW_kQb8HM0A" name="InputTrigger">
+          <target xmi:type="PerformanceExtension:DefaultInputTrigger" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1/@extensions.0"/>
+          <semanticElements xmi:type="PerformanceExtension:DefaultInputTrigger" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1/@extensions.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_VWP-kMGTEeiwW_kQb8HM0A" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subContainerMappings[name='ActivityContainer']/@subContainerMappings[name='DefaultInputTriggerContainer']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@containerMappings[name='ComponentContainer']/@subContainerMappings[name='ActivityContainer']/@subContainerMappings[name='DefaultInputTriggerContainer']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_A5cDgMGQEeiwW_kQb8HM0A" sourceNode="__4_6MMGPEeiwW_kQb8HM0A" targetNode="_A5Wj8MGQEeiwW_kQb8HM0A">
+      <target xmi:type="ComponentDefinition:OutputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2"/>
+      <semanticElements xmi:type="ComponentDefinition:OutputPort" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_A5cDgcGQEeiwW_kQb8HM0A" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@edgeMappings[name='ActivityOutputEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_A5cDgsGQEeiwW_kQb8HM0A"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@edgeMappings[name='ActivityOutputEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_EV4VMMGQEeiwW_kQb8HM0A" sourceNode="_95gusMGPEeiwW_kQb8HM0A" targetNode="__4_6MMGPEeiwW_kQb8HM0A">
+      <target xmi:type="PerformanceExtension:InputLinkExtension" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1/@links.0"/>
+      <semanticElements xmi:type="PerformanceExtension:InputLinkExtension" href="model/ComponentJoystickTrafficLights.component#//@component/@elements.1/@links.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_EV90wMGQEeiwW_kQb8HM0A" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@edgeMappings[name='InputLinkEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_EV90wcGQEeiwW_kQb8HM0A"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer/@edgeMappings[name='InputLinkEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_44sgNsGPEeiwW_kQb8HM0A"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.sirius.component.design/description/component.odesign#//@ownedViewpoints[name='ComponentDefinitionViewpoint']/@ownedRepresentations[name='ComponentDefinitionDiagram']/@additionalLayers[name='SeRoNet']"/>
+    <target xmi:type="ComponentDefinition:ComponentDefModel" href="model/ComponentJoystickTrafficLights.component#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

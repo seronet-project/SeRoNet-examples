@@ -1,0 +1,3 @@
+SystemParameterModel SystemOpcUaJoystickTrafficLightsParams extendsSystem SystemOpcUaJoystickTrafficLights {
+
+}

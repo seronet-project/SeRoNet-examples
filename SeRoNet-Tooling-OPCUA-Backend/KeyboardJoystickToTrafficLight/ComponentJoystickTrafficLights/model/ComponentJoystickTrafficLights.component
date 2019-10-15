@@ -1,0 +1,12 @@
+ComponentDefinition ComponentJoystickTrafficLights logo "/ComponentJoystickTrafficLights/model/logo.png"
+{
+	InputPort JoystickServiceIn implements CommBasicObjects.JoystickService {
+	SupportedMiddleware OpcUa_SeRoNet }
+	Activity JoystickTrafficLightsActivity
+	{
+		InputPortLink JoystickServiceIn { oversamplingOk undersamplingOk }
+		DefaultTrigger InputPortTrigger JoystickServiceIn
+	}
+	OutputPort TrafficLightsServiceOut implements CommBasicObjects.TrafficLightsService realizedBy JoystickTrafficLightsActivity {
+	SupportedMiddleware OpcUa_SeRoNet }
+}

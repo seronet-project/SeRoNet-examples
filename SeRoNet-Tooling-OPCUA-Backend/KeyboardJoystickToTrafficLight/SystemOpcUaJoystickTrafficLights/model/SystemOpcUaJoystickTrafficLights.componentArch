@@ -1,0 +1,12 @@
+SystemComponentArchitecture SystemOpcUaJoystickTrafficLights 
+{
+	ComponentInstance ComponentJoystickTrafficLights instantiates ComponentJoystickTrafficLights
+	{
+		RequiredService JoystickServiceIn
+	} 
+	ComponentInstance ComponentKeyboardJoystick instantiates ComponentKeyboardJoystick
+	{
+		ProvidedService JoystickServiceOut
+	} 
+	Connection ComponentJoystickTrafficLights.JoystickServiceIn -> ComponentKeyboardJoystick.JoystickServiceOut useMiddleware OpcUa_SeRoNet 
+}

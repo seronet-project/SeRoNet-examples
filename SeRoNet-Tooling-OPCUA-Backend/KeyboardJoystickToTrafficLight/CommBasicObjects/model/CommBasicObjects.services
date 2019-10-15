@@ -1,0 +1,138 @@
+// --------------------------------------------------------------------------
+//
+//  Copyright (C) 2018 Servicerobotik Ulm
+//
+//  Service Robotics Research Center
+//  University of Applied Sciences Ulm
+//  Prittwitzstr. 10
+//  89075 Ulm (Germany)
+//
+//  This library is free software; you can redistribute it and/or
+//  modify it under the terms of the GNU Lesser General Public
+//  License as published by the Free Software Foundation; either
+//  version 2.1 of the License, or (at your option) any later version.
+//
+//  This library is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+//  Lesser General Public License for more details.
+//
+//  You should have received a copy of the GNU Lesser General Public
+//  License along with this library; if not, write to the Free Software
+//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+//
+// --------------------------------------------------------------------------
+
+ServiceDefRepository CommBasicObjects version 1.0
+{
+	ForkingServiceDefinition LaserService {
+		PushPattern <DataType=CommBasicObjects.CommMobileLaserScan>
+	}
+	RequestAnswerServiceDefinition LaserQueryService {
+		QueryPattern < 
+			RequestType = CommBasicObjects.CommVoid 
+			AnswerType = CommBasicObjects.CommMobileLaserScan 
+		>
+	}
+	
+	ForkingServiceDefinition TrafficLightsService {
+		PushPattern <DataType=CommBasicObjects.CommTrafficLights>
+	}
+	
+	ForkingServiceDefinition JoystickService {
+		PushPattern <DataType=CommBasicObjects.CommJoystick>
+	}
+	
+	ForkingServiceDefinition BaseStateService {
+		PushPattern<DataType=CommBasicObjects.CommBaseState>
+	}
+	
+	
+	// Do not use BasePositionUpdateService and Use CommNavigationObjects::LocalizationUpdateService instead
+	// Dennis 31 Oct. 2018
+	/*ForkingServiceDefinition BasePositionUpdateService {
+		PushPattern<DataType=CommBasicObjects.CommBasePositionUpdate>
+	}*/
+	
+	
+	
+	RequestAnswerServiceDefinition BaseStateQueryService {
+		QueryPattern <
+			RequestType = CommBasicObjects.CommVoid
+			AnswerType = CommBasicObjects.CommBaseState
+		>
+	}
+
+	CoordinationServiceDefinition DefaultCoordinationService {
+		StatePattern < lifecycle ComponentLifecycle with CommBasicObjects.BasicModes >
+		ParameterPattern < EmptyDefaultParameterSet >
+	}
+	
+	CoordinationServiceDefinition BaseCoordinationService {
+		StatePattern < lifecycle ComponentLifecycle with CommBasicObjects.BasicModes >
+		ParameterPattern < CommBasicObjects.BaseParams >
+	}
+	
+	ForkingServiceDefinition IMUData {
+		PushPattern<DataType=CommBasicObjects.CommIMUData>
+	}
+	
+	ForkingServiceDefinition BumperEventService {
+		EventPattern < 
+			ActivationType = 	CommBasicObjects.CommBumperEventParameter
+			EventType = 		CommBasicObjects.CommBumperEventResult
+			EventStateType = 	CommBasicObjects.CommBumperEventState
+		>
+	}
+	
+
+	ForkingServiceDefinition LaserSafetyEventService {
+		EventPattern < 
+			ActivationType = 	CommBasicObjects.CommLaserSafetyEventParam
+			EventType = 		CommBasicObjects.CommLaserSafetyField
+			EventStateType = 	CommBasicObjects.CommLaserSafetyEventState
+		>
+	}
+	
+	RequestAnswerServiceDefinition CommFileReadQuery {
+		QueryPattern <
+			RequestType = CommBasicObjects.CommFileReadRequest
+			AnswerType = CommBasicObjects.CommFileReadAnswer
+		>
+	}
+	
+	RequestAnswerServiceDefinition CommFileWriteQuery {
+		QueryPattern <
+			RequestType = CommBasicObjects.CommFileWriteRequest
+			AnswerType = CommBasicObjects.CommFileWriteAnswer
+		>
+	}
+
+	ForkingServiceDefinition CommFileMoveEvent {
+		EventPattern < 
+			ActivationType = 	CommBasicObjects.CommFileMoverEventParameter
+			EventType = 		CommBasicObjects.CommFileMoverEventResult
+			EventStateType = 	CommBasicObjects.CommFileMoverEventState
+		>
+	}
+	
+	ForkingServiceDefinition CommKBEvent {
+		EventPattern < 
+			ActivationType = 	CommBasicObjects.CommKBEventParam
+			EventType = 		CommBasicObjects.CommKBEventResult
+			EventStateType = 	CommBasicObjects.CommFileMoverEventState // dummy .. please change. .. GAUTAM
+		>
+	}
+	
+	RequestAnswerServiceDefinition CommKBQuery {
+		QueryPattern <
+			RequestType = CommBasicObjects.CommTCLMessage
+			AnswerType = CommBasicObjects.CommTCLMessage
+		>
+	}
+	
+	ForkingServiceDefinition CommMobIR {
+		PushPattern<DataType=CommBasicObjects.CommMobileIRScan>
+	}
+	
+}
