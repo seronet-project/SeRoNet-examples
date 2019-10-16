@@ -1,0 +1,132 @@
+CommObjectsRepository ROSRos_core version 1.0.0 {
+
+
+CommObject Std_msgs_Bool {
+	data : Boolean
+}
+
+CommObject Std_msgs_Byte {
+	data : UInt8 //attribute generated from a deprecated ROS Byte type
+}
+
+CommObject Std_msgs_ByteMultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : UInt8[*]
+}
+
+CommObject Std_msgs_ColorRGBA {
+	r : Float
+	g : Float
+	b : Float
+	a : Float
+}
+
+CommObject Std_msgs_Duration {
+	data : CommBasicObjects.CommTimeStamp
+}
+
+CommObject Std_msgs_Empty {
+}
+
+CommObject Std_msgs_Float32 {
+	data : Float
+}
+
+CommObject Std_msgs_Float32MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Float[*]
+}
+
+CommObject Std_msgs_Float64 {
+	data : Double
+}
+
+CommObject Std_msgs_Float64MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Double[*]
+}
+
+CommObject Std_msgs_Header {
+	seq : UInt32
+	stamp : CommBasicObjects.CommTimeStamp
+	frame_id : String
+}
+
+CommObject Std_msgs_Int16MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Int16[*]
+}
+
+CommObject Std_msgs_Int32MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Int32[*]
+}
+
+CommObject Std_msgs_Int64MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Int64[*]
+}
+
+CommObject Std_msgs_Int8MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : Int8[*]
+}
+
+CommObject Std_msgs_MultiArrayDimension {
+	label : String
+	size : UInt32
+	stride : UInt32
+}
+
+CommObject Std_msgs_MultiArrayLayout {
+	dim : Std_msgs_MultiArrayDimension[*]
+	data_offset : UInt32
+}
+
+CommObject Std_msgs_Time {
+	data : CommBasicObjects.CommTimeStamp
+}
+
+CommObject Std_msgs_UInt16MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : UInt16[*]
+}
+
+CommObject Std_msgs_UInt32MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : UInt32[*]
+}
+
+CommObject Std_msgs_UInt64MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : UInt64[*]
+}
+
+CommObject Std_msgs_UInt8MultiArray {
+	layout : Std_msgs_MultiArrayLayout
+	data : UInt8[*]
+}
+
+CommObject Std_srvs_EmptyRequest {
+}
+
+CommObject Std_srvs_EmptyResponse {
+}
+
+CommObject Std_srvs_SetBoolRequest {
+	data : Boolean
+}
+
+CommObject Std_srvs_SetBoolResponse {
+	success : Boolean
+	message : String
+}
+
+CommObject Std_srvs_TriggerRequest {
+}
+
+CommObject Std_srvs_TriggerResponse {
+	success : Boolean
+	message : String
+}
+}

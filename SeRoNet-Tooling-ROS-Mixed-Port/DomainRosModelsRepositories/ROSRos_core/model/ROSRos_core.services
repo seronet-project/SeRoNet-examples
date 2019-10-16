@@ -1,0 +1,113 @@
+ServiceDefRepository ROSROSRos_core version 1.0 {
+
+	ForkingServiceDefinition  BoolService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Bool>
+	}
+
+	ForkingServiceDefinition  ByteService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Byte>
+	}
+
+	ForkingServiceDefinition  ByteMultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_ByteMultiArray>
+	}
+
+	ForkingServiceDefinition  ColorRGBAService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_ColorRGBA>
+	}
+
+	ForkingServiceDefinition  DurationService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Duration>
+	}
+
+	ForkingServiceDefinition  EmptyService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Empty>
+	}
+
+	ForkingServiceDefinition  Float32Service {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Float32>
+	}
+
+	ForkingServiceDefinition  Float32MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Float32MultiArray>
+	}
+
+	ForkingServiceDefinition  Float64Service {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Float64>
+	}
+
+	ForkingServiceDefinition  Float64MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Float64MultiArray>
+	}
+
+	ForkingServiceDefinition  HeaderService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Header>
+	}
+
+	ForkingServiceDefinition  Int16MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Int16MultiArray>
+	}
+
+	ForkingServiceDefinition  Int32MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Int32MultiArray>
+	}
+
+	ForkingServiceDefinition  Int64MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Int64MultiArray>
+	}
+
+	ForkingServiceDefinition  Int8MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Int8MultiArray>
+	}
+
+	ForkingServiceDefinition  MultiArrayDimensionService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_MultiArrayDimension>
+	}
+
+	ForkingServiceDefinition  MultiArrayLayoutService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_MultiArrayLayout>
+	}
+
+	ForkingServiceDefinition  TimeService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_Time>
+	}
+
+	ForkingServiceDefinition  UInt16MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_UInt16MultiArray>
+	}
+
+	ForkingServiceDefinition  UInt32MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_UInt32MultiArray>
+	}
+
+	ForkingServiceDefinition  UInt64MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_UInt64MultiArray>
+	}
+
+	ForkingServiceDefinition  UInt8MultiArrayService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_UInt8MultiArray>
+	}
+
+	RequestAnswerServiceDefinition EmptyQueryService {
+		QueryPattern <
+			RequestType = ROSRos_core.Std_srvs_EmptyRequest
+			AnswerType = ROSRos_core.Std_srvs_EmptyResponse
+		>
+	}
+
+	RequestAnswerServiceDefinition SetBoolQueryService {
+		QueryPattern <
+			RequestType = ROSRos_core.Std_srvs_SetBoolRequest
+			AnswerType = ROSRos_core.Std_srvs_SetBoolResponse
+		>
+	}
+
+	RequestAnswerServiceDefinition TriggerQueryService {
+		QueryPattern <
+			RequestType = ROSRos_core.Std_srvs_TriggerRequest
+			AnswerType = ROSRos_core.Std_srvs_TriggerResponse
+		>
+	}
+
+
+}

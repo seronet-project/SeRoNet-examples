@@ -1,0 +1,836 @@
+CommObjectsRepository ROSCommon_msgs version 1.0.0 {
+
+
+CommObject Geometry_msgs_Accel {
+	linear : Geometry_msgs_Vector3
+	angular : Geometry_msgs_Vector3
+}
+
+CommObject Geometry_msgs_AccelStamped {
+	header : ROSRos_core.Std_msgs_Header
+	accel : Geometry_msgs_Accel
+}
+
+CommObject Geometry_msgs_AccelWithCovariance {
+	accel : Geometry_msgs_Accel
+	covariance : Double[*]
+}
+
+CommObject Geometry_msgs_AccelWithCovarianceStamped {
+	header : ROSRos_core.Std_msgs_Header
+	accel : Geometry_msgs_AccelWithCovariance
+}
+
+CommObject Geometry_msgs_Inertia {
+	m : Double
+	com : Geometry_msgs_Vector3
+	ixx : Double
+	ixy : Double
+	ixz : Double
+	iyy : Double
+	iyz : Double
+	izz : Double
+}
+
+CommObject Geometry_msgs_InertiaStamped {
+	header : ROSRos_core.Std_msgs_Header
+	inertia : Geometry_msgs_Inertia
+}
+
+CommObject Geometry_msgs_Point {
+	x : Double
+	y : Double
+	z : Double
+}
+
+CommObject Geometry_msgs_Point32 {
+	x : Float
+	y : Float
+	z : Float
+}
+
+CommObject Geometry_msgs_PointStamped {
+	header : ROSRos_core.Std_msgs_Header
+	point : Geometry_msgs_Point
+}
+
+CommObject Geometry_msgs_Polygon {
+	points : Geometry_msgs_Point32[*]
+}
+
+CommObject Geometry_msgs_PolygonStamped {
+	header : ROSRos_core.Std_msgs_Header
+	polygon : Geometry_msgs_Polygon
+}
+
+CommObject Geometry_msgs_Pose {
+	position : Geometry_msgs_Point
+	orientation : Geometry_msgs_Quaternion
+}
+
+CommObject Geometry_msgs_Pose2D {
+	x : Double
+	y : Double
+	theta : Double
+}
+
+CommObject Geometry_msgs_PoseArray {
+	header : ROSRos_core.Std_msgs_Header
+	poses : Geometry_msgs_Pose[*]
+}
+
+CommObject Geometry_msgs_PoseStamped {
+	header : ROSRos_core.Std_msgs_Header
+	pose : Geometry_msgs_Pose
+}
+
+CommObject Geometry_msgs_PoseWithCovariance {
+	pose : Geometry_msgs_Pose
+	covariance : Double[*]
+}
+
+CommObject Geometry_msgs_PoseWithCovarianceStamped {
+	header : ROSRos_core.Std_msgs_Header
+	pose : Geometry_msgs_PoseWithCovariance
+}
+
+CommObject Geometry_msgs_Quaternion {
+	x : Double
+	y : Double
+	z : Double
+	w : Double
+}
+
+CommObject Geometry_msgs_QuaternionStamped {
+	header : ROSRos_core.Std_msgs_Header
+	quaternion : Geometry_msgs_Quaternion
+}
+
+CommObject Geometry_msgs_Transform {
+	translation : Geometry_msgs_Vector3
+	rotation : Geometry_msgs_Quaternion
+}
+
+CommObject Geometry_msgs_TransformStamped {
+	header : ROSRos_core.Std_msgs_Header
+	child_frame_id : String
+	transform : Geometry_msgs_Transform
+}
+
+CommObject Geometry_msgs_Twist {
+	linear : Geometry_msgs_Vector3
+	angular : Geometry_msgs_Vector3
+}
+
+CommObject Geometry_msgs_TwistStamped {
+	header : ROSRos_core.Std_msgs_Header
+	twist : Geometry_msgs_Twist
+}
+
+CommObject Geometry_msgs_TwistWithCovariance {
+	twist : Geometry_msgs_Twist
+	covariance : Double[*]
+}
+
+CommObject Geometry_msgs_TwistWithCovarianceStamped {
+	header : ROSRos_core.Std_msgs_Header
+	twist : Geometry_msgs_TwistWithCovariance
+}
+
+CommObject Geometry_msgs_Vector3 {
+	x : Double
+	y : Double
+	z : Double
+}
+
+CommObject Geometry_msgs_Vector3Stamped {
+	header : ROSRos_core.Std_msgs_Header
+	vector : Geometry_msgs_Vector3
+}
+
+CommObject Geometry_msgs_Wrench {
+	force : Geometry_msgs_Vector3
+	torque : Geometry_msgs_Vector3
+}
+
+CommObject Geometry_msgs_WrenchStamped {
+	header : ROSRos_core.Std_msgs_Header
+	wrench : Geometry_msgs_Wrench
+}
+
+CommObject Actionlib_msgs_GoalID {
+	stamp : CommBasicObjects.CommTimeStamp
+	id : String
+}
+
+CommObject Actionlib_msgs_GoalStatus {
+	goal_id : Actionlib_msgs_GoalID
+	status : UInt8
+	text : String
+}
+Enumeration Actionlib_msgs_GoalStatusType {
+	PENDING = 0
+	ACTIVE = 1
+	PREEMPTED = 2
+	SUCCEEDED = 3
+	ABORTED = 4
+	REJECTED = 5
+	PREEMPTING = 6
+	RECALLING = 7
+	RECALLED = 8
+	LOST = 9
+}
+
+CommObject Actionlib_msgs_GoalStatusArray {
+	header : ROSRos_core.Std_msgs_Header
+	status_list : Actionlib_msgs_GoalStatus[*]
+}
+
+CommObject Diagnostic_msgs_DiagnosticArray {
+	header : ROSRos_core.Std_msgs_Header
+	status : Diagnostic_msgs_DiagnosticStatus[*]
+}
+
+CommObject Diagnostic_msgs_DiagnosticStatus {
+	level : UInt8 //attribute generated from a deprecated ROS Byte type
+	name : String
+	message : String
+	hardware_id : String
+	values : Diagnostic_msgs_KeyValue[*]
+}
+Enumeration Diagnostic_msgs_DiagnosticStatusType {
+	OK = 0
+	WARN = 1
+	ERROR = 2
+	STALE = 3
+}
+
+CommObject Diagnostic_msgs_KeyValue {
+	key : String
+	value : String
+}
+
+CommObject Diagnostic_msgs_AddDiagnosticsRequest {
+	load_namespace : String
+}
+
+CommObject Diagnostic_msgs_AddDiagnosticsResponse {
+	success : Boolean
+	message : String
+}
+
+CommObject Diagnostic_msgs_SelfTestRequest {
+}
+
+CommObject Diagnostic_msgs_SelfTestResponse {
+	id : String
+	passed : UInt8 //attribute generated from a deprecated ROS Byte type
+	status : Diagnostic_msgs_DiagnosticStatus[*]
+}
+
+CommObject Nav_msgs_GetMapAction {
+	action_goal : Nav_msgs_GetMapActionGoal
+	action_result : Nav_msgs_GetMapActionResult
+	action_feedback : Nav_msgs_GetMapActionFeedback
+}
+
+CommObject Nav_msgs_GetMapActionFeedback {
+	header : ROSRos_core.Std_msgs_Header
+	status : Actionlib_msgs_GoalStatus
+	feedback : Nav_msgs_GetMapFeedback
+}
+
+CommObject Nav_msgs_GetMapActionGoal {
+	header : ROSRos_core.Std_msgs_Header
+	goal_id : Actionlib_msgs_GoalID
+	goal : Nav_msgs_GetMapGoal
+}
+
+CommObject Nav_msgs_GetMapActionResult {
+	header : ROSRos_core.Std_msgs_Header
+	status : Actionlib_msgs_GoalStatus
+	result : Nav_msgs_GetMapResult
+}
+
+CommObject Nav_msgs_GetMapFeedback {
+}
+
+CommObject Nav_msgs_GetMapGoal {
+}
+
+CommObject Nav_msgs_GetMapResult {
+	map : Nav_msgs_OccupancyGrid
+}
+
+CommObject Nav_msgs_GridCells {
+	header : ROSRos_core.Std_msgs_Header
+	cell_width : Float
+	cell_height : Float
+	cells : Geometry_msgs_Point[*]
+}
+
+CommObject Nav_msgs_MapMetaData {
+	map_load_time : CommBasicObjects.CommTimeStamp
+	resolution : Float
+	width : UInt32
+	height : UInt32
+	origin : Geometry_msgs_Pose
+}
+
+CommObject Nav_msgs_OccupancyGrid {
+	header : ROSRos_core.Std_msgs_Header
+	info : Nav_msgs_MapMetaData
+	data : Int8[*]
+}
+
+CommObject Nav_msgs_Odometry {
+	header : ROSRos_core.Std_msgs_Header
+	child_frame_id : String
+	pose : Geometry_msgs_PoseWithCovariance
+	twist : Geometry_msgs_TwistWithCovariance
+}
+
+CommObject Nav_msgs_Path {
+	header : ROSRos_core.Std_msgs_Header
+	poses : Geometry_msgs_PoseStamped[*]
+}
+
+CommObject Nav_msgs_GetMapRequest {
+}
+
+CommObject Nav_msgs_GetMapResponse {
+	map : Nav_msgs_OccupancyGrid
+}
+
+CommObject Nav_msgs_GetPlanRequest {
+	start : Geometry_msgs_PoseStamped
+	goal : Geometry_msgs_PoseStamped
+	tolerance : Float
+}
+
+CommObject Nav_msgs_GetPlanResponse {
+	plan : Nav_msgs_Path
+}
+
+CommObject Nav_msgs_SetMapRequest {
+	map : Nav_msgs_OccupancyGrid
+	initial_pose : Geometry_msgs_PoseWithCovarianceStamped
+}
+
+CommObject Nav_msgs_SetMapResponse {
+	success : Boolean
+}
+
+CommObject Sensor_msgs_BatteryState {
+	header : ROSRos_core.Std_msgs_Header
+	voltage : Float
+	current : Float
+	charge : Float
+	capacity : Float
+	design_capacity : Float
+	percentage : Float
+	power_supply_status : UInt8
+	power_supply_health : UInt8
+	power_supply_technology : UInt8
+	present : Boolean
+	cell_voltage : Float[*]
+	location : String
+	serial_number : String
+}
+Enumeration Sensor_msgs_BatteryStateType {
+	POWER_SUPPLY_STATUS_UNKNOWN = 0
+	POWER_SUPPLY_STATUS_CHARGING = 1
+	POWER_SUPPLY_STATUS_DISCHARGING = 2
+	POWER_SUPPLY_STATUS_NOT_CHARGING = 3
+	POWER_SUPPLY_STATUS_FULL = 4
+	POWER_SUPPLY_HEALTH_UNKNOWN = 5
+	POWER_SUPPLY_HEALTH_GOOD = 6
+	POWER_SUPPLY_HEALTH_OVERHEAT = 7
+	POWER_SUPPLY_HEALTH_DEAD = 8
+	POWER_SUPPLY_HEALTH_OVERVOLTAGE = 9
+	POWER_SUPPLY_HEALTH_UNSPEC_FAILURE = 10
+	POWER_SUPPLY_HEALTH_COLD = 11
+	POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE = 12
+	POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE = 13
+	POWER_SUPPLY_TECHNOLOGY_UNKNOWN = 14
+	POWER_SUPPLY_TECHNOLOGY_NIMH = 15
+	POWER_SUPPLY_TECHNOLOGY_LION = 16
+	POWER_SUPPLY_TECHNOLOGY_LIPO = 17
+	POWER_SUPPLY_TECHNOLOGY_LIFE = 18
+	POWER_SUPPLY_TECHNOLOGY_NICD = 19
+	POWER_SUPPLY_TECHNOLOGY_LIMN = 20
+}
+
+CommObject Sensor_msgs_CameraInfo {
+	header : ROSRos_core.Std_msgs_Header
+	height : UInt32
+	width : UInt32
+	distortion_model : String
+	D : Double[*]
+	K : Double[*]
+	R : Double[*]
+	P : Double[*]
+	binning_x : UInt32
+	binning_y : UInt32
+	roi : Sensor_msgs_RegionOfInterest
+}
+
+CommObject Sensor_msgs_ChannelFloat32 {
+	name : String
+	values : Float[*]
+}
+
+CommObject Sensor_msgs_CompressedImage {
+	header : ROSRos_core.Std_msgs_Header
+	format : String
+	data : UInt8[*]
+}
+
+CommObject Sensor_msgs_FluidPressure {
+	header : ROSRos_core.Std_msgs_Header
+	fluid_pressure : Double
+	variance : Double
+}
+
+CommObject Sensor_msgs_Illuminance {
+	header : ROSRos_core.Std_msgs_Header
+	illuminance : Double
+	variance : Double
+}
+
+CommObject Sensor_msgs_Image {
+	header : ROSRos_core.Std_msgs_Header
+	height : UInt32
+	width : UInt32
+	encoding : String
+	is_bigendian : UInt8
+	step : UInt32
+	data : UInt8[*]
+}
+
+CommObject Sensor_msgs_Imu {
+	header : ROSRos_core.Std_msgs_Header
+	orientation : Geometry_msgs_Quaternion
+	orientation_covariance : Double[*]
+	angular_velocity : Geometry_msgs_Vector3
+	angular_velocity_covariance : Double[*]
+	linear_acceleration : Geometry_msgs_Vector3
+	linear_acceleration_covariance : Double[*]
+}
+
+CommObject Sensor_msgs_JointState {
+	header : ROSRos_core.Std_msgs_Header
+	name : String[*]
+	position : Double[*]
+	velocity : Double[*]
+	effort : Double[*]
+}
+
+CommObject Sensor_msgs_Joy {
+	header : ROSRos_core.Std_msgs_Header
+	axes : Float[*]
+	buttons : Int32[*]
+}
+
+CommObject Sensor_msgs_JoyFeedback {
+	type : UInt8
+	id : UInt8
+	intensity : Float
+}
+Enumeration Sensor_msgs_JoyFeedbackType {
+	TYPE_LED = 0
+	TYPE_RUMBLE = 1
+	TYPE_BUZZER = 2
+}
+
+CommObject Sensor_msgs_JoyFeedbackArray {
+	array : Sensor_msgs_JoyFeedback[*]
+}
+
+CommObject Sensor_msgs_LaserEcho {
+	echoes : Float[*]
+}
+
+CommObject Sensor_msgs_LaserScan {
+	header : ROSRos_core.Std_msgs_Header
+	angle_min : Float
+	angle_max : Float
+	angle_increment : Float
+	time_increment : Float
+	scan_time : Float
+	range_min : Float
+	range_max : Float
+	ranges : Float[*]
+	intensities : Float[*]
+}
+
+CommObject Sensor_msgs_MagneticField {
+	header : ROSRos_core.Std_msgs_Header
+	magnetic_field : Geometry_msgs_Vector3
+	magnetic_field_covariance : Double[*]
+}
+
+CommObject Sensor_msgs_MultiDOFJointState {
+	header : ROSRos_core.Std_msgs_Header
+	joint_names : String[*]
+	transforms : Geometry_msgs_Transform[*]
+	twist : Geometry_msgs_Twist[*]
+	wrench : Geometry_msgs_Wrench[*]
+}
+
+CommObject Sensor_msgs_MultiEchoLaserScan {
+	header : ROSRos_core.Std_msgs_Header
+	angle_min : Float
+	angle_max : Float
+	angle_increment : Float
+	time_increment : Float
+	scan_time : Float
+	range_min : Float
+	range_max : Float
+	ranges : Sensor_msgs_LaserEcho[*]
+	intensities : Sensor_msgs_LaserEcho[*]
+}
+
+CommObject Sensor_msgs_NavSatFix {
+	header : ROSRos_core.Std_msgs_Header
+	status : Sensor_msgs_NavSatStatus
+	latitude : Double
+	longitude : Double
+	altitude : Double
+	position_covariance : Double[*]
+	position_covariance_type : UInt8
+}
+Enumeration Sensor_msgs_NavSatFixType {
+	COVARIANCE_TYPE_UNKNOWN = 0
+	COVARIANCE_TYPE_APPROXIMATED = 1
+	COVARIANCE_TYPE_DIAGONAL_KNOWN = 2
+	COVARIANCE_TYPE_KNOWN = 3
+}
+
+CommObject Sensor_msgs_NavSatStatus {
+	status : Int8
+	service : UInt16
+}
+Enumeration Sensor_msgs_NavSatStatusType {
+	STATUS_NO_FIX = 0
+	STATUS_FIX = 1
+	STATUS_SBAS_FIX = 2
+	STATUS_GBAS_FIX = 3
+	SERVICE_GPS = 4
+	SERVICE_GLONASS = 5
+	SERVICE_COMPASS = 6
+	SERVICE_GALILEO = 7
+}
+
+CommObject Sensor_msgs_PointCloud {
+	header : ROSRos_core.Std_msgs_Header
+	points : Geometry_msgs_Point32[*]
+	channels : Sensor_msgs_ChannelFloat32[*]
+}
+
+CommObject Sensor_msgs_PointCloud2 {
+	header : ROSRos_core.Std_msgs_Header
+	height : UInt32
+	width : UInt32
+	fields : Sensor_msgs_PointField[*]
+	is_bigendian : Boolean
+	point_step : UInt32
+	row_step : UInt32
+	data : UInt8[*]
+	is_dense : Boolean
+}
+
+CommObject Sensor_msgs_PointField {
+	name : String
+	offset : UInt32
+	datatype : UInt8
+	count : UInt32
+}
+Enumeration Sensor_msgs_PointFieldType {
+	INT8 = 0
+	UINT8 = 1
+	INT16 = 2
+	UINT16 = 3
+	INT32 = 4
+	UINT32 = 5
+	FLOAT32 = 6
+	FLOAT64 = 7
+}
+
+CommObject Sensor_msgs_Range {
+	header : ROSRos_core.Std_msgs_Header
+	radiation_type : UInt8
+	field_of_view : Float
+	min_range : Float
+	max_range : Float
+	range : Float
+}
+Enumeration Sensor_msgs_RangeType {
+	ULTRASOUND = 0
+	INFRARED = 1
+}
+
+CommObject Sensor_msgs_RegionOfInterest {
+	x_offset : UInt32
+	y_offset : UInt32
+	height : UInt32
+	width : UInt32
+	do_rectify : Boolean
+}
+
+CommObject Sensor_msgs_RelativeHumidity {
+	header : ROSRos_core.Std_msgs_Header
+	relative_humidity : Double
+	variance : Double
+}
+
+CommObject Sensor_msgs_Temperature {
+	header : ROSRos_core.Std_msgs_Header
+	temperature : Double
+	variance : Double
+}
+
+CommObject Sensor_msgs_TimeReference {
+	header : ROSRos_core.Std_msgs_Header
+	time_ref : CommBasicObjects.CommTimeStamp
+	source : String
+}
+
+CommObject Sensor_msgs_SetCameraInfoRequest {
+	camera_info : Sensor_msgs_CameraInfo
+}
+
+CommObject Sensor_msgs_SetCameraInfoResponse {
+	success : Boolean
+	status_message : String
+}
+
+CommObject Shape_msgs_Mesh {
+	triangles : Shape_msgs_MeshTriangle[*]
+	vertices : Geometry_msgs_Point[*]
+}
+
+CommObject Shape_msgs_MeshTriangle {
+	vertex_indices : UInt32[*]
+}
+
+CommObject Shape_msgs_Plane {
+	coef : Double[*]
+}
+
+CommObject Shape_msgs_SolidPrimitive {
+	type : UInt8
+	dimensions : Double[*]
+}
+Enumeration Shape_msgs_SolidPrimitiveType {
+	BOX = 0
+	SPHERE = 1
+	CYLINDER = 2
+	CONE = 3
+	BOX_X = 4
+	BOX_Y = 5
+	BOX_Z = 6
+	SPHERE_RADIUS = 7
+	CYLINDER_HEIGHT = 8
+	CYLINDER_RADIUS = 9
+	CONE_HEIGHT = 10
+	CONE_RADIUS = 11
+}
+
+CommObject Stereo_msgs_DisparityImage {
+	header : ROSRos_core.Std_msgs_Header
+	image : Sensor_msgs_Image
+	f : Float
+	T : Float
+	valid_window : Sensor_msgs_RegionOfInterest
+	min_disparity : Float
+	max_disparity : Float
+	delta_d : Float
+}
+
+CommObject Trajectory_msgs_JointTrajectory {
+	header : ROSRos_core.Std_msgs_Header
+	joint_names : String[*]
+	points : Trajectory_msgs_JointTrajectoryPoint[*]
+}
+
+CommObject Trajectory_msgs_JointTrajectoryPoint {
+	positions : Double[*]
+	velocities : Double[*]
+	accelerations : Double[*]
+	effort : Double[*]
+	time_from_start : CommBasicObjects.CommTimeStamp
+}
+
+CommObject Trajectory_msgs_MultiDOFJointTrajectory {
+	header : ROSRos_core.Std_msgs_Header
+	joint_names : String[*]
+	points : Trajectory_msgs_MultiDOFJointTrajectoryPoint[*]
+}
+
+CommObject Trajectory_msgs_MultiDOFJointTrajectoryPoint {
+	transforms : Geometry_msgs_Transform[*]
+	velocities : Geometry_msgs_Twist[*]
+	accelerations : Geometry_msgs_Twist[*]
+	time_from_start : CommBasicObjects.CommTimeStamp
+}
+
+CommObject Visualization_msgs_ImageMarker {
+	header : ROSRos_core.Std_msgs_Header
+	ns : String
+	id : Int32
+	type : Int32
+	action : Int32
+	position : Geometry_msgs_Point
+	scale : Float
+	outline_color : ROSRos_core.Std_msgs_ColorRGBA
+	filled : UInt8
+	fill_color : ROSRos_core.Std_msgs_ColorRGBA
+	lifetime : CommBasicObjects.CommTimeStamp
+	points : Geometry_msgs_Point[*]
+	outline_colors : ROSRos_core.Std_msgs_ColorRGBA[*]
+}
+Enumeration Visualization_msgs_ImageMarkerType {
+	CIRCLE = 0
+	LINE_STRIP = 1
+	LINE_LIST = 2
+	POLYGON = 3
+	POINTS = 4
+	ADD = 5
+	REMOVE = 6
+}
+
+CommObject Visualization_msgs_InteractiveMarker {
+	header : ROSRos_core.Std_msgs_Header
+	pose : Geometry_msgs_Pose
+	name : String
+	description : String
+	scale : Float
+	menu_entries : Visualization_msgs_MenuEntry[*]
+	controls : Visualization_msgs_InteractiveMarkerControl[*]
+}
+
+CommObject Visualization_msgs_InteractiveMarkerControl {
+	name : String
+	orientation : Geometry_msgs_Quaternion
+	orientation_mode : UInt8
+	interaction_mode : UInt8
+	always_visible : Boolean
+	markers : Visualization_msgs_Marker[*]
+	independent_marker_orientation : Boolean
+	description : String
+}
+Enumeration Visualization_msgs_InteractiveMarkerControlType {
+	INHERIT = 0
+	FIXED = 1
+	VIEW_FACING = 2
+	NONE = 3
+	MENU = 4
+	BUTTON = 5
+	MOVE_AXIS = 6
+	MOVE_PLANE = 7
+	ROTATE_AXIS = 8
+	MOVE_ROTATE = 9
+	MOVE_3D = 10
+	ROTATE_3D = 11
+	MOVE_ROTATE_3D = 12
+}
+
+CommObject Visualization_msgs_InteractiveMarkerFeedback {
+	header : ROSRos_core.Std_msgs_Header
+	client_id : String
+	marker_name : String
+	control_name : String
+	event_type : UInt8
+	pose : Geometry_msgs_Pose
+	menu_entry_id : UInt32
+	mouse_point : Geometry_msgs_Point
+	mouse_point_valid : Boolean
+}
+Enumeration Visualization_msgs_InteractiveMarkerFeedbackType {
+	KEEP_ALIVE = 0
+	POSE_UPDATE = 1
+	MENU_SELECT = 2
+	BUTTON_CLICK = 3
+	MOUSE_DOWN = 4
+	MOUSE_UP = 5
+}
+
+CommObject Visualization_msgs_InteractiveMarkerInit {
+	server_id : String
+	seq_num : UInt64
+	markers : Visualization_msgs_InteractiveMarker[*]
+}
+
+CommObject Visualization_msgs_InteractiveMarkerPose {
+	header : ROSRos_core.Std_msgs_Header
+	pose : Geometry_msgs_Pose
+	name : String
+}
+
+CommObject Visualization_msgs_InteractiveMarkerUpdate {
+	server_id : String
+	seq_num : UInt64
+	type : UInt8
+	markers : Visualization_msgs_InteractiveMarker[*]
+	poses : Visualization_msgs_InteractiveMarkerPose[*]
+	erases : String[*]
+}
+Enumeration Visualization_msgs_InteractiveMarkerUpdateType {
+	KEEP_ALIVE = 0
+	UPDATE = 1
+}
+
+CommObject Visualization_msgs_Marker {
+	header : ROSRos_core.Std_msgs_Header
+	ns : String
+	id : Int32
+	type : Int32
+	action : Int32
+	pose : Geometry_msgs_Pose
+	scale : Geometry_msgs_Vector3
+	color : ROSRos_core.Std_msgs_ColorRGBA
+	lifetime : CommBasicObjects.CommTimeStamp
+	frame_locked : Boolean
+	points : Geometry_msgs_Point[*]
+	colors : ROSRos_core.Std_msgs_ColorRGBA[*]
+	text : String
+	mesh_resource : String
+	mesh_use_embedded_materials : Boolean
+}
+Enumeration Visualization_msgs_MarkerType {
+	ARROW = 0
+	CUBE = 1
+	SPHERE = 2
+	CYLINDER = 3
+	LINE_STRIP = 4
+	LINE_LIST = 5
+	CUBE_LIST = 6
+	SPHERE_LIST = 7
+	POINTS = 8
+	TEXT_VIEW_FACING = 9
+	MESH_RESOURCE = 10
+	TRIANGLE_LIST = 11
+	ADD = 12
+	MODIFY = 13
+	DELETE = 14
+	DELETEALL = 15
+}
+
+CommObject Visualization_msgs_MarkerArray {
+	markers : Visualization_msgs_Marker[*]
+}
+
+CommObject Visualization_msgs_MenuEntry {
+	id : UInt32
+	parent_id : UInt32
+	title : String
+	command : String
+	command_type : UInt8
+}
+Enumeration Visualization_msgs_MenuEntryType {
+	FEEDBACK = 0
+	ROSRUN = 1
+	ROSLAUNCH = 2
+}
+}

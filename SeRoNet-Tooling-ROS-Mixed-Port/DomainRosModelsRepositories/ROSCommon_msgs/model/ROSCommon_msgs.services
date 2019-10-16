@@ -1,0 +1,418 @@
+ServiceDefRepository ROSCommon_msgs version 1.0 {
+
+	ForkingServiceDefinition  AccelService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Accel>
+	}
+
+	ForkingServiceDefinition  AccelStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_AccelStamped>
+	}
+
+	ForkingServiceDefinition  AccelWithCovarianceService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_AccelWithCovariance>
+	}
+
+	ForkingServiceDefinition  AccelWithCovarianceStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_AccelWithCovarianceStamped>
+	}
+
+	ForkingServiceDefinition  InertiaService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Inertia>
+	}
+
+	ForkingServiceDefinition  InertiaStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_InertiaStamped>
+	}
+
+	ForkingServiceDefinition  PointService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Point>
+	}
+
+	ForkingServiceDefinition  Point32Service {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Point32>
+	}
+
+	ForkingServiceDefinition  PointStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PointStamped>
+	}
+
+	ForkingServiceDefinition  PolygonService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Polygon>
+	}
+
+	ForkingServiceDefinition  PolygonStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PolygonStamped>
+	}
+
+	ForkingServiceDefinition  PoseService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Pose>
+	}
+
+	ForkingServiceDefinition  Pose2DService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Pose2D>
+	}
+
+	ForkingServiceDefinition  PoseArrayService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PoseArray>
+	}
+
+	ForkingServiceDefinition  PoseStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PoseStamped>
+	}
+
+	ForkingServiceDefinition  PoseWithCovarianceService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PoseWithCovariance>
+	}
+
+	ForkingServiceDefinition  PoseWithCovarianceStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_PoseWithCovarianceStamped>
+	}
+
+	ForkingServiceDefinition  QuaternionService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Quaternion>
+	}
+
+	ForkingServiceDefinition  QuaternionStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_QuaternionStamped>
+	}
+
+	ForkingServiceDefinition  TransformService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Transform>
+	}
+
+	ForkingServiceDefinition  TransformStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_TransformStamped>
+	}
+
+	ForkingServiceDefinition  TwistService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Twist>
+	}
+
+	ForkingServiceDefinition  TwistStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_TwistStamped>
+	}
+
+	ForkingServiceDefinition  TwistWithCovarianceService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_TwistWithCovariance>
+	}
+
+	ForkingServiceDefinition  TwistWithCovarianceStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_TwistWithCovarianceStamped>
+	}
+
+	ForkingServiceDefinition  Vector3Service {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Vector3>
+	}
+
+	ForkingServiceDefinition  Vector3StampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Vector3Stamped>
+	}
+
+	ForkingServiceDefinition  WrenchService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_Wrench>
+	}
+
+	ForkingServiceDefinition  WrenchStampedService {
+		PushPattern <DataType=ROSCommon_msgs.Geometry_msgs_WrenchStamped>
+	}
+
+	ForkingServiceDefinition  GoalIDService {
+		PushPattern <DataType=ROSCommon_msgs.Actionlib_msgs_GoalID>
+	}
+
+	ForkingServiceDefinition  GoalStatusService {
+		PushPattern <DataType=ROSCommon_msgs.Actionlib_msgs_GoalStatus>
+	}
+
+	ForkingServiceDefinition  GoalStatusArrayService {
+		PushPattern <DataType=ROSCommon_msgs.Actionlib_msgs_GoalStatusArray>
+	}
+
+	ForkingServiceDefinition  DiagnosticArrayService {
+		PushPattern <DataType=ROSCommon_msgs.Diagnostic_msgs_DiagnosticArray>
+	}
+
+	ForkingServiceDefinition  DiagnosticStatusService {
+		PushPattern <DataType=ROSCommon_msgs.Diagnostic_msgs_DiagnosticStatus>
+	}
+
+	ForkingServiceDefinition  KeyValueService {
+		PushPattern <DataType=ROSCommon_msgs.Diagnostic_msgs_KeyValue>
+	}
+
+	RequestAnswerServiceDefinition AddDiagnosticsQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Diagnostic_msgs_AddDiagnosticsRequest
+			AnswerType = ROSCommon_msgs.Diagnostic_msgs_AddDiagnosticsResponse
+		>
+	}
+
+	RequestAnswerServiceDefinition SelfTestQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Diagnostic_msgs_SelfTestRequest
+			AnswerType = ROSCommon_msgs.Diagnostic_msgs_SelfTestResponse
+		>
+	}
+
+	ForkingServiceDefinition  GetMapActionService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapAction>
+	}
+
+	ForkingServiceDefinition  GetMapActionFeedbackService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapActionFeedback>
+	}
+
+	ForkingServiceDefinition  GetMapActionGoalService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapActionGoal>
+	}
+
+	ForkingServiceDefinition  GetMapActionResultService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapActionResult>
+	}
+
+	ForkingServiceDefinition  GetMapFeedbackService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapFeedback>
+	}
+
+	ForkingServiceDefinition  GetMapGoalService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapGoal>
+	}
+
+	ForkingServiceDefinition  GetMapResultService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GetMapResult>
+	}
+
+	ForkingServiceDefinition  GridCellsService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_GridCells>
+	}
+
+	ForkingServiceDefinition  MapMetaDataService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_MapMetaData>
+	}
+
+	ForkingServiceDefinition  OccupancyGridService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_OccupancyGrid>
+	}
+
+	ForkingServiceDefinition  OdometryService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_Odometry>
+	}
+
+	ForkingServiceDefinition  PathService {
+		PushPattern <DataType=ROSCommon_msgs.Nav_msgs_Path>
+	}
+
+	RequestAnswerServiceDefinition GetMapQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Nav_msgs_GetMapRequest
+			AnswerType = ROSCommon_msgs.Nav_msgs_GetMapResponse
+		>
+	}
+
+	RequestAnswerServiceDefinition GetPlanQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Nav_msgs_GetPlanRequest
+			AnswerType = ROSCommon_msgs.Nav_msgs_GetPlanResponse
+		>
+	}
+
+	RequestAnswerServiceDefinition SetMapQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Nav_msgs_SetMapRequest
+			AnswerType = ROSCommon_msgs.Nav_msgs_SetMapResponse
+		>
+	}
+
+	ForkingServiceDefinition  BatteryStateService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_BatteryState>
+	}
+
+	ForkingServiceDefinition  CameraInfoService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_CameraInfo>
+	}
+
+	ForkingServiceDefinition  ChannelFloat32Service {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_ChannelFloat32>
+	}
+
+	ForkingServiceDefinition  CompressedImageService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_CompressedImage>
+	}
+
+	ForkingServiceDefinition  FluidPressureService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_FluidPressure>
+	}
+
+	ForkingServiceDefinition  IlluminanceService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Illuminance>
+	}
+
+	ForkingServiceDefinition  ImageService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Image>
+	}
+
+	ForkingServiceDefinition  ImuService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Imu>
+	}
+
+	ForkingServiceDefinition  JointStateService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_JointState>
+	}
+
+	ForkingServiceDefinition  JoyService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Joy>
+	}
+
+	ForkingServiceDefinition  JoyFeedbackService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_JoyFeedback>
+	}
+
+	ForkingServiceDefinition  JoyFeedbackArrayService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_JoyFeedbackArray>
+	}
+
+	ForkingServiceDefinition  LaserEchoService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_LaserEcho>
+	}
+
+	ForkingServiceDefinition  LaserScanService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_LaserScan>
+	}
+
+	ForkingServiceDefinition  MagneticFieldService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_MagneticField>
+	}
+
+	ForkingServiceDefinition  MultiDOFJointStateService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_MultiDOFJointState>
+	}
+
+	ForkingServiceDefinition  MultiEchoLaserScanService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_MultiEchoLaserScan>
+	}
+
+	ForkingServiceDefinition  NavSatFixService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_NavSatFix>
+	}
+
+	ForkingServiceDefinition  NavSatStatusService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_NavSatStatus>
+	}
+
+	ForkingServiceDefinition  PointCloudService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_PointCloud>
+	}
+
+	ForkingServiceDefinition  PointCloud2Service {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_PointCloud2>
+	}
+
+	ForkingServiceDefinition  PointFieldService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_PointField>
+	}
+
+	ForkingServiceDefinition  RangeService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Range>
+	}
+
+	ForkingServiceDefinition  RegionOfInterestService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_RegionOfInterest>
+	}
+
+	ForkingServiceDefinition  RelativeHumidityService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_RelativeHumidity>
+	}
+
+	ForkingServiceDefinition  TemperatureService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_Temperature>
+	}
+
+	ForkingServiceDefinition  TimeReferenceService {
+		PushPattern <DataType=ROSCommon_msgs.Sensor_msgs_TimeReference>
+	}
+
+	RequestAnswerServiceDefinition SetCameraInfoQueryService {
+		QueryPattern <
+			RequestType = ROSCommon_msgs.Sensor_msgs_SetCameraInfoRequest
+			AnswerType = ROSCommon_msgs.Sensor_msgs_SetCameraInfoResponse
+		>
+	}
+
+	ForkingServiceDefinition  MeshService {
+		PushPattern <DataType=ROSCommon_msgs.Shape_msgs_Mesh>
+	}
+
+	ForkingServiceDefinition  MeshTriangleService {
+		PushPattern <DataType=ROSCommon_msgs.Shape_msgs_MeshTriangle>
+	}
+
+	ForkingServiceDefinition  PlaneService {
+		PushPattern <DataType=ROSCommon_msgs.Shape_msgs_Plane>
+	}
+
+	ForkingServiceDefinition  SolidPrimitiveService {
+		PushPattern <DataType=ROSCommon_msgs.Shape_msgs_SolidPrimitive>
+	}
+
+	ForkingServiceDefinition  DisparityImageService {
+		PushPattern <DataType=ROSCommon_msgs.Stereo_msgs_DisparityImage>
+	}
+
+	ForkingServiceDefinition  JointTrajectoryService {
+		PushPattern <DataType=ROSCommon_msgs.Trajectory_msgs_JointTrajectory>
+	}
+
+	ForkingServiceDefinition  JointTrajectoryPointService {
+		PushPattern <DataType=ROSCommon_msgs.Trajectory_msgs_JointTrajectoryPoint>
+	}
+
+	ForkingServiceDefinition  MultiDOFJointTrajectoryService {
+		PushPattern <DataType=ROSCommon_msgs.Trajectory_msgs_MultiDOFJointTrajectory>
+	}
+
+	ForkingServiceDefinition  MultiDOFJointTrajectoryPointService {
+		PushPattern <DataType=ROSCommon_msgs.Trajectory_msgs_MultiDOFJointTrajectoryPoint>
+	}
+
+	ForkingServiceDefinition  ImageMarkerService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_ImageMarker>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarker>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerControlService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarkerControl>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerFeedbackService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarkerFeedback>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerInitService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarkerInit>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerPoseService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarkerPose>
+	}
+
+	ForkingServiceDefinition  InteractiveMarkerUpdateService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_InteractiveMarkerUpdate>
+	}
+
+	ForkingServiceDefinition  MarkerService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_Marker>
+	}
+
+	ForkingServiceDefinition  MarkerArrayService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_MarkerArray>
+	}
+
+	ForkingServiceDefinition  MenuEntryService {
+		PushPattern <DataType=ROSCommon_msgs.Visualization_msgs_MenuEntry>
+	}
+
+
+}
