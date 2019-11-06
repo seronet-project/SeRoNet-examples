@@ -64,11 +64,11 @@ ComponentJoystickTrafficLights::ComponentJoystickTrafficLights()
 	connections.joystickTrafficLightsActivity.priority = -1;
 	connections.joystickTrafficLightsActivity.cpuAffinity = -1;
 	
+	// initialize members of PlainOpcUaComponentJoystickTrafficLightsExtension
+	
 	// initialize members of ComponentJoystickTrafficLightsROSExtension
 	
-	// initialize members of SeRoNetSDKComponentGeneratorExtension
-	
-	// initialize members of PlainOpcUaComponentJoystickTrafficLightsExtension
+	// initialize members of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -80,6 +80,11 @@ void ComponentJoystickTrafficLights::addPortFactory(const std::string &name, Com
 void ComponentJoystickTrafficLights::addExtension(ComponentJoystickTrafficLightsExtension *extension)
 {
 	componentExtensionRegistry[extension->getName()] = extension;
+}
+
+SmartACE::SmartComponent* ComponentJoystickTrafficLights::getComponentImpl()
+{
+	return dynamic_cast<ComponentJoystickTrafficLightsAcePortFactory*>(portFactoryRegistry["ACE_SmartSoft"])->getComponentImpl();
 }
 
 /**
@@ -167,11 +172,11 @@ void ComponentJoystickTrafficLights::init(int argc, char *argv[])
 		loadParameter(argc, argv);
 		
 		
+		// initializations of PlainOpcUaComponentJoystickTrafficLightsExtension
+		
 		// initializations of ComponentJoystickTrafficLightsROSExtension
 		
-		// initializations of SeRoNetSDKComponentGeneratorExtension
-		
-		// initializations of PlainOpcUaComponentJoystickTrafficLightsExtension
+		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		
 		// initialize all registered port-factories
@@ -249,7 +254,7 @@ void ComponentJoystickTrafficLights::init(int argc, char *argv[])
 			if(microseconds > 0) {
 				Smart::TimedTaskTrigger *triggerPtr = new Smart::TimedTaskTrigger();
 				triggerPtr->attach(joystickTrafficLightsActivity);
-				component->getTimerManager()->scheduleTimer(triggerPtr, std::chrono::microseconds(microseconds), std::chrono::microseconds(microseconds));
+				component->getTimerManager()->scheduleTimer(triggerPtr, (void *) 0, std::chrono::microseconds(microseconds), std::chrono::microseconds(microseconds));
 				// store trigger in class member
 				joystickTrafficLightsActivityTrigger = triggerPtr;
 			} else {
@@ -336,8 +341,10 @@ void ComponentJoystickTrafficLights::fini()
 	// unlink all UpcallManagers
 	joystickServiceInUpcallManager->detach(joystickTrafficLightsActivity);
 	// unlink the TaskTrigger
-	joystickTrafficLightsActivityTrigger->detach(joystickTrafficLightsActivity);
-	delete joystickTrafficLightsActivity;
+	if(joystickTrafficLightsActivityTrigger != NULL){
+		joystickTrafficLightsActivityTrigger->detach(joystickTrafficLightsActivity);
+		delete joystickTrafficLightsActivity;
+	}
 
 	// destroy all input-handler
 
@@ -374,11 +381,11 @@ void ComponentJoystickTrafficLights::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of PlainOpcUaComponentJoystickTrafficLightsExtension
+	
 	// destruction of ComponentJoystickTrafficLightsROSExtension
 	
-	// destruction of SeRoNetSDKComponentGeneratorExtension
-	
-	// destruction of PlainOpcUaComponentJoystickTrafficLightsExtension
+	// destruction of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -487,11 +494,11 @@ void ComponentJoystickTrafficLights::loadParameter(int argc, char *argv[])
 			parameter.getInteger("JoystickTrafficLightsActivity", "cpuAffinity", connections.joystickTrafficLightsActivity.cpuAffinity);
 		}
 		
+		// load parameters for PlainOpcUaComponentJoystickTrafficLightsExtension
+		
 		// load parameters for ComponentJoystickTrafficLightsROSExtension
 		
-		// load parameters for SeRoNetSDKComponentGeneratorExtension
-		
-		// load parameters for PlainOpcUaComponentJoystickTrafficLightsExtension
+		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		
 		// load parameters for all registered component-extensions

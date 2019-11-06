@@ -3,7 +3,7 @@
 
 # ComponentJoystickTrafficLights Component
 
-![ComponentJoystickTrafficLights-ComponentImage](https://github.com/Servicerobotics-Ulm/ComponentRepository/blob/master/ComponentJoystickTrafficLights/model/ComponentJoystickTrafficLightsComponentDefinition.jpg)
+![ComponentJoystickTrafficLights-ComponentImage](model/ComponentJoystickTrafficLightsComponentDefinition.jpg)
 
 
 | Metaelement | Documentation |

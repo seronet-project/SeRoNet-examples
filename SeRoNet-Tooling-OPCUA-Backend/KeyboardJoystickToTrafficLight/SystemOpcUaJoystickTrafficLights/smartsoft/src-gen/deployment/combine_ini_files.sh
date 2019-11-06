@@ -18,13 +18,25 @@
 # This script collects the generated ini-file parts and combines them into single ini-files (one for each component artefact)
 #
 
+# create subfolder combined-ini-files (if not yet created)
+echo "create subfolder src-gen/combined-ini-files"
+mkdir -p src-gen/combined-ini-files
+
+# clean-up old combined-ini-files before they are generated again
+echo "clean-up src-gen/combined-ini-files subfolder"
+rm src-gen/combined-ini-files/*.ini
+
 # create ini-file ComponentJoystickTrafficLights.ini
 echo "create ini-file ComponentJoystickTrafficLights.ini"
-cp src-gen/system/ComponentJoystickTrafficLights.ini src-gen/deployment/
-cat src-gen/params/ComponentJoystickTrafficLights.ini >> src-gen/deployment/ComponentJoystickTrafficLights.ini
+cp src-gen/system/ComponentJoystickTrafficLights.ini src-gen/combined-ini-files/
+if [ -f src-gen/params/ComponentJoystickTrafficLights.ini ]; then
+  cat src-gen/params/ComponentJoystickTrafficLights.ini >> src-gen/combined-ini-files/ComponentJoystickTrafficLights.ini
+fi
 
 # create ini-file ComponentKeyboardJoystick.ini
 echo "create ini-file ComponentKeyboardJoystick.ini"
-cp src-gen/system/ComponentKeyboardJoystick.ini src-gen/deployment/
-cat src-gen/params/ComponentKeyboardJoystick.ini >> src-gen/deployment/ComponentKeyboardJoystick.ini
+cp src-gen/system/ComponentKeyboardJoystick.ini src-gen/combined-ini-files/
+if [ -f src-gen/params/ComponentKeyboardJoystick.ini ]; then
+  cat src-gen/params/ComponentKeyboardJoystick.ini >> src-gen/combined-ini-files/ComponentKeyboardJoystick.ini
+fi
 

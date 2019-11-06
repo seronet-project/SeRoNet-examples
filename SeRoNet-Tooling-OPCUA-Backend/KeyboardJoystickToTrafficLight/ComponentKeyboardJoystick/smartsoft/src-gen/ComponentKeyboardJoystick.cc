@@ -53,11 +53,11 @@ ComponentKeyboardJoystick::ComponentKeyboardJoystick()
 	connections.keyboardActivity.priority = -1;
 	connections.keyboardActivity.cpuAffinity = -1;
 	
+	// initialize members of PlainOpcUaComponentKeyboardJoystickExtension
+	
 	// initialize members of ComponentKeyboardJoystickROSExtension
 	
-	// initialize members of SeRoNetSDKComponentGeneratorExtension
-	
-	// initialize members of PlainOpcUaComponentKeyboardJoystickExtension
+	// initialize members of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -69,6 +69,11 @@ void ComponentKeyboardJoystick::addPortFactory(const std::string &name, Componen
 void ComponentKeyboardJoystick::addExtension(ComponentKeyboardJoystickExtension *extension)
 {
 	componentExtensionRegistry[extension->getName()] = extension;
+}
+
+SmartACE::SmartComponent* ComponentKeyboardJoystick::getComponentImpl()
+{
+	return dynamic_cast<ComponentKeyboardJoystickAcePortFactory*>(portFactoryRegistry["ACE_SmartSoft"])->getComponentImpl();
 }
 
 /**
@@ -139,11 +144,11 @@ void ComponentKeyboardJoystick::init(int argc, char *argv[])
 		loadParameter(argc, argv);
 		
 		
+		// initializations of PlainOpcUaComponentKeyboardJoystickExtension
+		
 		// initializations of ComponentKeyboardJoystickROSExtension
 		
-		// initializations of SeRoNetSDKComponentGeneratorExtension
-		
-		// initializations of PlainOpcUaComponentKeyboardJoystickExtension
+		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		
 		// initialize all registered port-factories
@@ -213,7 +218,7 @@ void ComponentKeyboardJoystick::init(int argc, char *argv[])
 			if(microseconds > 0) {
 				Smart::TimedTaskTrigger *triggerPtr = new Smart::TimedTaskTrigger();
 				triggerPtr->attach(keyboardActivity);
-				component->getTimerManager()->scheduleTimer(triggerPtr, std::chrono::microseconds(microseconds), std::chrono::microseconds(microseconds));
+				component->getTimerManager()->scheduleTimer(triggerPtr, (void *) 0, std::chrono::microseconds(microseconds), std::chrono::microseconds(microseconds));
 				// store trigger in class member
 				keyboardActivityTrigger = triggerPtr;
 			} else {
@@ -290,8 +295,10 @@ void ComponentKeyboardJoystick::fini()
 	// destroy all task instances
 	// unlink all UpcallManagers
 	// unlink the TaskTrigger
-	keyboardActivityTrigger->detach(keyboardActivity);
-	delete keyboardActivity;
+	if(keyboardActivityTrigger != NULL){
+		keyboardActivityTrigger->detach(keyboardActivity);
+		delete keyboardActivity;
+	}
 
 	// destroy all input-handler
 
@@ -325,11 +332,11 @@ void ComponentKeyboardJoystick::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of PlainOpcUaComponentKeyboardJoystickExtension
+	
 	// destruction of ComponentKeyboardJoystickROSExtension
 	
-	// destruction of SeRoNetSDKComponentGeneratorExtension
-	
-	// destruction of PlainOpcUaComponentKeyboardJoystickExtension
+	// destruction of OpcUaBackendComponentGeneratorExtension
 	
 }
 
@@ -430,11 +437,11 @@ void ComponentKeyboardJoystick::loadParameter(int argc, char *argv[])
 			parameter.getInteger("KeyboardActivity", "cpuAffinity", connections.keyboardActivity.cpuAffinity);
 		}
 		
+		// load parameters for PlainOpcUaComponentKeyboardJoystickExtension
+		
 		// load parameters for ComponentKeyboardJoystickROSExtension
 		
-		// load parameters for SeRoNetSDKComponentGeneratorExtension
-		
-		// load parameters for PlainOpcUaComponentKeyboardJoystickExtension
+		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		
 		// load parameters for all registered component-extensions

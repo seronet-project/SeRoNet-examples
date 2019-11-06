@@ -37,6 +37,7 @@ echo Sourcing referenced projects
 source src-gen/deployment/referenced-projects
 
 DEPLOY_LIBRARIES_USER=""
+###############################
 echo "Sourcing pre-deployment script for ComponentJoystickTrafficLights... (errors might be ignored)"
 DEPLOY_LIBRARIES=""
 DEPLOY_COMPONENT_FILES=""
@@ -60,7 +61,22 @@ for I in $DEPLOY_COMPONENT_FILES; do
 	fi
 done
 
+#########################
+## BEHAVIOR FILES
+shopt -u | grep -q nullglob && changed=true && shopt -s nullglob
+for entry in "$REFERENCED_PROJECT_ComponentJoystickTrafficLights"/model/*.smartTcl
+do
+  DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentJoystickTrafficLights="$DEPLOY_COMPONENT_TCL_MODEL_FILES_ComponentJoystickTrafficLights $entry"
+done
+[ $changed ] && shopt -u nullglob; unset changed
+
+echo "$DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentJoystickTrafficLights "
+#########################
+
 echo
+###############################
+ 
+###############################
 echo "Sourcing pre-deployment script for ComponentKeyboardJoystick... (errors might be ignored)"
 DEPLOY_LIBRARIES=""
 DEPLOY_COMPONENT_FILES=""
@@ -84,7 +100,21 @@ for I in $DEPLOY_COMPONENT_FILES; do
 	fi
 done
 
+#########################
+## BEHAVIOR FILES
+shopt -u | grep -q nullglob && changed=true && shopt -s nullglob
+for entry in "$REFERENCED_PROJECT_ComponentKeyboardJoystick"/model/*.smartTcl
+do
+  DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentKeyboardJoystick="$DEPLOY_COMPONENT_TCL_MODEL_FILES_ComponentKeyboardJoystick $entry"
+done
+[ $changed ] && shopt -u nullglob; unset changed
+
+echo "$DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentKeyboardJoystick "
+#########################
+
 echo
+###############################
+ 
 
 
 DEPL_FILES="
@@ -97,12 +127,12 @@ src-gen/deployment/ns_config.ini
 src/ComponentJoystickTrafficLights_data
 src/startstop-hooks-ComponentJoystickTrafficLights.sh
 $SMART_ROOT_ACE/bin/ComponentJoystickTrafficLights
-src-gen/deployment/ComponentJoystickTrafficLights.ini
+src-gen/combined-ini-files/ComponentJoystickTrafficLights.ini
 $SMART_ROOT_ACE/lib/libCommBasicObjects.so*
 src/ComponentKeyboardJoystick_data
 src/startstop-hooks-ComponentKeyboardJoystick.sh
 $SMART_ROOT_ACE/bin/ComponentKeyboardJoystick
-src-gen/deployment/ComponentKeyboardJoystick.ini
+src-gen/combined-ini-files/ComponentKeyboardJoystick.ini
 $SMART_ROOT_ACE/lib/libCommBasicObjects.so*
 
 $DEPLOY_LIBRARIES_USER
@@ -136,6 +166,7 @@ else
 	
 	TMPDIR=$(mktemp -d --suffix=.deployment) || exit 1
 	echo "Temporary directory: $TMPDIR"
+	mkdir $TMPDIR/behaviorFiles
 	trap "rm -rf $TMPDIR" EXIT
 	
 	# collect files in $TMPDIR
@@ -146,13 +177,26 @@ if [ ! "$DEPLOY_COMPONENT_FILES_PATHS_ComponentJoystickTrafficLights" = "" ]; th
 	cp -rv $DEPLOY_COMPONENT_FILES_PATHS_ComponentJoystickTrafficLights $TMPDIR/ComponentJoystickTrafficLights_data/ 2>&1
 fi
 
+if [ ! "$DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentJoystickTrafficLights" = "" ]; then
+	cp -rv $DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentJoystickTrafficLights $TMPDIR/behaviorFiles/ 2>&1
+fi
+
 cp -v $REFERENCED_PROJECT_ComponentJoystickTrafficLights/smartsoft/src/startstop-hooks.sh $TMPDIR/startstop-hooks-component-ComponentJoystickTrafficLights.sh 2>/dev/null
 #rsync -l -r -v --progress --exclude ".svn" $DEPLOY_COMPONENT_FILES_PATHS_ComponentKeyboardJoystick $TMPDIR/ComponentKeyboardJoystick_data/
 if [ ! "$DEPLOY_COMPONENT_FILES_PATHS_ComponentKeyboardJoystick" = "" ]; then
 	cp -rv $DEPLOY_COMPONENT_FILES_PATHS_ComponentKeyboardJoystick $TMPDIR/ComponentKeyboardJoystick_data/ 2>&1
 fi
 
+if [ ! "$DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentKeyboardJoystick" = "" ]; then
+	cp -rv $DEPLOY_COMPONENT_BEHAVIOR_MODEL_FILES_ComponentKeyboardJoystick $TMPDIR/behaviorFiles/ 2>&1
+fi
+
 cp -v $REFERENCED_PROJECT_ComponentKeyboardJoystick/smartsoft/src/startstop-hooks.sh $TMPDIR/startstop-hooks-component-ComponentKeyboardJoystick.sh 2>/dev/null
+	
+	#collect and copy behavior related files
+	echo "Sourcing behavior files..."
+	test -f src-gen/deployment/deploy-behavior-files.sh && source src-gen/deployment/deploy-behavior-files.sh
+	
 	# actually deploy:
 	rsync -z -l -r -v --progress --exclude ".svn" -e ssh $TMPDIR/ $SSH_TARGET
 fi

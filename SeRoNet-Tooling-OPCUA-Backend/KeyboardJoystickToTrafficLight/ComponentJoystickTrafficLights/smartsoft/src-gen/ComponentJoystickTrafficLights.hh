@@ -29,13 +29,13 @@
 class ComponentJoystickTrafficLightsPortFactoryInterface;
 class ComponentJoystickTrafficLightsExtension;
 
-// includes for ComponentJoystickTrafficLightsROSExtension
-
-// includes for SeRoNetSDKComponentGeneratorExtension
-
 // includes for PlainOpcUaComponentJoystickTrafficLightsExtension
 // include plain OPC UA device clients
 // include plain OPC UA status servers
+
+// includes for ComponentJoystickTrafficLightsROSExtension
+
+// includes for OpcUaBackendComponentGeneratorExtension
 
 
 // include communication objects
@@ -111,11 +111,11 @@ public:
 	
 	// define request-handlers
 	
+	// definitions of PlainOpcUaComponentJoystickTrafficLightsExtension
+	
 	// definitions of ComponentJoystickTrafficLightsROSExtension
 	
-	// definitions of SeRoNetSDKComponentGeneratorExtension
-	
-	// definitions of PlainOpcUaComponentJoystickTrafficLightsExtension
+	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	
 	// define default slave ports
@@ -126,6 +126,8 @@ public:
 	
 	/// this method is used to register different PortFactory classes (one for each supported middleware framework)
 	void addPortFactory(const std::string &name, ComponentJoystickTrafficLightsPortFactoryInterface *portFactory);
+	
+	SmartACE::SmartComponent* getComponentImpl();
 	
 	/// this method is used to register different component-extension classes
 	void addExtension(ComponentJoystickTrafficLightsExtension *extension);
@@ -226,11 +228,11 @@ public:
 			std::string roboticMiddleware;
 		} joystickServiceIn;
 		
+		// -- parameters for PlainOpcUaComponentJoystickTrafficLightsExtension
+		
 		// -- parameters for ComponentJoystickTrafficLightsROSExtension
 		
-		// -- parameters for SeRoNetSDKComponentGeneratorExtension
-		
-		// -- parameters for PlainOpcUaComponentJoystickTrafficLightsExtension
+		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 	} connections;
 };

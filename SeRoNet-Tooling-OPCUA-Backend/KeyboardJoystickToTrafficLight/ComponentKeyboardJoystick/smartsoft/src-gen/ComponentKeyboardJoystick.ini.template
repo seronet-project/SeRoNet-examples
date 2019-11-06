@@ -60,13 +60,14 @@ roboticMiddleware ACE_SmartSoft
 # client port parameter
 
 ##########################
+## parameters of PlainOpcUaComponentKeyboardJoystickExtension
+
+
+##########################
 ## parameters of ComponentKeyboardJoystickROSExtension
 
 ##########################
-## parameters of SeRoNetSDKComponentGeneratorExtension
-
-##########################
-## parameters of PlainOpcUaComponentKeyboardJoystickExtension
+## parameters of OpcUaBackendComponentGeneratorExtension
 
 
 #####################
