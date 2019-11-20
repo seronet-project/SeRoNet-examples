@@ -26,9 +26,9 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Traject
 	good_bit = good_bit && cdr << data.header;
 	// serialize list-element joint_names
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.joint_names.size());
-	std::vector<ACE_CString>::const_iterator data_joint_namesIt;
+	std::vector<std::string>::const_iterator data_joint_namesIt;
 	for(data_joint_namesIt=data.joint_names.begin(); data_joint_namesIt!=data.joint_names.end(); data_joint_namesIt++) {
-		good_bit = good_bit && cdr << ACE_CString(data_joint_namesIt->c_str());
+		good_bit = good_bit && cdr << ACE_CString((*data_joint_namesIt).c_str());
 	}
 	// serialize list-element points
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.points.size());
@@ -53,7 +53,7 @@ ACE_CDR::Boolean operator>>(ACE_InputCDR &cdr, ROSCommon_msgsIDL::Trajectory_msg
 	ACE_CString data_joint_namesItem;
 	for(ACE_CDR::ULong i=0; i<data_joint_namesNbr; ++i) {
 		good_bit = good_bit && cdr >> data_joint_namesItem;
-		data.joint_names.push_back(data_joint_namesItem);
+		data.joint_names.push_back(data_joint_namesItem.c_str());
 	}
 	// deserialize list-type element points
 	ACE_CDR::ULong data_pointsNbr;

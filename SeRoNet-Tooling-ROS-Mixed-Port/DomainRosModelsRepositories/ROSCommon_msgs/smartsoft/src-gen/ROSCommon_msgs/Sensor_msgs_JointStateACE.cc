@@ -25,9 +25,9 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Sensor_
 	good_bit = good_bit && cdr << data.header;
 	// serialize list-element name
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.name.size());
-	std::vector<ACE_CString>::const_iterator data_nameIt;
+	std::vector<std::string>::const_iterator data_nameIt;
 	for(data_nameIt=data.name.begin(); data_nameIt!=data.name.end(); data_nameIt++) {
-		good_bit = good_bit && cdr << ACE_CString(data_nameIt->c_str());
+		good_bit = good_bit && cdr << ACE_CString((*data_nameIt).c_str());
 	}
 	// serialize list-element position
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.position.size());
@@ -55,7 +55,7 @@ ACE_CDR::Boolean operator>>(ACE_InputCDR &cdr, ROSCommon_msgsIDL::Sensor_msgs_Jo
 	ACE_CString data_nameItem;
 	for(ACE_CDR::ULong i=0; i<data_nameNbr; ++i) {
 		good_bit = good_bit && cdr >> data_nameItem;
-		data.name.push_back(data_nameItem);
+		data.name.push_back(data_nameItem.c_str());
 	}
 	// deserialize list-type element position
 	ACE_CDR::ULong data_positionNbr;

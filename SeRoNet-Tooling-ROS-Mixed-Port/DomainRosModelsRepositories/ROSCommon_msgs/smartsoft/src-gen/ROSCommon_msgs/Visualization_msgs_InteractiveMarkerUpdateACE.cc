@@ -42,9 +42,9 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Visuali
 	}
 	// serialize list-element erases
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.erases.size());
-	std::vector<ACE_CString>::const_iterator data_erasesIt;
+	std::vector<std::string>::const_iterator data_erasesIt;
 	for(data_erasesIt=data.erases.begin(); data_erasesIt!=data.erases.end(); data_erasesIt++) {
-		good_bit = good_bit && cdr << ACE_CString(data_erasesIt->c_str());
+		good_bit = good_bit && cdr << ACE_CString((*data_erasesIt).c_str());
 	}
 	
 	return good_bit;
@@ -89,7 +89,7 @@ ACE_CDR::Boolean operator>>(ACE_InputCDR &cdr, ROSCommon_msgsIDL::Visualization_
 	ACE_CString data_erasesItem;
 	for(ACE_CDR::ULong i=0; i<data_erasesNbr; ++i) {
 		good_bit = good_bit && cdr >> data_erasesItem;
-		data.erases.push_back(data_erasesItem);
+		data.erases.push_back(data_erasesItem.c_str());
 	}
 	
 	return good_bit;
