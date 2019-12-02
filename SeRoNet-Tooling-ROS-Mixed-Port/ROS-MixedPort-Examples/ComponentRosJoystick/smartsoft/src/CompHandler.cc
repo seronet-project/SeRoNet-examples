@@ -20,6 +20,7 @@
 #include <iostream>
 
 // include communication objects
+#include <CommBasicObjects/CommJoystick.hh>
 
 
 void CompHandler::onStartup() 

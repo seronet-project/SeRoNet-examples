@@ -26,6 +26,8 @@
 // include all interaction-observer interfaces
 #include <JoystickActivityObserverInterface.hh>
 
+#include <sensor_msgs/Joy.h>
+#include <mutex>
 
 class JoystickActivityCore
 :	public SmartACE::ManagedTask
@@ -86,6 +88,7 @@ public:
 	inline int getCurrentUpdateCount() const {
 		return currentUpdateCount;
 	}
-	
+	CommBasicObjects::CommJoystick comm_joy;
+	void _joy_cb (const sensor_msgs::Joy::ConstPtr &msg);
 };
 #endif
