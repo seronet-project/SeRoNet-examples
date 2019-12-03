@@ -1,6 +1,7 @@
 ComponentDefinition ComponentHelloSubscriber logo "/ComponentHelloSubscriber/model/logo.png"
 {
-InputPort TimeServiceIn implements DomainHelloServices.TimeService {
+	/// this port receives incoming time value updates
+	InputPort TimeServiceIn implements DomainHelloServices.TimeService {
 	}
 	Activity ReceiverActivity
 	{

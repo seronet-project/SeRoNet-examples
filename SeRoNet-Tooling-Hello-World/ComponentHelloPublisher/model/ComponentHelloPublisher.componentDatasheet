@@ -1,0 +1,5 @@
+ComponentDatasheet ComponentHelloPublisher
+{
+	BaseURI "http://www.servicerobotik-ulm.de" 
+	ShortDescription "This component periodically reads the current system time and publishes the related value at the output port"
+}

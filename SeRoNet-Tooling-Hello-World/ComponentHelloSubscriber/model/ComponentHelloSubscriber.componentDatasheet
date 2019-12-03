@@ -1,0 +1,5 @@
+ComponentDatasheet ComponentHelloSubscriber
+{
+	BaseURI "http://www.servicerobotik-ulm.de" 
+	ShortDescription "This component receives incoming time value updates and prints them out to standard output"
+}
