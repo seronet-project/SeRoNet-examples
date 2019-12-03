@@ -1,0 +1,7 @@
+CommObjectsRepository DomainHelloServices version 1 . 0
+{
+	CommObject CommTime {
+		sec: UInt64
+		usec: UInt64
+	}
+}

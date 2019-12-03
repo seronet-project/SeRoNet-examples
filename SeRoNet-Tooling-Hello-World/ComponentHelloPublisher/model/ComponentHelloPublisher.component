@@ -1,0 +1,9 @@
+ComponentDefinition ComponentHelloPublisher logo "/ComponentHelloPublisher/model/logo.png"
+{
+Activity TimeTask
+	{
+		DefaultTrigger PeriodicTimer 1.0 Hz
+	}
+	OutputPort TimeServiceOut implements DomainHelloServices.TimeService realizedBy TimeTask {
+	}
+}

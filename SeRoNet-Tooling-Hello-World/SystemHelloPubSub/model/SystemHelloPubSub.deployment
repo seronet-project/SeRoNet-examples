@@ -1,0 +1,13 @@
+DeploymentModel SystemHelloPubSub using ComponentArchitecture SystemHelloPubSub
+{
+TargetPlatformReference LocalPC using SystemHelloPubSub.LocalPC
+	{
+		UploadDirectory "/tmp"
+		NetworkInterface localhost
+	}
+	NamingService
+	{
+		deploy-to LocalPC }
+	ComponentArtefact ComponentHelloPublisher deploy-to LocalPC
+	ComponentArtefact ComponentHelloSubscriber deploy-to LocalPC
+}

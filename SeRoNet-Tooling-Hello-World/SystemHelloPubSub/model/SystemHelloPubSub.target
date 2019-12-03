@@ -1,0 +1,6 @@
+TargetPlatformModel SystemHelloPubSub
+{
+TargetPlatformDefinition LocalPC
+	{
+		NetworkInterface localhost { HostAddress "localhost" }
+	} }

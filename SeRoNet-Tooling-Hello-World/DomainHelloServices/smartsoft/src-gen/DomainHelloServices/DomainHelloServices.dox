@@ -1,0 +1,28 @@
+/** 
+\class DomainHelloServices::CommTimeCore
+
+Structure of Communication Object:
+- sec: UInt64 
+- usec: UInt64 
+
+
+
+
+@defgroup DomainHelloServices
+@ingroup commObjGroup
+@{
+\page DomainHelloServicesPage DomainHelloServices
+Class Reference: DomainHelloServices
+<hr>
+
+@section CommTime CommTime
+- sec: UInt64  
+- usec: UInt64  
+
+Class Reference: DomainHelloServices::CommTimeCore
+<hr>
+
+
+@}
+*/
+

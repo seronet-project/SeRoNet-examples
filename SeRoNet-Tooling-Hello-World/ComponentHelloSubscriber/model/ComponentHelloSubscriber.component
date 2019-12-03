@@ -1,0 +1,10 @@
+ComponentDefinition ComponentHelloSubscriber logo "/ComponentHelloSubscriber/model/logo.png"
+{
+InputPort TimeServiceIn implements DomainHelloServices.TimeService {
+	}
+	Activity ReceiverActivity
+	{
+		InputPortLink TimeServiceIn { oversamplingOk undersamplingOk }
+		DefaultTrigger InputPortTrigger TimeServiceIn
+	}
+}

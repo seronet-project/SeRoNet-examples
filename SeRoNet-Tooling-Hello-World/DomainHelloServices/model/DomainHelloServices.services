@@ -1,0 +1,8 @@
+ServiceDefRepository DomainHelloServices version 1 . 0
+{
+	ForkingServiceDefinition TimeService {
+		PushPattern <
+			DataType = DomainHelloServices.CommTime
+		>
+	}
+}
