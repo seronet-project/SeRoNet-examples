@@ -29,6 +29,8 @@
 class ComponentRosJoystickPortFactoryInterface;
 class ComponentRosJoystickExtension;
 
+// includes for OpcUaBackendComponentGeneratorExtension
+
 // includes for ComponentRosJoystickROSExtension
 #include "ComponentRosJoystickRosPortBaseClass.hh"
 
@@ -102,6 +104,8 @@ public:
 	// define answer-ports
 	
 	// define request-handlers
+	
+	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	// definitions of ComponentRosJoystickROSExtension
 	ComponentRosJoystickRosPortBaseClass *rosPorts;
@@ -210,6 +214,8 @@ public:
 		} joystickServiceOut;
 	
 		//--- client port parameter ---
+		
+		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// -- parameters for ComponentRosJoystickROSExtension
 		

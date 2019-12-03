@@ -20,21 +20,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(ros_componentrosjoystick)
 
-## Find catkin and any catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy  sensor_msgs genmsg)
+find_package(catkin REQUIRED COMPONENTS roscpp  sensor_msgs)
 
-## Declare ROS messages and services
-#add_message_files(FILES Num.msg)
-#add_service_files(FILES AddTwoInts.srv)
-
-## Generate added messages and services
-#generate_messages(DEPENDENCIES std_msgs)
-
-## Declare a catkin package
 catkin_package()
 
-## Build talker and listener
-# include_directories(include ${catkin_INCLUDE_DIRS})
 LIST(APPEND LOCAL_INCLUDES ${catkin_INCLUDE_DIRS})
 LIST(APPEND LOCAL_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR})
 LIST(APPEND LOCAL_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR}/../src)
@@ -46,13 +35,5 @@ LIST(APPEND SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../src/ComponentRosJoystickRosPortC
 set(ROS_SRCS ${SRCS} PARENT_SCOPE)
 
 set(ROS_LIBS ${catkin_LIBRARIES} PARENT_SCOPE)
-
-#ADD_LIBRARY(ROSComponentRosJoystick STATIC ${CMAKE_CURRENT_SOURCE_DIR}/ComponentRosJoystickRosPortExtension.cc)
-#target_link_libraries(ROSComponentRosJoystick ${catkin_LIBRARIES})
-#set_property(TARGET ROSComponentRosJoystick PROPERTY CXX_STANDARD 11)
-#target_include_directories(ROSComponentRosJoystick PUBLIC
-#  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-#)
-#add_dependencies(system_test beginner_tutorials_generate_messages_cpp)
 
 # %EndTag(FULLTEXT)%
