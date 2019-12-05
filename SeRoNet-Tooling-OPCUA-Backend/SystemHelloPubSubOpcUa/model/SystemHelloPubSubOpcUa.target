@@ -1,0 +1,6 @@
+TargetPlatformModel SystemHelloPubSubOpcUa
+{
+TargetPlatformDefinition LocalPC
+	{
+		NetworkInterface localhost { HostAddress "localhost" }
+	} }

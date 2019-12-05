@@ -1,0 +1,12 @@
+SystemComponentArchitecture SystemHelloPubSubOpcUa
+{
+ComponentInstance ComponentHelloPublisher instantiates ComponentHelloPublisher
+	{
+		ProvidedService TimeServiceOut
+	}
+	ComponentInstance ComponentHelloSubscriber instantiates ComponentHelloSubscriber
+	{
+		RequiredService TimeServiceIn
+	}
+	Connection ComponentHelloSubscriber.TimeServiceIn -> ComponentHelloPublisher.TimeServiceOut useMiddleware OpcUa_SeRoNet
+}

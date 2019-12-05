@@ -1,8 +1,0 @@
-ComponentDefinition ComponentKeyboardJoystick logo "/ComponentKeyboardJoystick/model/logo.png"
-{
-	Activity KeyboardActivity
-	{
-	}
-	OutputPort JoystickServiceOut implements CommBasicObjects.JoystickService realizedBy KeyboardActivity {
-		SupportedMiddleware OpcUa_SeRoNet }
-}

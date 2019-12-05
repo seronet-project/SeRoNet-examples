@@ -1,0 +1,6 @@
+# This file is generated using the SmartMDSD Toolchain.
+# Any changes will be overwritten next time the deployment project
+# is deployed/run from within the SmartMDSD toolchain.
+
+REFERENCED_PROJECT_ComponentHelloPublisher="/home/alexej/SOFTWARE/SeRoNet-examples/SeRoNet-Tooling-Hello-World/ComponentHelloPublisher"
+REFERENCED_PROJECT_ComponentHelloSubscriber="/home/alexej/SOFTWARE/SeRoNet-examples/SeRoNet-Tooling-Hello-World/ComponentHelloSubscriber"

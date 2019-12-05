@@ -21,7 +21,7 @@
 TARGET_SSHUSER=
 TARGET_IP=localhost
 TARGET_DIRECTORY="/tmp"
-DEPLOYMENT_DIRECTORY=SystemHelloPubSub.deployment/
+DEPLOYMENT_DIRECTORY=SystemHelloPubSubOpcUa.deployment/
 
 echo "#######################################################"
 echo "## Deployment of Device LocalPC / $TARGET_IP"

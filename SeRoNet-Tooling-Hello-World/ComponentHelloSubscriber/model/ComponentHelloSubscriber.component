@@ -2,6 +2,7 @@ ComponentDefinition ComponentHelloSubscriber logo "/ComponentHelloSubscriber/mod
 {
 	/// this port receives incoming time value updates
 	InputPort TimeServiceIn implements DomainHelloServices.TimeService {
+	SupportedMiddleware OpcUa_SeRoNet SupportedMiddleware ACE_SmartSoft
 	}
 	Activity ReceiverActivity
 	{

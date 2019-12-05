@@ -79,7 +79,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_HQBIABXQEeqqC47Ky0t7MA" name="ComponentHelloSubscriber" tooltipText="ComponentDefinition: ComponentHelloSubscriber&#xA;">
       <target xmi:type="ComponentDefinition:ComponentDefinition" href="model/ComponentHelloSubscriber.component#//@component"/>
       <semanticElements xmi:type="ComponentDefinition:ComponentDefinition" href="model/ComponentHelloSubscriber.component#//@component"/>
-      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JgLz0BXQEeqqC47Ky0t7MA" name="TimeServiceIn" tooltipText="InputPort: TimeServiceIn&#xA;" outgoingEdges="_NiiO8BXQEeqqC47Ky0t7MA" width="3" height="3" resizeKind="NSEW">
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JgLz0BXQEeqqC47Ky0t7MA" name="TimeServiceIn" tooltipText="InputPort: TimeServiceIn&#xA; this port receives incoming time value updates" outgoingEdges="_NiiO8BXQEeqqC47Ky0t7MA" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="ComponentDefinition:InputPort" href="model/ComponentHelloSubscriber.component#//@component/@elements.0"/>
         <semanticElements xmi:type="ComponentDefinition:InputPort" href="model/ComponentHelloSubscriber.component#//@component/@elements.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

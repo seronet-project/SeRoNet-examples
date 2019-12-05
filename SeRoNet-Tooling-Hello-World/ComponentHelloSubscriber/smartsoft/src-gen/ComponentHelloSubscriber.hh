@@ -29,13 +29,13 @@
 class ComponentHelloSubscriberPortFactoryInterface;
 class ComponentHelloSubscriberExtension;
 
+// includes for ComponentHelloSubscriberROSExtension
+
 // includes for OpcUaBackendComponentGeneratorExtension
 
 // includes for PlainOpcUaComponentHelloSubscriberExtension
 // include plain OPC UA device clients
 // include plain OPC UA status servers
-
-// includes for ComponentHelloSubscriberROSExtension
 
 
 // include communication objects
@@ -108,11 +108,11 @@ public:
 	
 	// define request-handlers
 	
+	// definitions of ComponentHelloSubscriberROSExtension
+	
 	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	// definitions of PlainOpcUaComponentHelloSubscriberExtension
-	
-	// definitions of ComponentHelloSubscriberROSExtension
 	
 	
 	// define default slave ports
@@ -221,11 +221,11 @@ public:
 			std::string roboticMiddleware;
 		} timeServiceIn;
 		
+		// -- parameters for ComponentHelloSubscriberROSExtension
+		
 		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// -- parameters for PlainOpcUaComponentHelloSubscriberExtension
-		
-		// -- parameters for ComponentHelloSubscriberROSExtension
 		
 	} connections;
 };

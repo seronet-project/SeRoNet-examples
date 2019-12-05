@@ -6,5 +6,6 @@ ComponentDefinition ComponentHelloPublisher logo "/ComponentHelloPublisher/model
 	}
 	/// This port periodically publisches the current system time
 	OutputPort TimeServiceOut implements DomainHelloServices.TimeService realizedBy TimeTask {
+	SupportedMiddleware OpcUa_SeRoNet SupportedMiddleware ACE_SmartSoft
 	}
 }

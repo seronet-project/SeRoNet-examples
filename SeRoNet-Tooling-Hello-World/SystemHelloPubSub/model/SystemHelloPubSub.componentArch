@@ -1,6 +1,6 @@
 SystemComponentArchitecture SystemHelloPubSub
 {
-ComponentInstance ComponentHelloPublisher instantiates ComponentHelloPublisher
+	ComponentInstance ComponentHelloPublisher instantiates ComponentHelloPublisher
 	{
 		ProvidedService TimeServiceOut
 	}

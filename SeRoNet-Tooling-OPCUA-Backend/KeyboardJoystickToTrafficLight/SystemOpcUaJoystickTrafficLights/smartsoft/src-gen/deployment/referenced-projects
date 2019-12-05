@@ -1,6 +1,0 @@
-# This file is generated using the SmartMDSD Toolchain.
-# Any changes will be overwritten next time the deployment project
-# is deployed/run from within the SmartMDSD toolchain.
-
-REFERENCED_PROJECT_ComponentJoystickTrafficLights="/home/nhg/SeRoNetInstaller/SeRoNet-examples/SeRoNet-Tooling-OPCUA-Backend/KeyboardJoystickToTrafficLight/ComponentJoystickTrafficLights"
-REFERENCED_PROJECT_ComponentKeyboardJoystick="/home/nhg/SeRoNetInstaller/SeRoNet-examples/SeRoNet-Tooling-OPCUA-Backend/KeyboardJoystickToTrafficLight/ComponentKeyboardJoystick"

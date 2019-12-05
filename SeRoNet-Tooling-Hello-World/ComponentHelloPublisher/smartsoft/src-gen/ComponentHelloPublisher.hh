@@ -29,13 +29,13 @@
 class ComponentHelloPublisherPortFactoryInterface;
 class ComponentHelloPublisherExtension;
 
+// includes for ComponentHelloPublisherROSExtension
+
 // includes for OpcUaBackendComponentGeneratorExtension
 
 // includes for PlainOpcUaComponentHelloPublisherExtension
 // include plain OPC UA device clients
 // include plain OPC UA status servers
-
-// includes for ComponentHelloPublisherROSExtension
 
 
 // include communication objects
@@ -104,11 +104,11 @@ public:
 	
 	// define request-handlers
 	
+	// definitions of ComponentHelloPublisherROSExtension
+	
 	// definitions of OpcUaBackendComponentGeneratorExtension
 	
 	// definitions of PlainOpcUaComponentHelloPublisherExtension
-	
-	// definitions of ComponentHelloPublisherROSExtension
 	
 	
 	// define default slave ports
@@ -213,11 +213,11 @@ public:
 	
 		//--- client port parameter ---
 		
+		// -- parameters for ComponentHelloPublisherROSExtension
+		
 		// -- parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// -- parameters for PlainOpcUaComponentHelloPublisherExtension
-		
-		// -- parameters for ComponentHelloPublisherROSExtension
 		
 	} connections;
 };

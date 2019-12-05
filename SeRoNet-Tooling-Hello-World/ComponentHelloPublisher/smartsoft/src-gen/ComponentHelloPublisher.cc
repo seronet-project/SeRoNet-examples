@@ -55,11 +55,11 @@ ComponentHelloPublisher::ComponentHelloPublisher()
 	connections.timeTask.priority = -1;
 	connections.timeTask.cpuAffinity = -1;
 	
+	// initialize members of ComponentHelloPublisherROSExtension
+	
 	// initialize members of OpcUaBackendComponentGeneratorExtension
 	
 	// initialize members of PlainOpcUaComponentHelloPublisherExtension
-	
-	// initialize members of ComponentHelloPublisherROSExtension
 	
 }
 
@@ -146,11 +146,11 @@ void ComponentHelloPublisher::init(int argc, char *argv[])
 		loadParameter(argc, argv);
 		
 		
+		// initializations of ComponentHelloPublisherROSExtension
+		
 		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		// initializations of PlainOpcUaComponentHelloPublisherExtension
-		
-		// initializations of ComponentHelloPublisherROSExtension
 		
 		
 		// initialize all registered port-factories
@@ -347,11 +347,11 @@ void ComponentHelloPublisher::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of ComponentHelloPublisherROSExtension
+	
 	// destruction of OpcUaBackendComponentGeneratorExtension
 	
 	// destruction of PlainOpcUaComponentHelloPublisherExtension
-	
-	// destruction of ComponentHelloPublisherROSExtension
 	
 }
 
@@ -452,11 +452,11 @@ void ComponentHelloPublisher::loadParameter(int argc, char *argv[])
 			parameter.getInteger("TimeTask", "cpuAffinity", connections.timeTask.cpuAffinity);
 		}
 		
+		// load parameters for ComponentHelloPublisherROSExtension
+		
 		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// load parameters for PlainOpcUaComponentHelloPublisherExtension
-		
-		// load parameters for ComponentHelloPublisherROSExtension
 		
 		
 		// load parameters for all registered component-extensions

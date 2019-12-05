@@ -1,0 +1,13 @@
+DeploymentModel SystemHelloPubSubOpcUa using ComponentArchitecture SystemHelloPubSubOpcUa
+{
+TargetPlatformReference LocalPC using SystemHelloPubSubOpcUa.LocalPC
+	{
+		UploadDirectory "/tmp"
+		NetworkInterface localhost
+	}
+	NamingService
+	{
+		deploy-to LocalPC }
+	ComponentArtefact ComponentHelloPublisher deploy-to LocalPC
+	ComponentArtefact ComponentHelloSubscriber deploy-to LocalPC
+}

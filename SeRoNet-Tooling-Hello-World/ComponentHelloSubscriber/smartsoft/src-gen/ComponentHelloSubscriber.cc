@@ -61,11 +61,11 @@ ComponentHelloSubscriber::ComponentHelloSubscriber()
 	connections.receiverActivity.priority = -1;
 	connections.receiverActivity.cpuAffinity = -1;
 	
+	// initialize members of ComponentHelloSubscriberROSExtension
+	
 	// initialize members of OpcUaBackendComponentGeneratorExtension
 	
 	// initialize members of PlainOpcUaComponentHelloSubscriberExtension
-	
-	// initialize members of ComponentHelloSubscriberROSExtension
 	
 }
 
@@ -169,11 +169,11 @@ void ComponentHelloSubscriber::init(int argc, char *argv[])
 		loadParameter(argc, argv);
 		
 		
+		// initializations of ComponentHelloSubscriberROSExtension
+		
 		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		// initializations of PlainOpcUaComponentHelloSubscriberExtension
-		
-		// initializations of ComponentHelloSubscriberROSExtension
 		
 		
 		// initialize all registered port-factories
@@ -376,11 +376,11 @@ void ComponentHelloSubscriber::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of ComponentHelloSubscriberROSExtension
+	
 	// destruction of OpcUaBackendComponentGeneratorExtension
 	
 	// destruction of PlainOpcUaComponentHelloSubscriberExtension
-	
-	// destruction of ComponentHelloSubscriberROSExtension
 	
 }
 
@@ -484,11 +484,11 @@ void ComponentHelloSubscriber::loadParameter(int argc, char *argv[])
 			parameter.getInteger("ReceiverActivity", "cpuAffinity", connections.receiverActivity.cpuAffinity);
 		}
 		
+		// load parameters for ComponentHelloSubscriberROSExtension
+		
 		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// load parameters for PlainOpcUaComponentHelloSubscriberExtension
-		
-		// load parameters for ComponentHelloSubscriberROSExtension
 		
 		
 		// load parameters for all registered component-extensions
