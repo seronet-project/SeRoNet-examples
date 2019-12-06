@@ -53,11 +53,15 @@ Now, you can easily build all the related components of the system by right clic
 
 ![BuildSystemProject](Screenshots/04-BuildSystemProjects.png)
 
-After the actual deployment (i.e. the uploading of all related binaries, libraries and configurations files to the target platform) has finished, a dialog window will appear asking whether one wants to remotely launch the deployed system:
+The next step is to trigger that actual **Deployment Action** by again right clicking at the **SystemHelloPubSubOpcUa** project within the **SmartMDSD Project Explorer** and selecting the menu option **Deployment Action** as shown in the next screenshot:
+
+![DeploymentAction](Screenshots/05-DeploymentAction.png)
+
+This action will use SSH to upload all related binaries, libraries and configurations files of the current system to the target platform. Following that, a dialog window will appear asking whether the system should be remotely started:
 
 ![StartDeployment](Screenshots/06-StartDeployment.png)
 
-If you accept the dialog by pressing **Yes** a new terminal window will open that internally creates an SSH connection to the target and starts a simple terminal menu as shown at the upper left in the next screenshot:
+If you accept the dialog by pressing **Yes** a new terminal window will open. This terminal internally creates an SSH connection to the target platform and starts a simple terminal menu as shown at the upper left in the next screenshot:
 
 ![LaunchedSystem](Screenshots/07-LaunchedSystem.png)
 
