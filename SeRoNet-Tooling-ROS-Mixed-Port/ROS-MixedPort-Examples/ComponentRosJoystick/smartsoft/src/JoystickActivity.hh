@@ -20,19 +20,17 @@
 #include "JoystickActivityCore.hh"
 
 #include <mutex>
-#include <sensor_msgs/Joy.h>
+
 
 class JoystickActivity  : public JoystickActivityCore
 {
 private:
 	std::mutex mtx;
-	CommBasicObjects::CommJoystick comm_joy;
+
 public:
 	JoystickActivity(SmartACE::SmartComponent *comp);
 	virtual ~JoystickActivity();
 	
-	void update_joystrick_msg(const sensor_msgs::Joy::ConstPtr &msg);
-
 	virtual int on_entry();
 	virtual int on_execute();
 	virtual int on_exit();

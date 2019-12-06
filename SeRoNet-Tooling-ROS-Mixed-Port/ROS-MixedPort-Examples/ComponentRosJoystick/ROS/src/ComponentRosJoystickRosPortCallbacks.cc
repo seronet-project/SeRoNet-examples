@@ -28,7 +28,9 @@ ComponentRosJoystickRosPortCallbacks::~ComponentRosJoystickRosPortCallbacks() { 
 
 void ComponentRosJoystickRosPortCallbacks::_joy_cb (const sensor_msgs::Joy::ConstPtr &msg)
 {
-	COMP->joystickActivity->update_joystrick_msg(msg);
+	// for implementing this method, you can use the "COMP->" macro to access the component's class members
+	COMP->joystickActivity->_joy_cb(msg);
+	
 }
 
 

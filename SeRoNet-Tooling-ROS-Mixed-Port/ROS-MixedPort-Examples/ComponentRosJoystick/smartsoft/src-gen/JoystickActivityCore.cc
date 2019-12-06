@@ -36,6 +36,24 @@ JoystickActivityCore::~JoystickActivityCore()
 {
 }
 
+void JoystickActivityCore::_joy_cb (const sensor_msgs::Joy::ConstPtr &msg) {
+	std::unique_lock<std::mutex> lck (interaction_observers_mutex);
+	for(size_t ax=0; ax < msg->axes.size(); ++ax) {
+		if(ax == 0) {
+			comm_joy.set_x(msg->axes[ax]);
+		} else if(ax == 1) {
+			comm_joy.set_y(msg->axes[ax]);
+		} else if(ax == 2) {
+			comm_joy.set_x2(msg->axes[ax]);
+		} else if(ax == 3) {
+			comm_joy.set_y2(msg->axes[ax]);
+		}
+	}
+	for(size_t btn=0; btn < msg->buttons.size(); ++btn) {
+		// TODO: check if this conversion is correct
+		comm_joy.set_button(btn, msg->buttons[btn]);
+	}
+}
 
 void JoystickActivityCore::notify_all_interaction_observers() {
 	std::unique_lock<std::mutex> lock(interaction_observers_mutex);

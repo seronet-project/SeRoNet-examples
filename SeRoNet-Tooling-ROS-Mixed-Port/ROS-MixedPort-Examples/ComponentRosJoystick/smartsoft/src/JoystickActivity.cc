@@ -29,25 +29,7 @@ JoystickActivity::~JoystickActivity()
 	std::cout << "destructor JoystickActivity\n";
 }
 
-void JoystickActivity::update_joystrick_msg(const sensor_msgs::Joy::ConstPtr &msg)
-{
-	std::unique_lock<std::mutex> lck (mtx);
-	for(size_t ax=0; ax < msg->axes.size(); ++ax) {
-		if(ax == 0) {
-			comm_joy.set_x(msg->axes[ax]);
-		} else if(ax == 1) {
-			comm_joy.set_y(msg->axes[ax]);
-		} else if(ax == 2) {
-			comm_joy.set_x2(msg->axes[ax]);
-		} else if(ax == 3) {
-			comm_joy.set_y2(msg->axes[ax]);
-		}
-	}
-	for(size_t btn=0; btn < msg->buttons.size(); ++btn) {
-		// TODO: check if this conversion is correct
-		comm_joy.set_button(btn, msg->buttons[btn]);
-	}
-}
+
 
 int JoystickActivity::on_entry()
 {

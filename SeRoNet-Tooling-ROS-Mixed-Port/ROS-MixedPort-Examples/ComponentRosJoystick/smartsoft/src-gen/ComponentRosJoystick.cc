@@ -56,6 +56,8 @@ ComponentRosJoystick::ComponentRosJoystick()
 	connections.joystickActivity.priority = -1;
 	connections.joystickActivity.cpuAffinity = -1;
 	
+	// initialize members of OpcUaBackendComponentGeneratorExtension
+	
 	// initialize members of ComponentRosJoystickROSExtension
 	rosPorts = 0;
 	
@@ -145,6 +147,8 @@ void ComponentRosJoystick::init(int argc, char *argv[])
 		// load initial parameters from ini-file (if found)
 		loadParameter(argc, argv);
 		
+		
+		// initializations of OpcUaBackendComponentGeneratorExtension
 		
 		// initializations of ComponentRosJoystickROSExtension
 		
@@ -345,6 +349,8 @@ void ComponentRosJoystick::fini()
 		portFactory->second->destroy();
 	}
 	
+	// destruction of OpcUaBackendComponentGeneratorExtension
+	
 	// destruction of ComponentRosJoystickROSExtension
 	
 	// destruction of PlainOpcUaComponentRosJoystickExtension
@@ -447,6 +453,8 @@ void ComponentRosJoystick::loadParameter(int argc, char *argv[])
 		if(parameter.checkIfParameterExists("JoystickActivity", "cpuAffinity")) {
 			parameter.getInteger("JoystickActivity", "cpuAffinity", connections.joystickActivity.cpuAffinity);
 		}
+		
+		// load parameters for OpcUaBackendComponentGeneratorExtension
 		
 		// load parameters for ComponentRosJoystickROSExtension
 		
