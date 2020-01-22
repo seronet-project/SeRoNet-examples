@@ -1,4 +1,4 @@
-ServiceDefRepository ROSROSRos_core version 1.0 {
+ServiceDefRepository ROSRos_core version 1.0 {
 
 	ForkingServiceDefinition  BoolService {
 		PushPattern <DataType=ROSRos_core.Std_msgs_Bool>
