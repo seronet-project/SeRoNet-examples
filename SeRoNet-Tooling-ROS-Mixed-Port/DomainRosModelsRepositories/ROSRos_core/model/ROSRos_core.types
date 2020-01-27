@@ -26,6 +26,7 @@ CommObject Std_msgs_Duration {
 }
 
 CommObject Std_msgs_Empty {
+	dummy : CommBasicObjects.CommVoid
 }
 
 CommObject Std_msgs_Float32 {
@@ -108,9 +109,11 @@ CommObject Std_msgs_UInt8MultiArray {
 }
 
 CommObject Std_srvs_EmptyRequest {
+	dummy : CommBasicObjects.CommVoid
 }
 
 CommObject Std_srvs_EmptyResponse {
+	dummy : CommBasicObjects.CommVoid
 }
 
 CommObject Std_srvs_SetBoolRequest {
@@ -123,6 +126,7 @@ CommObject Std_srvs_SetBoolResponse {
 }
 
 CommObject Std_srvs_TriggerRequest {
+	dummy : CommBasicObjects.CommVoid
 }
 
 CommObject Std_srvs_TriggerResponse {
