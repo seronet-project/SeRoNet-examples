@@ -1,4 +1,0 @@
-RosInterfacesPool {
-	RosSubscriber _diagnostics { topicName "/diagnostics" type "diagnostic_msgs.DiagnosticArray" }
-	RosSubscriber _joy { topicName "/joy" type "sensor_msgs.Joy" }
-}

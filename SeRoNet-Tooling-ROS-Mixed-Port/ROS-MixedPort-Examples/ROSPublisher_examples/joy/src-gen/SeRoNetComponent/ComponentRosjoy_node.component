@@ -1,0 +1,12 @@
+ComponentDefinition ComponentRosjoy_node {
+
+	MixedPortROS joy_sub
+
+	OutputPort joyOut implements ROSCommon_msgs.JoyService realizedBy joy_nodeActivity {}
+
+
+	Activity joy_nodeActivity {
+		MixedPortROSLink joy_sub
+	}
+
+}
