@@ -1,0 +1,153 @@
+CommObjectsRepository ROSUr_msgs version 1.0.0 {
+
+
+CommObject Ur_msgs_Analog {
+	pin : UInt8
+	domain : UInt8
+	state : Float
+}
+Enumeration Ur_msgs_AnalogType {
+	VOLTAGE = 0
+	CURRENT = 1
+}
+
+CommObject Ur_msgs_Digital {
+	pin : UInt8
+	state : Boolean
+}
+
+CommObject Ur_msgs_IOStates {
+	digital_in_states : Ur_msgs_Digital[*]
+	digital_out_states : Ur_msgs_Digital[*]
+	flag_states : Ur_msgs_Digital[*]
+	analog_in_states : Ur_msgs_Analog[*]
+	analog_out_states : Ur_msgs_Analog[*]
+}
+
+CommObject Ur_msgs_MasterboardDataMsg {
+	digital_input_bits : UInt32
+	digital_output_bits : UInt32
+	analog_input_range0 : Int8
+	analog_input_range1 : Int8
+	analog_input0 : Double
+	analog_input1 : Double
+	analog_output_domain0 : Int8
+	analog_output_domain1 : Int8
+	analog_output0 : Double
+	analog_output1 : Double
+	masterboard_temperature : Float
+	robot_voltage_48V : Float
+	robot_current : Float
+	master_io_current : Float
+	master_safety_state : UInt8
+	master_onoff_state : UInt8
+}
+
+CommObject Ur_msgs_RobotModeDataMsg {
+	timestamp : UInt64
+	is_robot_connected : Boolean
+	is_real_robot_enabled : Boolean
+	is_power_on_robot : Boolean
+	is_emergency_stopped : Boolean
+	is_protective_stopped : Boolean
+	is_program_running : Boolean
+	is_program_paused : Boolean
+}
+
+CommObject Ur_msgs_RobotStateRTMsg {
+	time : Double
+	q_target : Double[*]
+	qd_target : Double[*]
+	qdd_target : Double[*]
+	i_target : Double[*]
+	m_target : Double[*]
+	q_actual : Double[*]
+	qd_actual : Double[*]
+	i_actual : Double[*]
+	tool_acc_values : Double[*]
+	tcp_force : Double[*]
+	tool_vector : Double[*]
+	tcp_speed : Double[*]
+	digital_input_bits : Double
+	motor_temperatures : Double[*]
+	controller_timer : Double
+	test_value : Double
+	robot_mode : Double
+	joint_modes : Double[*]
+}
+
+CommObject Ur_msgs_ToolDataMsg {
+	analog_input_range2 : Int8
+	analog_input_range3 : Int8
+	analog_input2 : Double
+	analog_input3 : Double
+	tool_voltage_48v : Float
+	tool_output_voltage : UInt8
+	tool_current : Float
+	tool_temperature : Float
+	tool_mode : UInt8
+}
+Enumeration Ur_msgs_ToolDataMsgType {
+	ANALOG_INPUT_RANGE_CURRENT = 0
+	ANALOG_INPUT_RANGE_VOLTAGE = 1
+	TOOL_BOOTLOADER_MODE = 2
+	TOOL_RUNNING_MODE = 3
+	TOOL_IDLE_MODE = 4
+}
+
+CommObject Ur_msgs_SetIORequest {
+	FUN_SET_DIGITAL_OUT : Int8
+	FUN_SET_FLAG : Int8
+	FUN_SET_ANALOG_OUT : Int8
+	FUN_SET_TOOL_VOLTAGE : Int8
+	STATE_OFF : Int8
+	STATE_ON : Int8
+	STATE_TOOL_VOLTAGE_0V : Int8
+	STATE_TOOL_VOLTAGE_12V : Int8
+	STATE_TOOL_VOLTAGE_24V : Int8
+	fun : Int8
+	pin : Int8
+	state : Float
+}
+
+CommObject Ur_msgs_SetIOResponse {
+	success : Boolean
+}
+Enumeration Ur_msgs_SetIOType {
+	ANALOG_INPUT_RANGE_CURRENT = 5
+	ANALOG_INPUT_RANGE_VOLTAGE = 6
+	TOOL_BOOTLOADER_MODE = 7
+	TOOL_RUNNING_MODE = 8
+	TOOL_IDLE_MODE = 9
+}
+
+CommObject Ur_msgs_SetPayloadRequest {
+	payload : Float
+}
+
+CommObject Ur_msgs_SetPayloadResponse {
+	success : Boolean
+}
+Enumeration Ur_msgs_SetPayloadType {
+	ANALOG_INPUT_RANGE_CURRENT = 10
+	ANALOG_INPUT_RANGE_VOLTAGE = 11
+	TOOL_BOOTLOADER_MODE = 12
+	TOOL_RUNNING_MODE = 13
+	TOOL_IDLE_MODE = 14
+}
+
+CommObject Ur_msgs_SetSpeedSliderFractionRequest {
+	speed_slider_fraction : Double
+}
+
+CommObject Ur_msgs_SetSpeedSliderFractionResponse {
+	success : Boolean
+}
+Enumeration Ur_msgs_SetSpeedSliderFractionType {
+	ANALOG_INPUT_RANGE_CURRENT = 15
+	ANALOG_INPUT_RANGE_VOLTAGE = 16
+	TOOL_BOOTLOADER_MODE = 17
+	TOOL_RUNNING_MODE = 18
+	TOOL_IDLE_MODE = 19
+}
+}

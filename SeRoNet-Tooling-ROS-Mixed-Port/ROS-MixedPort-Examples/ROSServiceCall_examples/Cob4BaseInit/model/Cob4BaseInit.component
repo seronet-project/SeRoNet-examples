@@ -1,0 +1,5 @@
+ComponentDefinition Cob4BaseInit logo "/Cob4BaseInit/model/logo.png"
+{
+	RequestPort TriggerQueryServiceReq implements ROSRos_core.TriggerQueryService {}
+	Activity SendInitRequest_activity {}
+}

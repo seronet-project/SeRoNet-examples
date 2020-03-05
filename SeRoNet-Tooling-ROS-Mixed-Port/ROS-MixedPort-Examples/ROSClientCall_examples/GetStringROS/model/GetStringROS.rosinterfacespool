@@ -1,0 +1,3 @@
+RosInterfacesPool {
+	RosSrvServer _set_bool { srvName "/SetBool" type "std_srvs.SetBool" }
+}

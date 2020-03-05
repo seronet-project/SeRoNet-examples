@@ -1,0 +1,9 @@
+ComponentDefinition ComponentJoyCob4_3 {
+	MixedPortROS _joy_pub
+	InputPort joyIn implements CommBasicObjects.JoystickService {}
+	Activity cob4_3Activity {
+		MixedPortROSLink _joy_pub
+		InputPortLink joyIn {}
+		DefaultTrigger PeriodicTimer 10.0 Hz
+	}
+}
