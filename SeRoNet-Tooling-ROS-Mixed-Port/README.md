@@ -29,15 +29,19 @@ In case, likely, that the ROS software to be described use other type of object 
     ./generate_messages_model_helper.sh ROS_PACKAGE_NAME > ROS_PACKAGE_NAME.ros
     ```
 
-The file generated, independently of the method, will have a *.ros* extension and can be copied to the folder "basic_msgs" of the "de.fraunhofer.ipa.ros.communication.objects" project.
+The file generated, independently of the method, will have a *.ros* extension and can be copied to the folder "basic_msgs" of the "de.fraunhofer.ipa.ros.communication.objects" project, please send us a pull request to our [repository](https://github.com/ipa320/RosCommonObjects.git) with your models to include them to the base dictionary automatically. Alternatively, for cases where the messages types are specific for a concrete component (like the ur_msgs for ur_driver or messages types defined whitin the same reposotory that the node) we recommended to follow the same approach than ROS does, define the communication objects models together with the node description, for our tooling that means copy the file to the project that will be created on the next step for your node description.
 
-Having generated the msgs package dependencies the next step is to describe your component (i.e. ROS node). First, we have to create a new ROS project, using one of the button of the toolbar:
+Having generated the msgs package dependencies the next step is to describe your component (i.e. ROS node). First, we have to create a new ROS project, using one of the buttons of the toolbar:
 
 ![New Ros Project](Screenshots/ROSnew_project.png)
 
-A pop-up dialog will ask you to define the name of the project. Once  you press finish a new folder will be created with a collection of  common messages and services and a predefined ROS model. To describe  easily the model you can use a Sirius representation.
+A pop-up dialog will ask you to define the name of the project. Once  you press finish a new folder will be created with a dependency to the common ROS communication objects project and a predefined ROS model. To describe easily the model you can use a Sirius representation, this view should be automatically generated and open by default, if not you can explore the project and open the *representation.aird* file using the [aird editor](https://www.eclipse.org/sirius/doc/user/general/Aird_Editor.html), please check that all the required dependencies models are imported. In case you defined previously a new *.ros* model for your communication models, we recommend to create a new folder within this new project (*msgs* for example) and copy there the model file. Then open the representation file (right click on the *representation.aird* file and choose *"Open with.."* and *"Aird Editor"*), under the column *Models* press the button *Add..* and select your model file:
 
-A new window will be opened where you can choose and add elements by  selecting them on the side toolbar. Using the properties view you can  modify and describe the properties of each element.
+![Representation dependencies](Screenshots/representation_aird_depends.png)
+
+To go back to the component representation view, explore the components menu under *Representations* and open your artifact diagram with a double click. In case it is empty use the side buttons *New..* and/or *Enable* to get the proper graphical editor configuration.
+
+ A new window will be opened where you can choose and add elements by selecting them on the side toolbar. Using the properties view you can modify and describe the properties of each element.
 
 ![Joy Node Representation](Screenshots/node_representation.png)
 
@@ -57,7 +61,7 @@ Please check the [ROS tooling documentation and tutorials](https://github.com/ip
 
 #### 2.1 Transform Communication objects
 
-As to describe a ROS communication port we first have to define the type of the information to be exchanged (i.e. msgs, srvs and actions), in SeRoNet, we have to start with the models of the communication objects.
+Like in ROS to describe a communication port we have first to define the type of the information to be exchanged (i.e. msgs, srvs and actions), in SeRoNet, we have to start with the models of the communication objects.
 
 For the common ROS objects, the respective SeRoNet objects are already translated and available within this [repository](https://github.com/ipa-nhg/SeRoNet-examples/tree/ROSdocu/SeRoNet-Tooling-ROS-Mixed-Port/DomainRosModelsRepositories).
 
@@ -84,8 +88,6 @@ PackageSet{package{
 }
 ```
 
-
-
 The user can very easily trigger this function by a  right clicking on the ROS model file (cob_light/msgs/cob_light.ros) and  selecting the option "Generate SeRoNet communication objects".
 
 This will generate the file services and the file types under the folder *src-gen*.
@@ -100,9 +102,9 @@ These files are the input for a SeRoNet Domain Model. By creating a [new Domain 
 
 ![cob_light_obtects_to_SeRoNet3](Screenshots/cob_light_obtects_to_SeRoNet3.gif)
 
-Probably after create the new Domain Models project and add the types and services files you will get an error because some dependencies are  missed.
+Probably after create the new Domain Models project and add the types and services files you will get an error because of missed dependencies.
 
-For the most common ROS objects the project dependencies are already available. We suggest to import *always* by default the following projects from the GitHub repositories previously cloned:
+For the most common ROS objects the project dependencies are already available. We suggest to import **always** by default the following projects from the following GitHub repositories:
 
 - [DomainModelsRepositories/CommBasicObjects](https://github.com/Servicerobotics-Ulm/DomainModelsRepositories)
 - [SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/DomainRosModelsRepositories/ROSRos_core](DomainRosModelsRepositories/ROSRos_core)
@@ -116,11 +118,11 @@ Then open the Domain Expert perspective (Go to Menu Window ->  Perspective -> Op
 
 By default the tooling will automatically autogenerate the corresponding component interface (a generic model of a component) of all the nodes  on your ROS project. The autogenerated components are always located  under a new folder called *components/*. This model is the bridge from ROS to other frameworks. For the case of SeRoNet the tooling  includes a special function that can be activated by a right click on  the file an choosing the option *Generate ROS-SeRoNet Mixed Port*.
 
-The result of this call is a rospoolinterface file, which can be interpreted by a [SeRoNet component](https://wiki.servicerobotik-ulm.de/tutorials:develop-your-first-component:start) to describe one if its ports.
+The result of this call is a *rospoolinterface* file, which can be interpreted by a [SeRoNet component](https://wiki.servicerobotik-ulm.de/tutorials:develop-your-first-component:start) to describe one if its ports.
 
 ![ROSSeRoNet_generatedFilesSeRoNet](Screenshots/ROSSeRoNet_generatedFilesSeRoNet.gif)
 
-Complementarily and to make easier the relay of interfaces we  incorporated an extra help function that automatically relays ROS interfaces from an existing model. The previous function through its pop-up dialog guides  the user to generates not only the rospoolinterface model but also a  suggestion of a SeRoNet component with a ROS mixed Port. The resulted  files will be generated under the folder *src-gen/SeRoNetComponent*
+Complementarity and to make easier the relay of interfaces we  incorporated an extra help function that automatically relays ROS interfaces from an existing model. The previous function through its pop-up dialog guides  the user to generates not only the rospoolinterface model but also a  suggestion of a SeRoNet component with a ROS mixed Port. The resulted  files will be generated under the folder *src-gen/SeRoNetComponent*
 
 *![ROSSeRoNet_SeRoNetComponent](Screenshots/ROSSeRoNet_SeRoNetComponent.gif)*
 
