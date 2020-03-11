@@ -1,0 +1,10 @@
+ComponentInterface { name joy_node
+	RosPublishers{
+		RosPublisher "joy" { RefPublisher "joy.joy.joy_node.joy"},
+		RosPublisher "diagnostics" { RefPublisher "joy.joy.joy_node.diagnostics"}
+	}
+	RosSubscribers{
+		RosSubscriber "joy/set_feedback" { RefSubscriber "joy.joy.joy_node.joy/set_feedback"}
+	}
+	
+}

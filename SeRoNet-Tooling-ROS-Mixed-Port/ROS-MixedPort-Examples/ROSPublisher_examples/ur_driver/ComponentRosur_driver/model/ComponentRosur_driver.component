@@ -1,8 +1,0 @@
-ComponentDefinition ComponentRosur_driver {
-	MixedPortROS joint_states_sub
-	OutputPort joint_statesOut implements ROSCommon_msgs.JointStateService realizedBy ur_driverActivity {}
-	Activity ur_driverActivity {
-		MixedPortROSLink joint_states_sub
-		DefaultTrigger PeriodicTimer 10.0 Hz
-	}
-}
