@@ -35,7 +35,7 @@ class Std_msgs_Empty : public Std_msgs_EmptyCore {
 		 *      CommRepository::MyCommObject obj;
 		 *      obj.setX(1).setY(2).setZ(3)...;
 		 */
-		// Std_msgs_Empty();
+		// Std_msgs_Empty(const CommBasicObjects::CommVoid &dummy);
 		
 		Std_msgs_Empty(const Std_msgs_EmptyCore &std_msgs_Empty);
 		Std_msgs_Empty(const DATATYPE &std_msgs_Empty);

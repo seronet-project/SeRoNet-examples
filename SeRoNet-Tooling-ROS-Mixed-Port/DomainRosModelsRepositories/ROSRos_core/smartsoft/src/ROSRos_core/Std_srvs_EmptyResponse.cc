@@ -32,9 +32,10 @@ Std_srvs_EmptyResponse::Std_srvs_EmptyResponse()
  * The preferred way to set values for initialization is:
  *      CommRepository::MyCommObject obj;
  *      obj.setX(1).setY(2).setZ(3)...;
-Std_srvs_EmptyResponse::Std_srvs_EmptyResponse()
+Std_srvs_EmptyResponse::Std_srvs_EmptyResponse(const CommBasicObjects::CommVoid &dummy)
 :	Std_srvs_EmptyResponseCore() // base constructor sets default values as defined in the model
 {
+	setDummy(dummy);
 }
  */
 

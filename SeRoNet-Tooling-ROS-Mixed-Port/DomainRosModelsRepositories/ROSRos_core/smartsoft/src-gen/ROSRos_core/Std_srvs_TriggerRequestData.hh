@@ -16,12 +16,14 @@
 #ifndef ROSROS_CORE_STD_SRVS_TRIGGERREQUEST_DATA_H_
 #define ROSROS_CORE_STD_SRVS_TRIGGERREQUEST_DATA_H_
 
+#include "CommBasicObjects/CommVoidData.hh"
 
 
 namespace ROSRos_coreIDL 
 {
 	struct Std_srvs_TriggerRequest
 	{
+		CommBasicObjectsIDL::CommVoid dummy;
   	};
 };
 

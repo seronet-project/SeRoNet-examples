@@ -15,11 +15,14 @@
 //--------------------------------------------------------------------------
 #include "ROSRos_core/Std_srvs_EmptyResponseACE.hh"
 #include <ace/SString.h>
+#include "CommBasicObjects/CommVoidACE.hh"
 
 // serialization operator for element Std_srvs_EmptyResponse
 ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSRos_coreIDL::Std_srvs_EmptyResponse &data)
 {
 	ACE_CDR::Boolean good_bit = true;
+	// serialize list-element dummy
+	good_bit = good_bit && cdr << data.dummy;
 	
 	return good_bit;
 }
@@ -28,6 +31,8 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSRos_coreIDL::Std_srvs_E
 ACE_CDR::Boolean operator>>(ACE_InputCDR &cdr, ROSRos_coreIDL::Std_srvs_EmptyResponse &data)
 {
 	ACE_CDR::Boolean good_bit = true;
+	// deserialize type element dummy
+	good_bit = good_bit && cdr >> data.dummy;
 	
 	return good_bit;
 }

@@ -35,7 +35,7 @@ class Std_srvs_EmptyRequest : public Std_srvs_EmptyRequestCore {
 		 *      CommRepository::MyCommObject obj;
 		 *      obj.setX(1).setY(2).setZ(3)...;
 		 */
-		// Std_srvs_EmptyRequest();
+		// Std_srvs_EmptyRequest(const CommBasicObjects::CommVoid &dummy);
 		
 		Std_srvs_EmptyRequest(const Std_srvs_EmptyRequestCore &std_srvs_EmptyRequest);
 		Std_srvs_EmptyRequest(const DATATYPE &std_srvs_EmptyRequest);

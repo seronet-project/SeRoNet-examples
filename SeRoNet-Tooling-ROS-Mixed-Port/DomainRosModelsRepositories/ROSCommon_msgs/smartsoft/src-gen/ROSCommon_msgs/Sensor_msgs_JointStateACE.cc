@@ -27,7 +27,7 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Sensor_
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.name.size());
 	std::vector<std::string>::const_iterator data_nameIt;
 	for(data_nameIt=data.name.begin(); data_nameIt!=data.name.end(); data_nameIt++) {
-		good_bit = good_bit && cdr << ACE_CString((*data_nameIt).c_str());
+		good_bit = good_bit && cdr << ACE_CString(data_nameIt->c_str());
 	}
 	// serialize list-element position
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.position.size());

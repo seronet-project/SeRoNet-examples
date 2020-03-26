@@ -32,9 +32,10 @@ Std_srvs_TriggerRequest::Std_srvs_TriggerRequest()
  * The preferred way to set values for initialization is:
  *      CommRepository::MyCommObject obj;
  *      obj.setX(1).setY(2).setZ(3)...;
-Std_srvs_TriggerRequest::Std_srvs_TriggerRequest()
+Std_srvs_TriggerRequest::Std_srvs_TriggerRequest(const CommBasicObjects::CommVoid &dummy)
 :	Std_srvs_TriggerRequestCore() // base constructor sets default values as defined in the model
 {
+	setDummy(dummy);
 }
  */
 

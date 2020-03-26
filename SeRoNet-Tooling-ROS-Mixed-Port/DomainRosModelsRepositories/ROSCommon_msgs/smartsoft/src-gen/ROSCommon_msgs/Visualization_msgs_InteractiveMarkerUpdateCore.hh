@@ -171,8 +171,6 @@ public:
 	 */
 	inline std::vector<std::string> getErasesCopy() const {
 		return std::vector<std::string>(idl_Visualization_msgs_InteractiveMarkerUpdate.erases.begin(), idl_Visualization_msgs_InteractiveMarkerUpdate.erases.end());
-		//std::transform(idl_Visualization_msgs_InteractiveMarkerUpdate.erases.begin(), idl_Visualization_msgs_InteractiveMarkerUpdate.erases.end(), copy.begin(), getStlString);
-		//return copy;
 	}
 	inline std::string getErasesElemAtPos(const size_t &pos) const { return idl_Visualization_msgs_InteractiveMarkerUpdate.erases[pos].c_str(); }
 	inline size_t getErasesSize() const { return idl_Visualization_msgs_InteractiveMarkerUpdate.erases.size(); }
@@ -180,12 +178,7 @@ public:
 	/**
 	 * Setter methods for idl_Visualization_msgs_InteractiveMarkerUpdate.erases of type vector<std::string>
 	 */
-	inline Visualization_msgs_InteractiveMarkerUpdateCore& setErases(const std::vector<std::string> &erases) { 
-		idl_Visualization_msgs_InteractiveMarkerUpdate.erases = erases;
-		//resizeErases(erases.size());
-		//std::transform(erases.begin(), erases.end(), idl_Visualization_msgs_InteractiveMarkerUpdate.erases.begin(), getIdlString);
-		return *this;
-	}
+	inline Visualization_msgs_InteractiveMarkerUpdateCore& setErases(const std::vector<std::string> &erases) { idl_Visualization_msgs_InteractiveMarkerUpdate.erases = erases; return *this; }
 	inline bool setErasesElemAtPos(const size_t &pos, const std::string &elem) {
 		if(pos < idl_Visualization_msgs_InteractiveMarkerUpdate.erases.size()) {
 			idl_Visualization_msgs_InteractiveMarkerUpdate.erases[pos] = elem.c_str();
@@ -195,8 +188,6 @@ public:
 	}
 	inline bool insertErasesVectorAtPos(const size_t &pos, const std::vector<std::string> &data) {
 		if(pos < idl_Visualization_msgs_InteractiveMarkerUpdate.erases.size()) {
-			//std::vector<ACE_CString> copy(data.size());
-			//std::transform(data.begin(), data.end(), copy.begin(), getIdlString);
 			idl_Visualization_msgs_InteractiveMarkerUpdate.erases.insert(idl_Visualization_msgs_InteractiveMarkerUpdate.erases.begin()+pos, data.begin(), data.end());
 			return true;
 		}

@@ -35,7 +35,7 @@ class Std_srvs_EmptyResponse : public Std_srvs_EmptyResponseCore {
 		 *      CommRepository::MyCommObject obj;
 		 *      obj.setX(1).setY(2).setZ(3)...;
 		 */
-		// Std_srvs_EmptyResponse();
+		// Std_srvs_EmptyResponse(const CommBasicObjects::CommVoid &dummy);
 		
 		Std_srvs_EmptyResponse(const Std_srvs_EmptyResponseCore &std_srvs_EmptyResponse);
 		Std_srvs_EmptyResponse(const DATATYPE &std_srvs_EmptyResponse);

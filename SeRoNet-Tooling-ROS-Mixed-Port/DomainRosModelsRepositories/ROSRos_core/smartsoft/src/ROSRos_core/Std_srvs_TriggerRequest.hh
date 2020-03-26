@@ -35,7 +35,7 @@ class Std_srvs_TriggerRequest : public Std_srvs_TriggerRequestCore {
 		 *      CommRepository::MyCommObject obj;
 		 *      obj.setX(1).setY(2).setZ(3)...;
 		 */
-		// Std_srvs_TriggerRequest();
+		// Std_srvs_TriggerRequest(const CommBasicObjects::CommVoid &dummy);
 		
 		Std_srvs_TriggerRequest(const Std_srvs_TriggerRequestCore &std_srvs_TriggerRequest);
 		Std_srvs_TriggerRequest(const DATATYPE &std_srvs_TriggerRequest);

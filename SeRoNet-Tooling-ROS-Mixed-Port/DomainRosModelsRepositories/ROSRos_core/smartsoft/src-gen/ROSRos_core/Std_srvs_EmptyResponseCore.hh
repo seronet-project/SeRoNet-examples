@@ -17,6 +17,7 @@
 #define ROSROS_CORE_STD_SRVS_EMPTYRESPONSE_CORE_H_
 
 #include "ROSRos_core/Std_srvs_EmptyResponseData.hh"
+#include "CommBasicObjects/CommVoid.hh"
 
 #include <iostream>
 #include <string>
@@ -63,6 +64,10 @@ public:
 	void from_xml(std::istream &is);
 	
 	// User Interface
+	
+	// getter and setter for element Dummy
+	inline CommBasicObjects::CommVoid getDummy() const { return CommBasicObjects::CommVoid(idl_Std_srvs_EmptyResponse.dummy); }
+	inline Std_srvs_EmptyResponseCore& setDummy(const CommBasicObjects::CommVoid &dummy) { idl_Std_srvs_EmptyResponse.dummy = dummy; return *this; }
 };
 
 } /* namespace ROSRos_core */

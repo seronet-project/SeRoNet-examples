@@ -42,6 +42,8 @@ namespace ROSRos_core
 	{
 		// get own hash value
 		hashes.push_back(getCompiledHash());
+		// get hash value(s) for CommBasicObjects::CommVoid(idl_Std_msgs_Empty.dummy)
+		CommBasicObjects::CommVoid::getAllHashValues(hashes);
 	}
 	
 	void Std_msgs_EmptyCore::checkAllHashValues(std::list<std::string> &hashes)
@@ -59,6 +61,8 @@ namespace ROSRos_core
 		assert(strcmp(getCompiledHash(), hashes.front().c_str()) == 0);
 		hashes.pop_front();
 		
+		// check hash value(s) for CommBasicObjects::CommVoid(idl_Std_msgs_Empty.dummy)
+		CommBasicObjects::CommVoid::checkAllHashValues(hashes);
 	}
 	
 	#ifdef ENABLE_HASH
@@ -66,6 +70,7 @@ namespace ROSRos_core
 	{
 		size_t seed = 0;
 		
+		seed += CommBasicObjects::CommVoid::generateDataHash(data.dummy);
 		
 		return seed;
 	}
@@ -75,6 +80,7 @@ namespace ROSRos_core
 	Std_msgs_EmptyCore::Std_msgs_EmptyCore()
 	:	idl_Std_msgs_Empty()
 	{  
+		setDummy(CommBasicObjects::CommVoid());
 	}
 	
 	Std_msgs_EmptyCore::Std_msgs_EmptyCore(const DATATYPE &data)
@@ -87,16 +93,26 @@ namespace ROSRos_core
 	void Std_msgs_EmptyCore::to_ostream(std::ostream &os) const
 	{
 	  os << "Std_msgs_Empty(";
+	  getDummy().to_ostream(os);
 	  os << ") ";
 	}
 	
 	// convert to xml stream
 	void Std_msgs_EmptyCore::to_xml(std::ostream &os, const std::string &indent) const {
+		os << indent << "<dummy>";
+		getDummy().to_xml(os, indent);
+		os << indent << "</dummy>";
 	}
 	
 	// restore from xml stream
 	void Std_msgs_EmptyCore::from_xml(std::istream &is) {
+		static const Smart::KnuthMorrisPratt kmp_dummy("<dummy>");
 		
+		if(kmp_dummy.search(is)) {
+			CommBasicObjects::CommVoid dummyItem;
+			dummyItem.from_xml(is);
+			setDummy(dummyItem);
+		}
 	}
 	
 	/*

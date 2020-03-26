@@ -75,9 +75,7 @@ public:
 	 * Getter methods for idl_Sensor_msgs_JointState.name of type vector<std::string>
 	 */
 	inline std::vector<std::string> getNameCopy() const {
-		return std::vector<std::string> (idl_Sensor_msgs_JointState.name.begin(), idl_Sensor_msgs_JointState.name.end());
-		//std::transform(idl_Sensor_msgs_JointState.name.begin(), idl_Sensor_msgs_JointState.name.end(), copy.begin(), getStlString);
-		//return copy;
+		return std::vector<std::string>(idl_Sensor_msgs_JointState.name.begin(), idl_Sensor_msgs_JointState.name.end());
 	}
 	inline std::string getNameElemAtPos(const size_t &pos) const { return idl_Sensor_msgs_JointState.name[pos].c_str(); }
 	inline size_t getNameSize() const { return idl_Sensor_msgs_JointState.name.size(); }
@@ -85,12 +83,7 @@ public:
 	/**
 	 * Setter methods for idl_Sensor_msgs_JointState.name of type vector<std::string>
 	 */
-	inline Sensor_msgs_JointStateCore& setName(const std::vector<std::string> &name) { 
-		idl_Sensor_msgs_JointState.name.assign(name.begin(), name.end());
-		//resizeName(name.size());
-		//std::transform(name.begin(), name.end(), idl_Sensor_msgs_JointState.name.begin(), getIdlString);
-		return *this;
-	}
+	inline Sensor_msgs_JointStateCore& setName(const std::vector<std::string> &name) { idl_Sensor_msgs_JointState.name = name; return *this; }
 	inline bool setNameElemAtPos(const size_t &pos, const std::string &elem) {
 		if(pos < idl_Sensor_msgs_JointState.name.size()) {
 			idl_Sensor_msgs_JointState.name[pos] = elem.c_str();
@@ -100,8 +93,6 @@ public:
 	}
 	inline bool insertNameVectorAtPos(const size_t &pos, const std::vector<std::string> &data) {
 		if(pos < idl_Sensor_msgs_JointState.name.size()) {
-			//std::vector<ACE_CString> copy(data.size());
-			//std::transform(data.begin(), data.end(), copy.begin(), getIdlString);
 			idl_Sensor_msgs_JointState.name.insert(idl_Sensor_msgs_JointState.name.begin()+pos, data.begin(), data.end());
 			return true;
 		}

@@ -79,8 +79,6 @@ public:
 	 */
 	inline std::vector<std::string> getJoint_namesCopy() const {
 		return std::vector<std::string>(idl_Sensor_msgs_MultiDOFJointState.joint_names.begin(), idl_Sensor_msgs_MultiDOFJointState.joint_names.end());
-		//std::transform(idl_Sensor_msgs_MultiDOFJointState.joint_names.begin(), idl_Sensor_msgs_MultiDOFJointState.joint_names.end(), copy.begin(), getStlString);
-		//return copy;
 	}
 	inline std::string getJoint_namesElemAtPos(const size_t &pos) const { return idl_Sensor_msgs_MultiDOFJointState.joint_names[pos].c_str(); }
 	inline size_t getJoint_namesSize() const { return idl_Sensor_msgs_MultiDOFJointState.joint_names.size(); }
@@ -88,12 +86,7 @@ public:
 	/**
 	 * Setter methods for idl_Sensor_msgs_MultiDOFJointState.joint_names of type vector<std::string>
 	 */
-	inline Sensor_msgs_MultiDOFJointStateCore& setJoint_names(const std::vector<std::string> &joint_names) { 
-		idl_Sensor_msgs_MultiDOFJointState.joint_names = joint_names;
-		//resizeJoint_names(joint_names.size());
-		//std::transform(joint_names.begin(), joint_names.end(), idl_Sensor_msgs_MultiDOFJointState.joint_names.begin(), getIdlString);
-		return *this;
-	}
+	inline Sensor_msgs_MultiDOFJointStateCore& setJoint_names(const std::vector<std::string> &joint_names) { idl_Sensor_msgs_MultiDOFJointState.joint_names = joint_names; return *this; }
 	inline bool setJoint_namesElemAtPos(const size_t &pos, const std::string &elem) {
 		if(pos < idl_Sensor_msgs_MultiDOFJointState.joint_names.size()) {
 			idl_Sensor_msgs_MultiDOFJointState.joint_names[pos] = elem.c_str();
@@ -101,15 +94,13 @@ public:
 		}
 		return false;
 	}
-	/**inline bool insertJoint_namesVectorAtPos(const size_t &pos, const std::vector<std::string> &data) {
+	inline bool insertJoint_namesVectorAtPos(const size_t &pos, const std::vector<std::string> &data) {
 		if(pos < idl_Sensor_msgs_MultiDOFJointState.joint_names.size()) {
-			std::vector<ACE_CString> copy(data.size());
-			std::transform(data.begin(), data.end(), copy.begin(), getIdlString);
-			idl_Sensor_msgs_MultiDOFJointState.joint_names.insert(idl_Sensor_msgs_MultiDOFJointState.joint_names.begin()+pos, copy.begin(), copy.end());
+			idl_Sensor_msgs_MultiDOFJointState.joint_names.insert(idl_Sensor_msgs_MultiDOFJointState.joint_names.begin()+pos, data.begin(), data.end());
 			return true;
 		}
 		return false;
-	}*/
+	}
 	inline void resizeJoint_names(const size_t &size) { idl_Sensor_msgs_MultiDOFJointState.joint_names.resize(size); }
 	inline bool eraseJoint_namesElemsAtPos(const size_t &pos, const size_t &nbr_elems) {
 		if( (pos+nbr_elems) <= idl_Sensor_msgs_MultiDOFJointState.joint_names.size() ) {

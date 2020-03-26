@@ -19,6 +19,7 @@ LIST(APPEND ROSRos_core_DEPENDENCIES SmartXml)
 
 # modelled CommunicationObject-dependencies are added here (if there are any)
 LIST(APPEND ROSRos_core_DEPENDENCIES CommBasicObjects)
+LIST(APPEND ROSRos_core_DEPENDENCIES CommBasicObjects)
 
 # these are the dependencies that have been added manually within the CMakeLists.txt file
 # (e.g. added by SMART_ADD_UTILITY)

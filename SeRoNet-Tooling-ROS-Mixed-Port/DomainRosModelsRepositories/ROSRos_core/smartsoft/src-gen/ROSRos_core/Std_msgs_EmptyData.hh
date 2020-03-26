@@ -16,12 +16,14 @@
 #ifndef ROSROS_CORE_STD_MSGS_EMPTY_DATA_H_
 #define ROSROS_CORE_STD_MSGS_EMPTY_DATA_H_
 
+#include "CommBasicObjects/CommVoidData.hh"
 
 
 namespace ROSRos_coreIDL 
 {
 	struct Std_msgs_Empty
 	{
+		CommBasicObjectsIDL::CommVoid dummy;
   	};
 };
 

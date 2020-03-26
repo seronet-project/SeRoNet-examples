@@ -31,6 +31,7 @@ Structure of Communication Object:
 \class ROSRos_core::Std_msgs_EmptyCore
 
 Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
 
 \class ROSRos_core::Std_msgs_Float32Core
 
@@ -130,10 +131,12 @@ Structure of Communication Object:
 \class ROSRos_core::Std_srvs_EmptyRequestCore
 
 Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
 
 \class ROSRos_core::Std_srvs_EmptyResponseCore
 
 Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
 
 \class ROSRos_core::Std_srvs_SetBoolRequestCore
 
@@ -149,6 +152,7 @@ Structure of Communication Object:
 \class ROSRos_core::Std_srvs_TriggerRequestCore
 
 Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
 
 \class ROSRos_core::Std_srvs_TriggerResponseCore
 
@@ -196,6 +200,7 @@ Class Reference: ROSRos_core::Std_msgs_ColorRGBACore
 Class Reference: ROSRos_core::Std_msgs_DurationCore
 <hr>
 @section Std_msgs_Empty Std_msgs_Empty
+- dummy: @ref CommVoid (CommObj) 
 
 Class Reference: ROSRos_core::Std_msgs_EmptyCore
 <hr>
@@ -295,10 +300,12 @@ Class Reference: ROSRos_core::Std_msgs_UInt64MultiArrayCore
 Class Reference: ROSRos_core::Std_msgs_UInt8MultiArrayCore
 <hr>
 @section Std_srvs_EmptyRequest Std_srvs_EmptyRequest
+- dummy: @ref CommVoid (CommObj) 
 
 Class Reference: ROSRos_core::Std_srvs_EmptyRequestCore
 <hr>
 @section Std_srvs_EmptyResponse Std_srvs_EmptyResponse
+- dummy: @ref CommVoid (CommObj) 
 
 Class Reference: ROSRos_core::Std_srvs_EmptyResponseCore
 <hr>
@@ -314,6 +321,7 @@ Class Reference: ROSRos_core::Std_srvs_SetBoolRequestCore
 Class Reference: ROSRos_core::Std_srvs_SetBoolResponseCore
 <hr>
 @section Std_srvs_TriggerRequest Std_srvs_TriggerRequest
+- dummy: @ref CommVoid (CommObj) 
 
 Class Reference: ROSRos_core::Std_srvs_TriggerRequestCore
 <hr>

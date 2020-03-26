@@ -77,8 +77,6 @@ public:
 	 */
 	inline std::vector<std::string> getJoint_namesCopy() const {
 		return std::vector<std::string>(idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.begin(), idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.end());
-		//std::transform(idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.begin(), idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.end(), copy.begin(), getStlString);
-		//return copy;
 	}
 	inline std::string getJoint_namesElemAtPos(const size_t &pos) const { return idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names[pos].c_str(); }
 	inline size_t getJoint_namesSize() const { return idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.size(); }
@@ -86,12 +84,7 @@ public:
 	/**
 	 * Setter methods for idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names of type vector<std::string>
 	 */
-	inline Trajectory_msgs_MultiDOFJointTrajectoryCore& setJoint_names(const std::vector<std::string> &joint_names) { 
-		idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names = joint_names;
-		//resizeJoint_names(joint_names.size());
-		//std::transform(joint_names.begin(), joint_names.end(), idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.begin(), getIdlString);
-		return *this;
-	}
+	inline Trajectory_msgs_MultiDOFJointTrajectoryCore& setJoint_names(const std::vector<std::string> &joint_names) { idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names = joint_names; return *this; }
 	inline bool setJoint_namesElemAtPos(const size_t &pos, const std::string &elem) {
 		if(pos < idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.size()) {
 			idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names[pos] = elem.c_str();
@@ -101,8 +94,6 @@ public:
 	}
 	inline bool insertJoint_namesVectorAtPos(const size_t &pos, const std::vector<std::string> &data) {
 		if(pos < idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.size()) {
-			//std::vector<ACE_CString> copy(data.size());
-			//std::transform(data.begin(), data.end(), copy.begin(), getIdlString);
 			idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.insert(idl_Trajectory_msgs_MultiDOFJointTrajectory.joint_names.begin()+pos, data.begin(), data.end());
 			return true;
 		}

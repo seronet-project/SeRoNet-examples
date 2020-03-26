@@ -44,7 +44,7 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Visuali
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.erases.size());
 	std::vector<std::string>::const_iterator data_erasesIt;
 	for(data_erasesIt=data.erases.begin(); data_erasesIt!=data.erases.end(); data_erasesIt++) {
-		good_bit = good_bit && cdr << ACE_CString((*data_erasesIt).c_str());
+		good_bit = good_bit && cdr << ACE_CString(data_erasesIt->c_str());
 	}
 	
 	return good_bit;

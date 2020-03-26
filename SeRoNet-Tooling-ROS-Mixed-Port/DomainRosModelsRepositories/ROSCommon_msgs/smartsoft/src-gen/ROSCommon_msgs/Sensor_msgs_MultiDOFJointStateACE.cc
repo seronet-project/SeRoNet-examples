@@ -30,7 +30,7 @@ ACE_CDR::Boolean operator<<(ACE_OutputCDR &cdr, const ROSCommon_msgsIDL::Sensor_
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.joint_names.size());
 	std::vector<std::string>::const_iterator data_joint_namesIt;
 	for(data_joint_namesIt=data.joint_names.begin(); data_joint_namesIt!=data.joint_names.end(); data_joint_namesIt++) {
-		good_bit = good_bit && cdr << ACE_CString((*data_joint_namesIt).c_str());
+		good_bit = good_bit && cdr << ACE_CString(data_joint_namesIt->c_str());
 	}
 	// serialize list-element transforms
 	good_bit = good_bit && cdr << ACE_Utils::truncate_cast<ACE_CDR::ULong>(data.transforms.size());
