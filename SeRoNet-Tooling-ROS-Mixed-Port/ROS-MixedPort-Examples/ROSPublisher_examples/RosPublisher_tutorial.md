@@ -2,7 +2,7 @@
 
 Short description
 
-Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../../README.md) are required to perform this tutorial.
+Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../../README.md) are required to perform this tutorial. A previous default setup of the workspace is necesary to follow the instructions of the tutorial: [WORKSPACE SETUP](../ROSMixedPortTutorials_WSsetup.md).
 
 #### System overview
 
@@ -31,19 +31,13 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 #### ROS components
 
-For this example we selected one of the most common ROS driver, the [joy package](http://wiki.ros.org/joy) , a package that requires as dependency the [sensor_msgs](http://wiki.ros.org/sensor_msgs). As it is part of the common ROS msgs the required dependencies can be automatically loaded using the ROS workspace setup button, remember that this menu is only for the ROS developer perspective available:
+For this example we selected one of the most common ROS driver, the [joy package](http://wiki.ros.org/joy), a package that requires as dependency the [sensor_msgs](http://wiki.ros.org/sensor_msgs). As it is part of the common ROS msgs the required dependencies were automatically loaded to your workspace whitin the project **de.fraunhofer.ipa.ros.communication.objects**.
 
-![01-ImportCommnObjects](../../Screenshots/01-ImportCommnObjects.png)
-
-Previously we explained the different ways to obtain a ROS package: 
-
-
-
-
+TBD
 
 #### SeRoNet components
 
-
+TBD
 
 #### Code implementation
 
@@ -51,3 +45,4 @@ Solution link ->
 
 #### Execution
 
+TBD
