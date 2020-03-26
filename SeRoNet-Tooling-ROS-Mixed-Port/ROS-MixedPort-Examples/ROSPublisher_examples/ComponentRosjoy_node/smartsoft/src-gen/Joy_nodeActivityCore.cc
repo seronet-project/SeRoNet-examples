@@ -36,9 +36,6 @@ Joy_nodeActivityCore::~Joy_nodeActivityCore()
 {
 }
 
-void Joy_nodeActivityCore::joy_sub_cb (const sensor_msgs::Joy::ConstPtr &msg) {
-	// implement this method
-}
 
 void Joy_nodeActivityCore::notify_all_interaction_observers() {
 	std::unique_lock<std::mutex> lock(interaction_observers_mutex);

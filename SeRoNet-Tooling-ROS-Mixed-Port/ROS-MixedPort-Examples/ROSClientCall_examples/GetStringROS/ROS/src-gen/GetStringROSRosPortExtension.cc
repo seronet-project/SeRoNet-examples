@@ -39,13 +39,12 @@ void GetStringROSRosPortExtension::initialize(GetStringROS *component, int argc,
 {
 	ros::init(argc, argv, "GetStringROS", ros::init_options::NoSigintHandler);
 	nh = new ros::NodeHandle();
-	
 	callbacksPtr = new GetStringROSRosPortCallbacks();
-	
 	component->rosPorts = this;
 	
 	_set_bool = nh->advertiseService("/SetBool", &GetStringROSRosPortCallbacks::_set_bool_cb, callbacksPtr);
 }
+
 
 int GetStringROSRosPortExtension::onStartup()
 {
@@ -66,6 +65,7 @@ int GetStringROSRosPortExtension::onShutdown(const std::chrono::steady_clock::du
 
 void GetStringROSRosPortExtension::destroy()
 {
+	delete _set_bool;
 	delete nh;
 	delete callbacksPtr;
 }

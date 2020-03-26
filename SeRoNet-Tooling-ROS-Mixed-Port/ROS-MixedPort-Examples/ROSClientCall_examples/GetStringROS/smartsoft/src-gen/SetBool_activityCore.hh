@@ -25,7 +25,6 @@
 // include all interaction-observer interfaces
 #include <SetBool_activityObserverInterface.hh>
 
-#include <std_srvs/SetBool.h>
 
 class SetBool_activityCore
 :	public SmartACE::ManagedTask

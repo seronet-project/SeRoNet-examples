@@ -18,6 +18,7 @@
 #define _COB4_3ACTIVITY_HH
 
 #include "Cob4_3ActivityCore.hh"
+#include <sensor_msgs/Joy.h>
 
 class Cob4_3Activity  : public Cob4_3ActivityCore
 {

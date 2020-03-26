@@ -22,12 +22,17 @@
 
 #include <ros/ros.h>
 
+#include <std_srvs/Trigger.h>
+
+
 class ComponentROSBaseInitRosPortBaseClass {
 public:
 	ComponentROSBaseInitRosPortBaseClass() { };
 	virtual ~ComponentROSBaseInitRosPortBaseClass() { }
 	
 	ros::ServiceClient _base_driver_init_srvcli;
+	
+
 };
 
 #endif // ROS_PORT_BASE_CLASS_H_

@@ -21,7 +21,6 @@
 #define ROS_PORT_COMPONENT_EXTENSION_H_
 
 #include "ComponentJoyCob4_3RosPortBaseClass.hh"
-#include "ComponentJoyCob4_3RosPortCallbacks.hh"
 
 #include "ComponentJoyCob4_3Extension.hh"
 
@@ -32,9 +31,6 @@ class ComponentJoyCob4_3RosPortExtension : public ComponentJoyCob4_3Extension, p
 {
 private:
 	ros::NodeHandle *nh;
-	
-	ComponentJoyCob4_3RosPortCallbacks *callbacksPtr;
-	
 	virtual int extensionExecution() override;
 public:
 	ComponentJoyCob4_3RosPortExtension();

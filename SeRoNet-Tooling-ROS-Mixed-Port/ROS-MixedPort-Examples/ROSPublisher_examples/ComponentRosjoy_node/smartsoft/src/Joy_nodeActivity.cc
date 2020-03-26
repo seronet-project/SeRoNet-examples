@@ -30,7 +30,9 @@ Joy_nodeActivity::~Joy_nodeActivity()
 }
 
 
-
+void Joy_nodeActivity::joy_sub_cb (const sensor_msgs::Joy::ConstPtr &msg) {
+	// implement this method
+}
 int Joy_nodeActivity::on_entry()
 {
 	// do initialization procedures here, which are called once, each time the task is started

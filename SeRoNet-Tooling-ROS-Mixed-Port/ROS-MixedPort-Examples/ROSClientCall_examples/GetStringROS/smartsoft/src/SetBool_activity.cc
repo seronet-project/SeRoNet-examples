@@ -30,7 +30,9 @@ SetBool_activity::~SetBool_activity()
 }
 
 
-
+std_srvs::SetBool::Response SetBool_activity::_set_bool_callServiceQuery (std_srvs::SetBool::Request request) {
+	// implement this method
+}
 int SetBool_activity::on_entry()
 {
 	// do initialization procedures here, which are called once, each time the task is started

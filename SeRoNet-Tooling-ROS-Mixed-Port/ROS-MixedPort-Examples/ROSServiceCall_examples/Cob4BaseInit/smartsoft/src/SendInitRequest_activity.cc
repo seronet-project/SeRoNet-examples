@@ -30,7 +30,6 @@ SendInitRequest_activity::~SendInitRequest_activity()
 }
 
 
-
 int SendInitRequest_activity::on_entry()
 {
 	// do initialization procedures here, which are called once, each time the task is started
@@ -39,15 +38,16 @@ int SendInitRequest_activity::on_entry()
 }
 int SendInitRequest_activity::on_execute()
 {
-	// do initialization procedures here, which are called once, each time the task is started
-	// it is possible to return != 0 (e.g. when initialization fails) then the task is not executed further
-	ROSRos_core::Std_srvs_TriggerRequest ask;
-	ROSRos_core::Std_srvs_TriggerResponse response;
+	// this method is called from an outside loop,
+	// hence, NEVER use an infinite loop (like "while(1)") here inside!!!
+	// also do not use blocking calls which do not result from smartsoft kernel
+	
+	// to get the incoming data, use this methods:
+	Smart::StatusCode status;
 
-	COMP ->triggerQueryServiceReq->query(ask, response);
-	std::cout<<"Got triggerQueryServiceReq Query Answer Sucess: "<<response.getSuccess()<<std::endl;
-	std::cout<<"Got triggerQueryServiceReq Query Answer Message: "<<response.getMessage()<<std::endl;
-	COMP->fini();
+	std::cout << "Hello from SendInitRequest_activity " << std::endl;
+
+	// it is possible to return != 0 (e.g. when the task detects errors), then the outer loop breaks and the task stops
 	return 0;
 }
 int SendInitRequest_activity::on_exit()

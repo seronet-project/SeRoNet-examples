@@ -18,6 +18,7 @@
 #define _JOY_NODEACTIVITY_HH
 
 #include "Joy_nodeActivityCore.hh"
+#include <sensor_msgs/Joy.h>
 
 class Joy_nodeActivity  : public Joy_nodeActivityCore
 {
@@ -29,6 +30,7 @@ public:
 	virtual int on_entry();
 	virtual int on_execute();
 	virtual int on_exit();
+	void joy_sub_cb (const sensor_msgs::Joy::ConstPtr &msg);
 };
 
 #endif

@@ -26,7 +26,6 @@
 // include all interaction-observer interfaces
 #include <Cob4_3ActivityObserverInterface.hh>
 
-#include <sensor_msgs/Joy.h>
 
 class Cob4_3ActivityCore
 :	public SmartACE::ManagedTask

@@ -32,9 +32,7 @@ class GetStringROSRosPortExtension : public GetStringROSExtension, public GetStr
 {
 private:
 	ros::NodeHandle *nh;
-	
 	GetStringROSRosPortCallbacks *callbacksPtr;
-	
 	virtual int extensionExecution() override;
 public:
 	GetStringROSRosPortExtension();
@@ -44,8 +42,8 @@ public:
 	virtual void initialize(GetStringROS *component, int argc, char* argv[]) override;
 	virtual int onStartup() override;
 
-	inline ros::ServiceServer* get_set_boolPtr() {
-		return &_set_bool;
+	inline ros::ServiceServer get_set_boolPtr() {
+		return _set_bool;
 	}
 
 	virtual int onShutdown(const std::chrono::steady_clock::duration &timeoutTime=std::chrono::seconds(2)) override;

@@ -30,6 +30,7 @@ GetStringROSRosPortCallbacks::~GetStringROSRosPortCallbacks() {  }
 bool GetStringROSRosPortCallbacks::_set_bool_cb (std_srvs::SetBool::Request &req, std_srvs::SetBool::Response &res)
 {
 	// for implementing this method, you can use the "COMP->" macro to access the component's class members
+	res= COMP->setBool_activity->_set_bool_callServiceQuery(req);
 	return true;
 }
 

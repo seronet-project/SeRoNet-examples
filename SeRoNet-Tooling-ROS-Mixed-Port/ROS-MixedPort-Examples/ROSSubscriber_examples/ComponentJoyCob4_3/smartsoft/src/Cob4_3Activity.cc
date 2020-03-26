@@ -38,7 +38,6 @@ void Cob4_3Activity::on_joyIn(const CommBasicObjects::CommJoystick &input)
 	// - if you need to implement a long-running procedure, do so within the on_execute() method and in
 	//   there, use the method joyInGetUpdate(input) to get a copy of the input object
 }
-
 int Cob4_3Activity::on_entry()
 {
 	// do initialization procedures here, which are called once, each time the task is started

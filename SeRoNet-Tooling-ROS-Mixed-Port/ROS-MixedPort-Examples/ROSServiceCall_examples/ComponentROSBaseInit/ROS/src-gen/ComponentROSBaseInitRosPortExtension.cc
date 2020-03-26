@@ -26,7 +26,6 @@ ComponentROSBaseInitRosPortExtension::ComponentROSBaseInitRosPortExtension()
 :	ComponentROSBaseInitExtension("ComponentROSBaseInitRosPortExtension")
 {
 	nh = 0;
-	callbacksPtr = 0;
 }
 
 ComponentROSBaseInitRosPortExtension::~ComponentROSBaseInitRosPortExtension()
@@ -39,13 +38,11 @@ void ComponentROSBaseInitRosPortExtension::initialize(ComponentROSBaseInit *comp
 {
 	ros::init(argc, argv, "ComponentROSBaseInit", ros::init_options::NoSigintHandler);
 	nh = new ros::NodeHandle();
-	
-	callbacksPtr = new ComponentROSBaseInitRosPortCallbacks();
-	
 	component->rosPorts = this;
 	
 	_base_driver_init_srvcli = nh->serviceClient<std_srvs::Trigger>("/base/driver/init");
 }
+
 
 int ComponentROSBaseInitRosPortExtension::onStartup()
 {
@@ -66,6 +63,6 @@ int ComponentROSBaseInitRosPortExtension::onShutdown(const std::chrono::steady_c
 
 void ComponentROSBaseInitRosPortExtension::destroy()
 {
+	delete _base_driver_init_srvcli;
 	delete nh;
-	delete callbacksPtr;
 }

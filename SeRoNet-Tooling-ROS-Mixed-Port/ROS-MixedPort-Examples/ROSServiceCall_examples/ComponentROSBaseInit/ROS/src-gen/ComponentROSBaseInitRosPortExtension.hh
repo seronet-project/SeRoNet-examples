@@ -21,7 +21,6 @@
 #define ROS_PORT_COMPONENT_EXTENSION_H_
 
 #include "ComponentROSBaseInitRosPortBaseClass.hh"
-#include "ComponentROSBaseInitRosPortCallbacks.hh"
 
 #include "ComponentROSBaseInitExtension.hh"
 
@@ -32,9 +31,6 @@ class ComponentROSBaseInitRosPortExtension : public ComponentROSBaseInitExtensio
 {
 private:
 	ros::NodeHandle *nh;
-	
-	ComponentROSBaseInitRosPortCallbacks *callbacksPtr;
-	
 	virtual int extensionExecution() override;
 public:
 	ComponentROSBaseInitRosPortExtension();
@@ -44,8 +40,8 @@ public:
 	virtual void initialize(ComponentROSBaseInit *component, int argc, char* argv[]) override;
 	virtual int onStartup() override;
 
-	inline ros::ServiceClient* get_base_driver_init_srvcliPtr() {
-		return &_base_driver_init_srvcli;
+	inline ros::ServiceClient get_base_driver_init_srvcliPtr() {
+		return _base_driver_init_srvcli;
 	}
 
 	virtual int onShutdown(const std::chrono::steady_clock::duration &timeoutTime=std::chrono::seconds(2)) override;

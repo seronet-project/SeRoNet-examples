@@ -28,13 +28,6 @@ void SetBoolQueryServiceAnswHandler::handleQuery(const Smart::QueryIdPtr &id, co
 {
 	ROSRos_core::Std_srvs_SetBoolResponse answer;
 	
-	if (request.getData()){
-		answer.setMessage("I got TRUE");
-		answer.setSuccess(true);
-	} else{
-		answer.setMessage("I got FALSE");
-		answer.setSuccess(true);
-	}
 	// implement your query handling logic here and fill in the answer object
 	
 	this->server->answer(id, answer);

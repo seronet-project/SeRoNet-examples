@@ -18,6 +18,7 @@
 #define _SETBOOL_ACTIVITY_HH
 
 #include "SetBool_activityCore.hh"
+#include <std_srvs/SetBool.h>
 
 class SetBool_activity  : public SetBool_activityCore
 {
@@ -29,6 +30,7 @@ public:
 	virtual int on_entry();
 	virtual int on_execute();
 	virtual int on_exit();
+	std_srvs::SetBool::Response _set_bool_callServiceQuery (std_srvs::SetBool::Request request);
 };
 
 #endif

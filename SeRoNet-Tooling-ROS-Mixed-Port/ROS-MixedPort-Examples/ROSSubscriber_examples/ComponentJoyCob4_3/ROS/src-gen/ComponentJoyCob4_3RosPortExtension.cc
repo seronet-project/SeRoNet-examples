@@ -26,7 +26,6 @@ ComponentJoyCob4_3RosPortExtension::ComponentJoyCob4_3RosPortExtension()
 :	ComponentJoyCob4_3Extension("ComponentJoyCob4_3RosPortExtension")
 {
 	nh = 0;
-	callbacksPtr = 0;
 }
 
 ComponentJoyCob4_3RosPortExtension::~ComponentJoyCob4_3RosPortExtension()
@@ -39,12 +38,13 @@ void ComponentJoyCob4_3RosPortExtension::initialize(ComponentJoyCob4_3 *componen
 {
 	ros::init(argc, argv, "ComponentJoyCob4_3", ros::init_options::NoSigintHandler);
 	nh = new ros::NodeHandle();
-	
-	callbacksPtr = new ComponentJoyCob4_3RosPortCallbacks();
-	
 	component->rosPorts = this;
 	
 	_joy_pub = nh->advertise<sensor_msgs::Joy>("/joy", 10);
+}
+
+void ComponentJoyCob4_3RosPortBaseClass::_joy_pub_publish_ros_msg(const sensor_msgs::Joy &msg){
+	_joy_pub.publish(msg);
 }
 
 int ComponentJoyCob4_3RosPortExtension::onStartup()
@@ -67,5 +67,4 @@ int ComponentJoyCob4_3RosPortExtension::onShutdown(const std::chrono::steady_clo
 void ComponentJoyCob4_3RosPortExtension::destroy()
 {
 	delete nh;
-	delete callbacksPtr;
 }

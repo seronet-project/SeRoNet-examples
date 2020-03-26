@@ -22,12 +22,17 @@
 
 #include <ros/ros.h>
 
+#include <std_srvs/SetBool.h>
+
+
 class GetStringROSRosPortBaseClass {
 public:
 	GetStringROSRosPortBaseClass() { };
 	virtual ~GetStringROSRosPortBaseClass() { }
 	
 	ros::ServiceServer _set_bool;
+	
+
 };
 
 #endif // ROS_PORT_BASE_CLASS_H_

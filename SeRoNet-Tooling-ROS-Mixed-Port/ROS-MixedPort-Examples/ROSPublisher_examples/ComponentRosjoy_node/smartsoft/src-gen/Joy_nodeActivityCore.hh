@@ -26,7 +26,6 @@
 // include all interaction-observer interfaces
 #include <Joy_nodeActivityObserverInterface.hh>
 
-#include <sensor_msgs/Joy.h>
 
 class Joy_nodeActivityCore
 :	public SmartACE::ManagedTask
@@ -88,6 +87,5 @@ public:
 		return currentUpdateCount;
 	}
 	
-	void joy_sub_cb (const sensor_msgs::Joy::ConstPtr &msg);
 };
 #endif
