@@ -80,7 +80,7 @@ Next we will create the two components.
 
 We now switch to the **Component Supplier Perspective** (see [Screenshot 07](Screenshots/07-Open-Component-Supplier-Perspective.png)) to activate the component-related development tools. Again, further details can be found at the **[New UI features HowTo](https://wiki.servicerobotik-ulm.de/how-tos:new-v3.9-ui:start)**.
 
-Next, we will launch the **Component Project Creation Wizard** (see [Screenshot 08](Screenshots/08-Create-Component-Project.png)) by using the Eclipse menu: **File** => **New** => **Component Project (Tier 3)**. After that, copy the instructions shown in the screenshots **09-11**. After pressing the **Finish** button at the end of the wizard, a new component project with an empty component model will be generated. Use the tools from the tool palette at the right side to create the component model diagram as shown in the next screenshot:
+Next, we will launch the **Component Project Creation Wizard** (see [Screenshot 08](Screenshots/08-Create-Component-Project.png)) by using the Eclipse menu: **File** => **New** => **Component Project (Tier 3)**. After that, copy the instructions shown in the screenshots **09-11** ([Screenshot 09](Screenshots/09-Component-Project-Wizard1.png),  [Screenshot 10](Screenshots/10-Component-Project-Wizard2.png), [Screenshot 11](Screenshots/11-Component-Project-Wizard3.png)). After pressing the **Finish** button at the end of the wizard, a new component project with an empty component model will be generated. Use the tools from the tool palette at the right side to create the component model diagram as shown in the next screenshot:
 
 ![ComponentHelloPublisher](Screenshots/12-Create-Component-Model.png)
 
