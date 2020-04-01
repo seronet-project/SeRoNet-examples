@@ -31,8 +31,14 @@ Joy_nodeActivity::~Joy_nodeActivity()
 
 
 void Joy_nodeActivity::joy_sub_cb (const sensor_msgs::Joy::ConstPtr &msg) {
-	// implement this method
+
+	std::unique_lock<std::mutex> lck(mtx);
+	joy_OutDataObject.setAxes(msg->axes);
+	joy_OutDataObject.setButtons(msg->buttons);
+
 }
+
+
 int Joy_nodeActivity::on_entry()
 {
 	// do initialization procedures here, which are called once, each time the task is started
@@ -48,7 +54,9 @@ int Joy_nodeActivity::on_execute()
 	// to get the incoming data, use this methods:
 	Smart::StatusCode status;
 
-	std::cout << "Hello from Joy_nodeActivity " << std::endl;
+	status = this -> joyOutPut (joy_OutDataObject);
+	std::cout << "\n Joystick Update: \n" << joy_OutDataObject << std::endl;
+
 
 	// it is possible to return != 0 (e.g. when the task detects errors), then the outer loop breaks and the task stops
 	return 0;

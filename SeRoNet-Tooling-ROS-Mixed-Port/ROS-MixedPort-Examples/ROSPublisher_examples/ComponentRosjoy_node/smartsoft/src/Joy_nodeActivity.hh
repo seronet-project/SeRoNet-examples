@@ -16,6 +16,7 @@
 //--------------------------------------------------------------------------
 #ifndef _JOY_NODEACTIVITY_HH
 #define _JOY_NODEACTIVITY_HH
+#include <mutex>
 
 #include "Joy_nodeActivityCore.hh"
 #include <sensor_msgs/Joy.h>
@@ -26,7 +27,10 @@ private:
 public:
 	Joy_nodeActivity(SmartACE::SmartComponent *comp);
 	virtual ~Joy_nodeActivity();
-	
+
+	std::mutex mtx;
+	ROSCommon_msgs::Sensor_msgs_Joy joy_OutDataObject;
+
 	virtual int on_entry();
 	virtual int on_execute();
 	virtual int on_exit();
