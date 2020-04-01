@@ -41,7 +41,7 @@ A pop-up dialog will ask you to define the name of the project. Once  you press 
 
 To go back to the component representation view, explore the components menu under *Representations* and open your artifact diagram with a double click. In case it is empty use the side buttons *New..* and/or *Enable* to get the proper graphical editor configuration.
 
- A new window will be opened where you can choose and add elements by selecting them on the side toolbar. Using the properties view you can modify and describe the properties of each element.
+ A new window will be opened where you can choose and add elements by selecting them on the side toolbar. Using the properties view you can modify and describe the properties of each element. For the reference of ROS object types (like a *Message* for a *Topic*), please use the icon ![set reference icon](/home/nhg/Desktop/mixed-port-release/ws/git/SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/Screenshots/reference_object_type_icon.png) and use its help dialog to set the reference correctly.
 
 ![Joy Node Representation](Screenshots/node_representation.png)
 
@@ -134,7 +134,7 @@ For this example the corresponding SeRoNet component with a ROS Mixed Port (by c
 
 To help the user to implement the logic of the resulted SeRoNet component, we made available several examples for different types of ROS Ports:
 
-- Ros Publisher to be "subscribed" by a SeRoNet component: [ROSPublisher_examples](ROS-MixedPort-Examples/ROSPublisher_examples)
+- Ros Publisher to be subscribed by a SeRoNet component: [ROSPublisher_examples](ROS-MixedPort-Examples/ROSPublisher_examples)
 - Ros Subscriber to be published by a SeRoNet component: [ROSSubscriber_examples](ROS-MixedPort-Examples/ROSSubscriber_examples)
 - Ros Service server to be called by  a SeRoNet component: [ROSServiceCall_examples](ROS-MixedPort-Examples/ROSServiceCall_examples)
 - Ros Service client to  called  a SeRoNet component: [ROSClientCall_examples](ROS-MixedPort-Examples/ROSClientCall_examples)
