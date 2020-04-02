@@ -1,0 +1,11 @@
+ComponentInterface { name /scan_unifier_juansabeli_12636_1913099024846273872
+	RosPublishers{
+		RosPublisher "/scan_unified" { RefPublisher "cob4_3./battery_monitor./scan_unifier_juansabeli_12636_1913099024846273872./scan_unified"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base_laser_right/scan" { RefSubscriber "cob4_3./battery_monitor./scan_unifier_juansabeli_12636_1913099024846273872./base_laser_right/scan"},
+		RosSubscriber "/base_laser_left/scan" { RefSubscriber "cob4_3./battery_monitor./scan_unifier_juansabeli_12636_1913099024846273872./base_laser_left/scan"},
+		RosSubscriber "/base_laser_front/scan" { RefSubscriber "cob4_3./battery_monitor./scan_unifier_juansabeli_12636_1913099024846273872./base_laser_front/scan"}
+	}
+	
+}

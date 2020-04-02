@@ -1,0 +1,19 @@
+ComponentInterface { name /base/twist_mux
+	RosPublishers{
+		RosPublisher "/base/velocity_smoother/command" { RefPublisher "cob4_3./battery_monitor./base/twist_mux./base/velocity_smoother/command"},
+		RosPublisher "/diagnostics" { RefPublisher "cob4_3./battery_monitor./base/twist_mux./diagnostics"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base/twist_mux/command_navigation" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_navigation"},
+		RosSubscriber "/base/twist_mux/command_teleop_android" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_teleop_android"},
+		RosSubscriber "/base/twist_mux/locks/pause_all" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/locks/pause_all"},
+		RosSubscriber "/base/twist_mux/command_teleop_keyboard" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_teleop_keyboard"},
+		RosSubscriber "/base/twist_mux/command_safe" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_safe"},
+		RosSubscriber "/base/twist_mux/locks/pause_teleop" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/locks/pause_teleop"},
+		RosSubscriber "/base/twist_mux/command_script_server" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_script_server"},
+		RosSubscriber "/base/twist_mux/command_syncmm" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_syncmm"},
+		RosSubscriber "/base/twist_mux/locks/pause_navigation" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/locks/pause_navigation"},
+		RosSubscriber "/base/twist_mux/command_teleop_joy" { RefSubscriber "cob4_3./battery_monitor./base/twist_mux./base/twist_mux/command_teleop_joy"}
+	}
+	
+}

@@ -1,0 +1,9 @@
+ComponentInterface { name /joint_state_publisher
+	RosPublishers{
+		RosPublisher "/joint_states" { RefPublisher "cob4_3./battery_monitor./joint_state_publisher./joint_states"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base/joint_states" { RefSubscriber "cob4_3./battery_monitor./joint_state_publisher./base/joint_states"}
+	}
+	
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="cob4_3" type="/battery_monitor" name="/battery_monitor" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/docker_control/move_base_linear" name="/docker_control/move_base_linear" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/docking_laser_filter" name="/docking_laser_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/bms" name="/bms" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/scan_unifier_juansabeli_12636_1913099024846273872" name="/scan_unifier_juansabeli_12636_1913099024846273872" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/gazebo" name="/gazebo" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/robot_state_publisher" name="/robot_state_publisher" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/scan_unifier_filter" name="/scan_unifier_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/emergency_stop_monitor" name="/emergency_stop_monitor" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base/twist_mux" name="/base/twist_mux" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/dashboard_aggregator" name="/dashboard_aggregator" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/teleop/teleop_node_juansabeli_12636_6647217214801012474" name="/teleop/teleop_node_juansabeli_12636_6647217214801012474" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/joint_state_publisher" name="/joint_state_publisher" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base/velocity_smoother" name="/base/velocity_smoother" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/light_base" name="/light_base" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/bms/power_state_aggregator" name="/bms/power_state_aggregator" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base_laser_front/scan_filter" name="/base_laser_front/scan_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base_laser_left/scan_filter" name="/base_laser_left/scan_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/collision_velocity_filter" name="/collision_velocity_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base/twist_marker" name="/base/twist_marker" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/diagnostic_aggregator" name="/diagnostic_aggregator" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base_laser_right/scan_filter" name="/base_laser_right/scan_filter" cwd="node" respawn="false" output="screen">
+
+	</node>
+
+	<node pkg="cob4_3" type="/base/fake_driver" name="/base/fake_driver" cwd="node" respawn="false" output="screen">
+
+	</node>
+</launch>

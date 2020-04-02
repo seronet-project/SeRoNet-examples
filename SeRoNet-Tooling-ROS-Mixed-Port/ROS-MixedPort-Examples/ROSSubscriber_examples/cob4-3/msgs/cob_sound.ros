@@ -1,0 +1,19 @@
+PackageSet{package{
+    Package cob_sound{spec{
+      TopicSpec PlayAction{},
+      TopicSpec PlayActionFeedback{},
+      TopicSpec PlayActionGoal{},
+      TopicSpec PlayActionResult{},
+      TopicSpec PlayFeedback{},
+      TopicSpec PlayGoal{},
+      TopicSpec PlayResult{},
+      TopicSpec SayAction{},
+      TopicSpec SayActionFeedback{},
+      TopicSpec SayActionGoal{},
+      TopicSpec SayActionResult{},
+      TopicSpec SayFeedback{},
+      TopicSpec SayGoal{},
+      TopicSpec SayResult{}
+    }}
+  }
+}

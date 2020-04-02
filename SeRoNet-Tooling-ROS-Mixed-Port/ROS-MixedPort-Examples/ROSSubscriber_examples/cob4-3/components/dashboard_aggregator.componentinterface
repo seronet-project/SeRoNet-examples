@@ -1,0 +1,11 @@
+ComponentInterface { name /dashboard_aggregator
+	RosPublishers{
+		RosPublisher "/dashboard_agg" { RefPublisher "cob4_3./battery_monitor./dashboard_aggregator./dashboard_agg"}
+	}
+	RosSubscribers{
+		RosSubscriber "/power_state" { RefSubscriber "cob4_3./battery_monitor./dashboard_aggregator./power_state"},
+		RosSubscriber "/emergency_stop_state" { RefSubscriber "cob4_3./battery_monitor./dashboard_aggregator./emergency_stop_state"},
+		RosSubscriber "/diagnostics_toplevel_state" { RefSubscriber "cob4_3./battery_monitor./dashboard_aggregator./diagnostics_toplevel_state"}
+	}
+	
+}

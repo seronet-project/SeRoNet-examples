@@ -1,0 +1,6 @@
+ComponentInterface { name /battery_monitor
+	RosSubscribers{
+		RosSubscriber "/power_state" { RefSubscriber "cob4_3./battery_monitor./battery_monitor./power_state"}
+	}
+	
+}

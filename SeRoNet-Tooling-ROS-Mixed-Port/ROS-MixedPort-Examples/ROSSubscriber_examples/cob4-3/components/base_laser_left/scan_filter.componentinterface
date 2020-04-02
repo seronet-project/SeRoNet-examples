@@ -1,0 +1,9 @@
+ComponentInterface { name /base_laser_left/scan_filter
+	RosPublishers{
+		RosPublisher "/base_laser_left/scan" { RefPublisher "cob4_3./battery_monitor./base_laser_left/scan_filter./base_laser_left/scan"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base_laser_left/scan_raw" { RefSubscriber "cob4_3./battery_monitor./base_laser_left/scan_filter./base_laser_left/scan_raw"}
+	}
+	
+}

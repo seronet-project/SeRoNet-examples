@@ -1,0 +1,10 @@
+ComponentInterface { name /teleop/teleop_node_juansabeli_12636_6647217214801012474
+	RosPublishers{
+		RosPublisher "/base/collision_velocity_filter/command" { RefPublisher "cob4_3./battery_monitor./teleop/teleop_node_juansabeli_12636_6647217214801012474./base/collision_velocity_filter/command"},
+		RosPublisher "/base/twist_mux/command_teleop_joy" { RefPublisher "cob4_3./battery_monitor./teleop/teleop_node_juansabeli_12636_6647217214801012474./base/twist_mux/command_teleop_joy"}
+	}
+	RosSubscribers{
+		RosSubscriber "/joy" { RefSubscriber "cob4_3./battery_monitor./teleop/teleop_node_juansabeli_12636_6647217214801012474./joy"}
+	}
+	
+}

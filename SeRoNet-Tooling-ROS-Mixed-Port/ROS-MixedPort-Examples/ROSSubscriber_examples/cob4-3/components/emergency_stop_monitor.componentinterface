@@ -1,0 +1,8 @@
+ComponentInterface { name /emergency_stop_monitor
+	RosSubscribers{
+		RosSubscriber "/diagnostics_agg" { RefSubscriber "cob4_3./battery_monitor./emergency_stop_monitor./diagnostics_agg"},
+		RosSubscriber "/diagnostics_toplevel_state" { RefSubscriber "cob4_3./battery_monitor./emergency_stop_monitor./diagnostics_toplevel_state"},
+		RosSubscriber "/joint_states" { RefSubscriber "cob4_3./battery_monitor./emergency_stop_monitor./joint_states"}
+	}
+	
+}

@@ -1,0 +1,10 @@
+ComponentInterface { name /gazebo_gui
+	RosPublishers{
+		RosPublisher "/gazebo_gui/parameter_descriptions" { RefPublisher "cob4_3./battery_monitor./gazebo_gui./gazebo_gui/parameter_descriptions"},
+		RosPublisher "/gazebo_gui/parameter_updates" { RefPublisher "cob4_3./battery_monitor./gazebo_gui./gazebo_gui/parameter_updates"}
+	}
+	RosSrvServers{
+		RosServiceServer "/gazebo_gui/set_parameters" { RefServer "cob4_3./battery_monitor./gazebo_gui./gazebo_gui/set_parameters"}
+	}
+	
+}

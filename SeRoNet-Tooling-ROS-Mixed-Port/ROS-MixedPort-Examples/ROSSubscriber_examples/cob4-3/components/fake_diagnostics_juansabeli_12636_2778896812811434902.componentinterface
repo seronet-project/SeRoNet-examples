@@ -1,0 +1,6 @@
+ComponentInterface { name /fake_diagnostics_juansabeli_12636_2778896812811434902
+	RosPublishers{
+		RosPublisher "/diagnostics" { RefPublisher "cob4_3./battery_monitor./fake_diagnostics_juansabeli_12636_2778896812811434902./diagnostics"}
+	}
+	
+}

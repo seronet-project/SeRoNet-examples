@@ -1,0 +1,6 @@
+ComponentInterface { name /script_server
+	RosSrvServers{
+		RosServiceServer "/script_server/compose_trajectory" { RefServer "cob4_3./battery_monitor./script_server./script_server/compose_trajectory"}
+	}
+	
+}

@@ -1,0 +1,16 @@
+ComponentInterface { name /light_base
+	RosPublishers{
+		RosPublisher "/light_base/debugMulti" { RefPublisher "cob4_3./battery_monitor./light_base./light_base/debugMulti"},
+		RosPublisher "/light_base/debug" { RefPublisher "cob4_3./battery_monitor./light_base./light_base/debug"},
+		RosPublisher "/diagnostics" { RefPublisher "cob4_3./battery_monitor./light_base./diagnostics"},
+		RosPublisher "/light_base/marker" { RefPublisher "cob4_3./battery_monitor./light_base./light_base/marker"}
+	}
+	RosSubscribers{
+		RosSubscriber "/light_base/command" { RefSubscriber "cob4_3./battery_monitor./light_base./light_base/command"}
+	}
+	RosSrvServers{
+		RosServiceServer "/light_base/stop_mode" { RefServer "cob4_3./battery_monitor./light_base./light_base/stop_mode"},
+		RosServiceServer "/light_base/set_light" { RefServer "cob4_3./battery_monitor./light_base./light_base/set_light"}
+	}
+	
+}

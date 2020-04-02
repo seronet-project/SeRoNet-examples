@@ -1,0 +1,19 @@
+ComponentInterface { name /docker_control/move_base_linear
+	RosPublishers{
+		RosPublisher "/base/twist_mux/command_navigation" { RefPublisher "cob4_3./battery_monitor./docker_control/move_base_linear./base/twist_mux/command_navigation"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base/odometry_controller/odometry" { RefSubscriber "cob4_3./battery_monitor./docker_control/move_base_linear./base/odometry_controller/odometry"},
+		RosSubscriber "/docker_control/move_base_linear_simple/goal" { RefSubscriber "cob4_3./battery_monitor./docker_control/move_base_linear./docker_control/move_base_linear_simple/goal"}
+	}
+	RosSrvServers{
+		RosServiceServer "/docker_control/move_base_linear/set_global_frame" { RefServer "cob4_3./battery_monitor./docker_control/move_base_linear./docker_control/move_base_linear/set_global_frame"}
+	}
+	RosActionServers{
+		RosActionServer "/docker_control/move_base_linear/" { RefServer "cob4_3./battery_monitor./docker_control/move_base_linear./docker_control/move_base_linear/"}
+	}
+	RosActionClients{
+		RosActionClient "/docker_control/move_base_linear/" { RefClient "cob4_3./battery_monitor./docker_control/move_base_linear./docker_control/move_base_linear/"}
+	}
+	
+}
