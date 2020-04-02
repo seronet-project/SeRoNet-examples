@@ -4,11 +4,11 @@ This tutorial shows how to use the [SeRoNet Mixed port features](https://github.
 
 Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../../README.md) are required to perform this tutorial. A previous default setup of the workspace is necessary to follow the instructions of the tutorial: [WORKSPACE SETUP](../ROSMixedPortTutorials_WSsetup.md).
 
-#### System overview
+### System overview
 
 ![SystemOverview](Screenshots/rospub_diagram.png)
 
-#### Required packages
+### Required packages
 
 **Domain Models projects::**
 
@@ -28,9 +28,9 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 - ComponentRosjoy_node (it will be created in this tutorial)
 
-#### ROS components
+### ROS components
 
-For this example we selected one of the most common ROS driver, the [joy package](http://wiki.ros.org/joy), a package that requires as dependency the [sensor_msgs](http://wiki.ros.org/sensor_msgs). As it is part of the common ROS msgs the required dependencies were automatically loaded to your workspace whiting the project **de.fraunhofer.ipa.ros.communication.objects**.
+For this example we selected one of the most common ROS drivers, the [joy package](http://wiki.ros.org/joy), a package that requires as dependency the [sensor_msgs](http://wiki.ros.org/sensor_msgs). As it is part of the common ROS msgs the required dependencies were automatically loaded to your workspace whiting the project **de.fraunhofer.ipa.ros.communication.objects**.
 
 The ROS tooling project associated to this ROS driver is delivered within this repository, you can import it using the Eclipse menu: **File** => **Import** => **General** => **Existing Projects into Workspace** and click the **Next** button. In the following window, click the **Browse...** button and select your local folder where you cloned the examples repository and choose the project **SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/ROS-MixedPort-Examples/ROSPublisher_examples/joy**. Complete the import by clicking the **Finish** button. If you navigate through the **joy** package and open the [representation file](https://www.eclipse.org/sirius/doc/user/general/Aird_Editor.html) you can get an overview o the model.
 
@@ -38,7 +38,7 @@ The ROS tooling project associated to this ROS driver is delivered within this r
 
 To get further information about how to create the model using the ROS developer tooling please visit the [ROS tooling documentation](https://github.com/ipa320/ros-model#tutorials).
 
-#### SeRoNet components
+### SeRoNet components
 
 By default the tooling automatically auto generates the corresponding component interface (a generic model of a component) of all the nodes on your ROS project. The auto generated components are always located under a new folder called *components/*. This model is the bridge from ROS to other frameworks. For the case of SeRoNet the tooling includes a special function that can be activated by a right-click on the file an choosing the option *Generate ROS-SeRoNet Mixed Port*.
 
@@ -62,9 +62,9 @@ The next figure shows the resulted SeRoNet component:
 
 <img src="ComponentRosjoy_node/model/ComponentRosjoy_nodeComponentDefinition.jpg" alt="ComponentRosjoy_node" style="zoom:50%;" />
 
-#### Code implementation
+### Code implementation
 
-In this section, we will adapt the auto generated C++ code to transform the incoming the  ROS message update from a */joy* ROS topic publisher (through the port *joy_sub*) into a SeRoNet communication object and push this object to the SeRoNet output  port *joyOut*.
+In this section, we will adapt the auto generated C++ code to transform the incoming  ROS message update from a */joy* ROS topic publisher (through the port *joy_sub*) into a SeRoNet communication object and push this object to the SeRoNet output  port *joyOut*.
 
 In case the *AutoCodeGeneration* ![AutoCodeGeneration_button](Screenshots/05-AutoCodeGeneration_button.png) button is disabled, you can select your project from the project Explorer  and press the *RunCodeGeneration*  ![ManualCodeGeneration_button](Screenshots/06-ManualCodeGeneration_button.png) , these two buttons are only available for the *Component Supplier* perspective.
 
@@ -93,7 +93,7 @@ Finally the on_execute implementation must be updated to send to the output port
 
 --> [Solution code](ComponentRosjoy_node) :wink:
 
-#### Execution
+### Execution
 
 This section requires a proper installation of the SeRoNet backend and the correct setup  of the workspaces (see [SeRoNet workspace setup](../ROSMixedPortTutorials_WSsetup.md))
 
