@@ -1,11 +1,11 @@
 RosInterfacesPool {
 	RosSubscriber _base_twist_mux_command_navigation_sub { topicName "/base/twist_mux/command_navigation" type "geometry_msgs.Twist" }
-	RosSubscriber _diagnostics_sub { topicName "/diagnostics" type "diagnostic_msgs.DiagnosticArray" }
 	RosSubscriber _station_detector_scan_sub { topicName "/station_detector/scan" type "sensor_msgs.LaserScan" }
 	RosSubscriber _bms_temperature_sub { topicName "/bms/temperature" type "std_msgs.Float64" }
 	RosSubscriber _bms_current_sub { topicName "/bms/current" type "std_msgs.Float64" }
 	RosSubscriber _bms_full_charge_capacity_sub { topicName "/bms/full_charge_capacity" type "std_msgs.Float64" }
 	RosSubscriber _bms_remaining_capacity_sub { topicName "/bms/remaining_capacity" type "std_msgs.Float64" }
+	RosSubscriber _diagnostics_sub { topicName "/diagnostics" type "diagnostic_msgs.DiagnosticArray" }
 	RosSubscriber _bms_voltage_sub { topicName "/bms/voltage" type "std_msgs.Float64" }
 	RosSubscriber _scan_unified_sub { topicName "/scan_unified" type "sensor_msgs.LaserScan" }
 	RosSubscriber _base_twist_controller_default_steer_ctrl_parameter_descriptions_sub { topicName "/base/twist_controller/default/steer_ctrl/parameter_descriptions" type "dynamic_reconfigure.ConfigDescription" }
@@ -37,8 +37,6 @@ RosInterfacesPool {
 	RosSubscriber _base_twist_controller_command_sub { topicName "/base/twist_controller/command" type "geometry_msgs.Twist" }
 	RosSubscriber _base_velocity_smoother_parameter_descriptions_sub { topicName "/base/velocity_smoother/parameter_descriptions" type "dynamic_reconfigure.ConfigDescription" }
 	RosSubscriber _base_velocity_smoother_parameter_updates_sub { topicName "/base/velocity_smoother/parameter_updates" type "dynamic_reconfigure.Config" }
-	RosSubscriber _gazebo_gui_parameter_descriptions_sub { topicName "/gazebo_gui/parameter_descriptions" type "dynamic_reconfigure.ConfigDescription" }
-	RosSubscriber _gazebo_gui_parameter_updates_sub { topicName "/gazebo_gui/parameter_updates" type "dynamic_reconfigure.Config" }
 	RosSubscriber _light_base_debugMulti_sub { topicName "/light_base/debugMulti" type "cob_light.ColorRGBAArray" }
 	RosSubscriber _light_base_debug_sub { topicName "/light_base/debug" type "std_msgs.ColorRGBA" }
 	RosSubscriber _light_base_marker_sub { topicName "/light_base/marker" type "visualization_msgs.Marker" }
@@ -57,7 +55,6 @@ RosInterfacesPool {
 	RosSubscriber _collision_velocity_filter_anti_collision_costmap_costmap_sub { topicName "/collision_velocity_filter/anti_collision_costmap/costmap" type "nav_msgs.OccupancyGrid" }
 	RosSubscriber _collision_velocity_filter_velocity_limited_marker_sub { topicName "/collision_velocity_filter/velocity_limited_marker" type "visualization_msgs.Marker" }
 	RosSubscriber _collision_velocity_filter_parameter_updates_sub { topicName "/collision_velocity_filter/parameter_updates" type "dynamic_reconfigure.Config" }
-	RosSubscriber _safety_controller_state_is_valid_sub { topicName "/safety_controller/state_is_valid" type "std_msgs.Bool" }
 	RosSubscriber _base_twist_mux_marker_sub { topicName "/base/twist_mux/marker" type "visualization_msgs.Marker" }
 	RosSubscriber _diagnostics_agg_sub { topicName "/diagnostics_agg" type "diagnostic_msgs.DiagnosticArray" }
 	RosSubscriber _diagnostics_toplevel_state_sub { topicName "/diagnostics_toplevel_state" type "diagnostic_msgs.DiagnosticStatus" }
@@ -145,7 +142,6 @@ RosInterfacesPool {
 	RosSrvClient _gazebo_get_model_properties_srvcli { srvName "/gazebo/get_model_properties" type "gazebo_msgs.GetModelProperties" }
 	RosSrvClient _gazebo_get_joint_properties_srvcli { srvName "/gazebo/get_joint_properties" type "gazebo_msgs.GetJointProperties" }
 	RosSrvClient _base_velocity_smoother_set_parameters_srvcli { srvName "/base/velocity_smoother/set_parameters" type "dynamic_reconfigure.Reconfigure" }
-	RosSrvClient _gazebo_gui_set_parameters_srvcli { srvName "/gazebo_gui/set_parameters" type "dynamic_reconfigure.Reconfigure" }
 	RosSrvClient _light_base_stop_mode_srvcli { srvName "/light_base/stop_mode" type "cob_light.StopLightMode" }
 	RosSrvClient _light_base_set_light_srvcli { srvName "/light_base/set_light" type "cob_light.SetLightMode" }
 	RosSrvClient _collision_velocity_filter_set_parameters_srvcli { srvName "/collision_velocity_filter/set_parameters" type "dynamic_reconfigure.Reconfigure" }
@@ -156,5 +152,4 @@ RosInterfacesPool {
 	RosSrvClient _base_driver_shutdown_srvcli { srvName "/base/driver/shutdown" type "std_srvs.Trigger" }
 	RosSrvClient _base_driver_halt_srvcli { srvName "/base/driver/halt" type "std_srvs.Trigger" }
 	RosSrvClient _base_driver_recover_srvcli { srvName "/base/driver/recover" type "std_srvs.Trigger" }
-	RosSrvClient _script_server_compose_trajectory_srvcli { srvName "/script_server/compose_trajectory" type "cob_script_server.ComposeTrajectory" }
 }

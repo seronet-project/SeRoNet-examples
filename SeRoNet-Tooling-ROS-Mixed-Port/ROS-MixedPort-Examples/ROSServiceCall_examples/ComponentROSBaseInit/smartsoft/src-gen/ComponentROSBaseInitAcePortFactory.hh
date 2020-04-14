@@ -35,7 +35,7 @@ public:
 	virtual int onStartup() override;
 
 	
-	virtual Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * createTriggerQueryServiceAnsw(const std::string &serviceName) override;
+	virtual Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * createBase_driver_initServiceAnsw(const std::string &serviceName) override;
 	
 	// get a pointer to the internal component implementation
 	SmartACE::SmartComponent* getComponentImpl();

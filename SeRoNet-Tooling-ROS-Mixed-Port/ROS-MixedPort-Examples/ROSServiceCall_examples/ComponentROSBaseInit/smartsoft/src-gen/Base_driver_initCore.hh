@@ -13,8 +13,8 @@
 // Please do not modify this file. It will be re-generated
 // running the code generator.
 //--------------------------------------------------------------------------
-#ifndef _TRIGGERQUERYSERVICEANSWHANDLER_CORE_HH
-#define _TRIGGERQUERYSERVICEANSWHANDLER_CORE_HH
+#ifndef _BASE_DRIVER_INIT_CORE_HH
+#define _BASE_DRIVER_INIT_CORE_HH
 		
 #include "aceSmartSoft.hh"
 
@@ -24,9 +24,9 @@
 // include the input interfaces (if any)
 
 // include all interaction-observer interfaces
-#include <TriggerQueryServiceAnswHandlerObserverInterface.hh>
+#include <Base_driver_initObserverInterface.hh>
 
-class TriggerQueryServiceAnswHandlerCore 
+class Base_driver_initCore 
 :	public Smart::IInputHandler<std::pair<Smart::QueryIdPtr,ROSRos_core::Std_srvs_TriggerRequest>>
 ,	public Smart::TaskTriggerSubject
 {
@@ -43,20 +43,20 @@ virtual void handle_input(const std::pair<Smart::QueryIdPtr,ROSRos_core::Std_srv
  */
 private:
 	std::mutex interaction_observers_mutex;
-	std::list<TriggerQueryServiceAnswHandlerObserverInterface*> interaction_observers;
+	std::list<Base_driver_initObserverInterface*> interaction_observers;
 protected:
 	void notify_all_interaction_observers();
 public:
-	void attach_interaction_observer(TriggerQueryServiceAnswHandlerObserverInterface *observer);
-	void detach_interaction_observer(TriggerQueryServiceAnswHandlerObserverInterface *observer);
+	void attach_interaction_observer(Base_driver_initObserverInterface *observer);
+	void detach_interaction_observer(Base_driver_initObserverInterface *observer);
 
 protected:
 	
 public:
 	using IQueryServer = Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse>;
 	using QueryId = Smart::QueryIdPtr;
-	TriggerQueryServiceAnswHandlerCore(IQueryServer *server);
-	virtual ~TriggerQueryServiceAnswHandlerCore() = default;
+	Base_driver_initCore(IQueryServer *server);
+	virtual ~Base_driver_initCore() = default;
 	
 protected:
 	IQueryServer *server;

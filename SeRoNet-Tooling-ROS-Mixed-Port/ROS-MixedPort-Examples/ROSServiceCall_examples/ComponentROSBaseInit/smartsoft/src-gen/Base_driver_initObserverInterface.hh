@@ -13,17 +13,17 @@
 // Please do not modify this file. It will be re-generated
 // running the code generator.
 //--------------------------------------------------------------------------
-#ifndef _TRIGGERQUERYSERVICEANSWHANDLER_OBSERVER_INTERFACE_HH
-#define _TRIGGERQUERYSERVICEANSWHANDLER_OBSERVER_INTERFACE_HH
+#ifndef _BASE_DRIVER_INIT_OBSERVER_INTERFACE_HH
+#define _BASE_DRIVER_INIT_OBSERVER_INTERFACE_HH
 
 // forward declaration
-class TriggerQueryServiceAnswHandler;
+class Base_driver_init;
 
-class TriggerQueryServiceAnswHandlerObserverInterface {
+class Base_driver_initObserverInterface {
 public:
-	virtual ~TriggerQueryServiceAnswHandlerObserverInterface() {  }
+	virtual ~Base_driver_initObserverInterface() {  }
 
-	virtual void on_update_from(const TriggerQueryServiceAnswHandler *subject) = 0;
+	virtual void on_update_from(const Base_driver_init *subject) = 0;
 };
 
 #endif

@@ -53,7 +53,7 @@ int ComponentROSBaseInitAcePortFactory::onStartup()
 }
 
 
-Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * ComponentROSBaseInitAcePortFactory::createTriggerQueryServiceAnsw(const std::string &serviceName)
+Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * ComponentROSBaseInitAcePortFactory::createBase_driver_initServiceAnsw(const std::string &serviceName)
 {
 	return new SmartACE::QueryServer<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse>(componentImpl, serviceName);
 }

@@ -37,8 +37,8 @@ initialComponentMode Neutral
 ##########################
 # server port parameter
 
-[TriggerQueryServiceAnsw]
-serviceName TriggerQueryServiceAnsw
+[base_driver_initServiceAnsw]
+serviceName base_driver_initServiceAnsw
 roboticMiddleware ACE_SmartSoft
 
 ##########################

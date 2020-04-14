@@ -13,39 +13,39 @@
 // Please do not modify this file. It will be re-generated
 // running the code generator.
 //--------------------------------------------------------------------------
-#include "TriggerQueryServiceAnswHandlerCore.hh"
-#include "TriggerQueryServiceAnswHandler.hh"
+#include "Base_driver_initCore.hh"
+#include "Base_driver_init.hh"
 
 // include observers
 
-TriggerQueryServiceAnswHandlerCore::TriggerQueryServiceAnswHandlerCore(IQueryServer* server)
+Base_driver_initCore::Base_driver_initCore(IQueryServer* server)
 :	Smart::IInputHandler<std::pair<Smart::QueryIdPtr,ROSRos_core::Std_srvs_TriggerRequest>>(server)
 ,	server(server)
 {
 	
 }
 
-void TriggerQueryServiceAnswHandlerCore::updateAllCommObjects()
+void Base_driver_initCore::updateAllCommObjects()
 {
 }
 
-void TriggerQueryServiceAnswHandlerCore::notify_all_interaction_observers() {
+void Base_driver_initCore::notify_all_interaction_observers() {
 	std::unique_lock<std::mutex> lock(interaction_observers_mutex);
 	// try dynamically down-casting this class to the derived class 
 	// (we can do it safely here as we exactly know the derived class)
-	if(const TriggerQueryServiceAnswHandler* triggerQueryServiceAnswHandler = dynamic_cast<const TriggerQueryServiceAnswHandler*>(this)) {
+	if(const Base_driver_init* base_driver_init = dynamic_cast<const Base_driver_init*>(this)) {
 		for(auto it=interaction_observers.begin(); it!=interaction_observers.end(); it++) {
-			(*it)->on_update_from(triggerQueryServiceAnswHandler);
+			(*it)->on_update_from(base_driver_init);
 		}
 	}
 }
 
-void TriggerQueryServiceAnswHandlerCore::attach_interaction_observer(TriggerQueryServiceAnswHandlerObserverInterface *observer) {
+void Base_driver_initCore::attach_interaction_observer(Base_driver_initObserverInterface *observer) {
 	std::unique_lock<std::mutex> lock(interaction_observers_mutex);
 	interaction_observers.push_back(observer);
 }
 
-void TriggerQueryServiceAnswHandlerCore::detach_interaction_observer(TriggerQueryServiceAnswHandlerObserverInterface *observer) {
+void Base_driver_initCore::detach_interaction_observer(Base_driver_initObserverInterface *observer) {
 	std::unique_lock<std::mutex> lock(interaction_observers_mutex);
 	interaction_observers.remove(observer);
 }

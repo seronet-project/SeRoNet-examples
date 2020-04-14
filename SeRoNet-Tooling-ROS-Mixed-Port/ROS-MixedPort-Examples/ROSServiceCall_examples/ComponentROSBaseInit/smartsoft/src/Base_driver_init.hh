@@ -14,17 +14,17 @@
 // If you want the toolchain to re-generate this file, please 
 // delete it before running the code generator.
 //--------------------------------------------------------------------------
-#ifndef _TRIGGERQUERYSERVICEANSWHANDLER_USER_HH
-#define _TRIGGERQUERYSERVICEANSWHANDLER_USER_HH
+#ifndef _BASE_DRIVER_INIT_USER_HH
+#define _BASE_DRIVER_INIT_USER_HH
 		
-#include "TriggerQueryServiceAnswHandlerCore.hh"
+#include "Base_driver_initCore.hh"
 
-class TriggerQueryServiceAnswHandler : public TriggerQueryServiceAnswHandlerCore
+class Base_driver_init : public Base_driver_initCore
 {
 protected:
 public:
-	TriggerQueryServiceAnswHandler(IQueryServer *server);
-	virtual ~TriggerQueryServiceAnswHandler() = default;
+	Base_driver_init(IQueryServer *server);
+	virtual ~Base_driver_init() = default;
 	virtual void handleQuery(const QueryId &id, const ROSRos_core::Std_srvs_TriggerRequest& request);
 };
 #endif

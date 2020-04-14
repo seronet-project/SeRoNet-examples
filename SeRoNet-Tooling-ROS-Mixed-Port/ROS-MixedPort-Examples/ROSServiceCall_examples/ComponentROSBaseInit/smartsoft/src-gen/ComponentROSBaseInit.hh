@@ -50,7 +50,7 @@ class ComponentROSBaseInitExtension;
 
 // include input-handler(s)
 // include request-handler(s)
-#include "TriggerQueryServiceAnswHandler.hh"
+#include "Base_driver_init.hh"
 
 // include handler
 #include "CompHandler.hh"
@@ -101,11 +101,11 @@ public:
 	// define output-ports
 	
 	// define answer-ports
-	Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> *triggerQueryServiceAnsw;
-	Smart::QueryServerTaskTrigger<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> *triggerQueryServiceAnswInputTaskTrigger;
+	Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> *base_driver_initServiceAnsw;
+	Smart::QueryServerTaskTrigger<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> *base_driver_initServiceAnswInputTaskTrigger;
 	
 	// define request-handlers
-	TriggerQueryServiceAnswHandler *triggerQueryServiceAnswHandler;
+	Base_driver_init *base_driver_init;
 	
 	// definitions of ComponentROSBaseInitROSExtension
 	ComponentROSBaseInitRosPortBaseClass *rosPorts;
@@ -194,10 +194,10 @@ public:
 		//--- upcall parameter ---
 		
 		//--- server port parameter ---
-		struct TriggerQueryServiceAnsw_struct {
+		struct Base_driver_initServiceAnsw_struct {
 				std::string serviceName;
 				std::string roboticMiddleware;
-		} triggerQueryServiceAnsw;
+		} base_driver_initServiceAnsw;
 	
 		//--- client port parameter ---
 		

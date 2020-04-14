@@ -14,21 +14,22 @@
 // If you want the toolchain to re-generate this file, please 
 // delete it before running the code generator.
 //--------------------------------------------------------------------------
-#include "TriggerQueryServiceAnswHandler.hh"
+#include "Base_driver_init.hh"
 #include "ComponentROSBaseInit.hh"
 
-TriggerQueryServiceAnswHandler::TriggerQueryServiceAnswHandler(IQueryServer *server)
-:	TriggerQueryServiceAnswHandlerCore(server)
+
+Base_driver_init::Base_driver_init(IQueryServer *server)
+:	Base_driver_initCore(server)
 {
 	
 }
 
 
-void TriggerQueryServiceAnswHandler::handleQuery(const Smart::QueryIdPtr &id, const ROSRos_core::Std_srvs_TriggerRequest& request) 
+void Base_driver_init::handleQuery(const Smart::QueryIdPtr &id, const ROSRos_core::Std_srvs_TriggerRequest& request) 
 {
 	ROSRos_core::Std_srvs_TriggerResponse answer;
 	
 	// implement your query handling logic here and fill in the answer object
-	
+
 	this->server->answer(id, answer);
 }

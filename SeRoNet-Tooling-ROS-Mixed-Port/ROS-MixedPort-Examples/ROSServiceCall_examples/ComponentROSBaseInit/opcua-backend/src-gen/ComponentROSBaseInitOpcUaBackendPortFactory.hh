@@ -46,7 +46,7 @@ public:
 	virtual int onStartup() override;
 
 	
-	virtual Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * createTriggerQueryServiceAnsw(const std::string &serviceName) override;
+	virtual Smart::IQueryServerPattern<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse> * createBase_driver_initServiceAnsw(const std::string &serviceName) override;
 	
 	virtual int onShutdown(const std::chrono::steady_clock::duration &timeoutTime=std::chrono::seconds(2)) override;
 	virtual void destroy() override;

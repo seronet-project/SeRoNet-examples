@@ -31,10 +31,10 @@ ComponentROSBaseInit::ComponentROSBaseInit()
 	std::cout << "constructor of ComponentROSBaseInit\n";
 	
 	// set all pointer members to NULL
-	triggerQueryServiceAnsw = NULL;
-	triggerQueryServiceAnswInputTaskTrigger = NULL;
-	triggerQueryServiceAnswHandler = NULL;
 	//_base_driver_init_srvcli = NULL;
+	base_driver_init = NULL;
+	base_driver_initServiceAnsw = NULL;
+	base_driver_initServiceAnswInputTaskTrigger = NULL;
 	stateChangeHandler = NULL;
 	stateSlave = NULL;
 	wiringSlave = NULL;
@@ -45,8 +45,8 @@ ComponentROSBaseInit::ComponentROSBaseInit()
 	connections.component.defaultScheduler = "DEFAULT";
 	connections.component.useLogger = false;
 	
-	connections.triggerQueryServiceAnsw.serviceName = "TriggerQueryServiceAnsw";
-	connections.triggerQueryServiceAnsw.roboticMiddleware = "ACE_SmartSoft";
+	connections.base_driver_initServiceAnsw.serviceName = "base_driver_initServiceAnsw";
+	connections.base_driver_initServiceAnsw.roboticMiddleware = "ACE_SmartSoft";
 	
 	// initialize members of ComponentROSBaseInitROSExtension
 	rosPorts = 0;
@@ -166,8 +166,8 @@ void ComponentROSBaseInit::init(int argc, char *argv[])
 		
 		// create server ports
 		// TODO: set minCycleTime from Ini-file
-		triggerQueryServiceAnsw = portFactoryRegistry[connections.triggerQueryServiceAnsw.roboticMiddleware]->createTriggerQueryServiceAnsw(connections.triggerQueryServiceAnsw.serviceName);
-		triggerQueryServiceAnswInputTaskTrigger = new Smart::QueryServerTaskTrigger<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse>(triggerQueryServiceAnsw);
+		base_driver_initServiceAnsw = portFactoryRegistry[connections.base_driver_initServiceAnsw.roboticMiddleware]->createBase_driver_initServiceAnsw(connections.base_driver_initServiceAnsw.serviceName);
+		base_driver_initServiceAnswInputTaskTrigger = new Smart::QueryServerTaskTrigger<ROSRos_core::Std_srvs_TriggerRequest, ROSRos_core::Std_srvs_TriggerResponse>(base_driver_initServiceAnsw);
 		
 		// create client ports
 		
@@ -176,7 +176,7 @@ void ComponentROSBaseInit::init(int argc, char *argv[])
 		// create input-handler
 		
 		// create request-handlers
-		triggerQueryServiceAnswHandler = new TriggerQueryServiceAnswHandler(triggerQueryServiceAnsw);
+		base_driver_init = new Base_driver_init(base_driver_initServiceAnsw);
 		
 		// create state pattern
 		stateChangeHandler = new SmartStateChangeHandler();
@@ -260,12 +260,12 @@ void ComponentROSBaseInit::fini()
 	// destroy client ports
 
 	// destroy server ports
-	delete triggerQueryServiceAnsw;
-	delete triggerQueryServiceAnswInputTaskTrigger;
+	delete base_driver_initServiceAnsw;
+	delete base_driver_initServiceAnswInputTaskTrigger;
 	// destroy event-test handlers (if needed)
 	
 	// destroy request-handlers
-	delete triggerQueryServiceAnswHandler;
+	delete base_driver_init;
 	
 	delete stateSlave;
 	// destroy state-change-handler
@@ -366,10 +366,10 @@ void ComponentROSBaseInit::loadParameter(int argc, char *argv[])
 		}
 		
 		
-		// load parameters for server TriggerQueryServiceAnsw
-		parameter.getString("TriggerQueryServiceAnsw", "serviceName", connections.triggerQueryServiceAnsw.serviceName);
-		if(parameter.checkIfParameterExists("TriggerQueryServiceAnsw", "roboticMiddleware")) {
-			parameter.getString("TriggerQueryServiceAnsw", "roboticMiddleware", connections.triggerQueryServiceAnsw.roboticMiddleware);
+		// load parameters for server base_driver_initServiceAnsw
+		parameter.getString("base_driver_initServiceAnsw", "serviceName", connections.base_driver_initServiceAnsw.serviceName);
+		if(parameter.checkIfParameterExists("base_driver_initServiceAnsw", "roboticMiddleware")) {
+			parameter.getString("base_driver_initServiceAnsw", "roboticMiddleware", connections.base_driver_initServiceAnsw.roboticMiddleware);
 		}
 		
 		
