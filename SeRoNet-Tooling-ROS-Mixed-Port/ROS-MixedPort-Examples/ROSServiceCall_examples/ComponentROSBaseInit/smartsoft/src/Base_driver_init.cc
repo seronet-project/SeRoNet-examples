@@ -16,7 +16,7 @@
 //--------------------------------------------------------------------------
 #include "Base_driver_init.hh"
 #include "ComponentROSBaseInit.hh"
-
+#include "std_srvs/Trigger.h"
 
 Base_driver_init::Base_driver_init(IQueryServer *server)
 :	Base_driver_initCore(server)
@@ -27,9 +27,14 @@ Base_driver_init::Base_driver_init(IQueryServer *server)
 
 void Base_driver_init::handleQuery(const Smart::QueryIdPtr &id, const ROSRos_core::Std_srvs_TriggerRequest& request) 
 {
+	std_srvs::Trigger ros_service;
+	COMP->rosPorts->_base_driver_init_srvcli.call(ros_service);
+
 	ROSRos_core::Std_srvs_TriggerResponse answer;
 	
 	// implement your query handling logic here and fill in the answer object
-
+	answer.setMessage(ros_service.response.message);
+	answer.setSuccess(ros_service.response.success);
+	
 	this->server->answer(id, answer);
 }
