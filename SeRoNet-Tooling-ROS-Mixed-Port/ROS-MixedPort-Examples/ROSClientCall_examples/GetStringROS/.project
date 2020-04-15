@@ -3,6 +3,7 @@
 	<name>GetStringROS</name>
 	<comment></comment>
 	<projects>
+		<project>CommBasicObjects</project>
 		<project>ROSRos_core</project>
 	</projects>
 	<buildSpec>

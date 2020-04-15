@@ -1,11 +1,11 @@
-ComponentDefinition GetStringROS logo "/SetBoolROS/model/logo.png"
+ComponentDefinition GetStringROS logo "/GetStringROS/model/logo.png"
 {
 RequestPort SetBoolQueryServiceReq implements ROSRos_core.SetBoolQueryService {
 	}
+	MixedPortROS _set_bool
 	Activity SetBool_activity
 	{
-		MixedPortROSLink _set_bool
 		RequestPortLink SetBoolQueryServiceReq
+		MixedPortROSLink _set_bool
 	}
-	MixedPortROS _set_bool
 }
