@@ -59,7 +59,7 @@ int SetBool_activity::on_execute()
 	// to get the incoming data, use this methods:
 	Smart::StatusCode status;
 
-	std::cout << "Hello from SetBool_activity " << std::endl;
+	//std::cout << "Hello from SetBool_activity " << std::endl;
 
 	// it is possible to return != 0 (e.g. when the task detects errors), then the outer loop breaks and the task stops
 	return 0;
