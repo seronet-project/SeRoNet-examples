@@ -32,6 +32,17 @@ SetBool_activity::~SetBool_activity()
 
 std_srvs::SetBool::Response SetBool_activity::_set_bool_callServiceQuery (std_srvs::SetBool::Request request) {
 	// implement this method
+	ROSRos_core::Std_srvs_SetBoolRequest ask;
+	ROSRos_core::Std_srvs_SetBoolResponse answer;
+
+	ask.setData(request.data);
+	COMP->setBoolQueryServiceReq->query(ask, answer);
+
+	std_srvs::SetBool::Response ros_srv;
+	ros_srv.success = answer.getSuccess();
+	ros_srv.message = answer.getMessage();
+
+	return ros_srv;
 }
 int SetBool_activity::on_entry()
 {
