@@ -1,0 +1,7 @@
+ComponentDefinition StringServiceQuery logo "/StringServiceQuery/model/logo.png"
+{
+AnswerPort SetBoolQueryServiceAnsw implements ROSRos_core.SetBoolQueryService {
+	}
+	RequestHandler SetBoolQueryServiceAnswHandler triggeredFrom SetBoolQueryServiceAnsw {
+	}
+}

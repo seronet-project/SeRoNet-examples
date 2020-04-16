@@ -1,0 +1,9 @@
+ComponentInterface { name /scan_unifier_filter
+	RosPublishers{
+		RosPublisher "/scan_unified_filtered" { RefPublisher "cob4_3./battery_monitor./scan_unifier_filter./scan_unified_filtered"}
+	}
+	RosSubscribers{
+		RosSubscriber "/scan_unified" { RefSubscriber "cob4_3./battery_monitor./scan_unifier_filter./scan_unified"}
+	}
+	
+}

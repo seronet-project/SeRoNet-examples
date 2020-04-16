@@ -1,0 +1,16 @@
+ComponentInterface { name /base/velocity_smoother
+	RosPublishers{
+		RosPublisher "/base/twist_controller/command" { RefPublisher "cob4_3./battery_monitor./base/velocity_smoother./base/twist_controller/command"},
+		RosPublisher "/base/velocity_smoother/parameter_descriptions" { RefPublisher "cob4_3./battery_monitor./base/velocity_smoother./base/velocity_smoother/parameter_descriptions"},
+		RosPublisher "/base/velocity_smoother/parameter_updates" { RefPublisher "cob4_3./battery_monitor./base/velocity_smoother./base/velocity_smoother/parameter_updates"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base/twist_controller/command" { RefSubscriber "cob4_3./battery_monitor./base/velocity_smoother./base/twist_controller/command"},
+		RosSubscriber "/base/odometry_controller/odometry" { RefSubscriber "cob4_3./battery_monitor./base/velocity_smoother./base/odometry_controller/odometry"},
+		RosSubscriber "/base/velocity_smoother/command" { RefSubscriber "cob4_3./battery_monitor./base/velocity_smoother./base/velocity_smoother/command"}
+	}
+	RosSrvServers{
+		RosServiceServer "/base/velocity_smoother/set_parameters" { RefServer "cob4_3./battery_monitor./base/velocity_smoother./base/velocity_smoother/set_parameters"}
+	}
+	
+}

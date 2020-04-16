@@ -1,0 +1,3 @@
+PackageSet{package{
+    Package cob_msg{spec{
+      TopicSpec "" { } } } } }

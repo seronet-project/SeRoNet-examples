@@ -1,0 +1,13 @@
+ComponentInterface { name /bms/power_state_aggregator
+	RosPublishers{
+		RosPublisher "/power_state" { RefPublisher "cob4_3./battery_monitor./bms/power_state_aggregator./power_state"}
+	}
+	RosSubscribers{
+		RosSubscriber "/bms/full_charge_capacity" { RefSubscriber "cob4_3./battery_monitor./bms/power_state_aggregator./bms/full_charge_capacity"},
+		RosSubscriber "/bms/voltage" { RefSubscriber "cob4_3./battery_monitor./bms/power_state_aggregator./bms/voltage"},
+		RosSubscriber "/bms/temperature" { RefSubscriber "cob4_3./battery_monitor./bms/power_state_aggregator./bms/temperature"},
+		RosSubscriber "/bms/current" { RefSubscriber "cob4_3./battery_monitor./bms/power_state_aggregator./bms/current"},
+		RosSubscriber "/bms/remaining_capacity" { RefSubscriber "cob4_3./battery_monitor./bms/power_state_aggregator./bms/remaining_capacity"}
+	}
+	
+}

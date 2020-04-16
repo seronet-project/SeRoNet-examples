@@ -1,0 +1,4 @@
+ComponentDatasheet ComponentRosjoy_node
+{
+	BaseURI "http://www.servicerobotik-ulm.de" ShortDescription "TODO: add short description for ComponentRosjoy_node datasheet"
+}

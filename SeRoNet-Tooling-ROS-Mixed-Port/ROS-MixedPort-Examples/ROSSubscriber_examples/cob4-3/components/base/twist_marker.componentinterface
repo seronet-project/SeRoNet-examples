@@ -1,0 +1,9 @@
+ComponentInterface { name /base/twist_marker
+	RosPublishers{
+		RosPublisher "/base/twist_mux/marker" { RefPublisher "cob4_3./battery_monitor./base/twist_marker./base/twist_mux/marker"}
+	}
+	RosSubscribers{
+		RosSubscriber "/base/velocity_smoother/command" { RefSubscriber "cob4_3./battery_monitor./base/twist_marker./base/velocity_smoother/command"}
+	}
+	
+}

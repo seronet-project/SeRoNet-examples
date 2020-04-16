@@ -1,0 +1,27 @@
+ComponentInterface { name /collision_velocity_filter
+	RosPublishers{
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/parameter_updates" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/parameter_updates"},
+		RosPublisher "/collision_velocity_filter/parameter_descriptions" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/parameter_descriptions"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/parameter_updates" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/parameter_updates"},
+		RosPublisher "/relevant_obstacles_grid" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./relevant_obstacles_grid"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/parameter_descriptions" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/parameter_descriptions"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/footprint" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/footprint"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/costmap_updates" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/costmap_updates"},
+		RosPublisher "/base/twist_mux/command_safe" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./base/twist_mux/command_safe"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/parameter_descriptions" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/parameter_descriptions"},
+		RosPublisher "/collision_velocity_filter/anti_collision_costmap/costmap" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/costmap"},
+		RosPublisher "/collision_velocity_filter/velocity_limited_marker" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/velocity_limited_marker"},
+		RosPublisher "/collision_velocity_filter/parameter_updates" { RefPublisher "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/parameter_updates"}
+	}
+	RosSubscribers{
+		RosSubscriber "/collision_velocity_filter/anti_collision_costmap/footprint" { RefSubscriber "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/footprint"},
+		RosSubscriber "/base/collision_velocity_filter/command" { RefSubscriber "cob4_3./battery_monitor./collision_velocity_filter./base/collision_velocity_filter/command"},
+		RosSubscriber "/scan_unified_filtered" { RefSubscriber "cob4_3./battery_monitor./collision_velocity_filter./scan_unified_filtered"}
+	}
+	RosSrvServers{
+		RosServiceServer "/collision_velocity_filter/set_parameters" { RefServer "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/set_parameters"},
+		RosServiceServer "/collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/set_parameters" { RefServer "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/obstacle_layer_0/set_parameters"},
+		RosServiceServer "/collision_velocity_filter/anti_collision_costmap/set_parameters" { RefServer "cob4_3./battery_monitor./collision_velocity_filter./collision_velocity_filter/anti_collision_costmap/set_parameters"}
+	}
+	
+}

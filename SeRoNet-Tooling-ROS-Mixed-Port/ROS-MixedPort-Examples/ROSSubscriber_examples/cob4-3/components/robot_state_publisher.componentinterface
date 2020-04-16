@@ -1,0 +1,6 @@
+ComponentInterface { name /robot_state_publisher
+	RosSubscribers{
+		RosSubscriber "/joint_states" { RefSubscriber "cob4_3./battery_monitor./robot_state_publisher./joint_states"}
+	}
+	
+}

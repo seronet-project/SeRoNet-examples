@@ -1,0 +1,4 @@
+ComponentDatasheet GetStringROS
+{
+	BaseURI "http://www.servicerobotik-ulm.de" ShortDescription "TODO: add short description for GetStringROS datasheet"
+}

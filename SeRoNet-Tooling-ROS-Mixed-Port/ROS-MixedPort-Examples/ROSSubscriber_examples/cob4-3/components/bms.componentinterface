@@ -1,0 +1,15 @@
+ComponentInterface { name /bms
+	RosPublishers{
+		RosPublisher "/bms/temperature" { RefPublisher "cob4_3./battery_monitor./bms./bms/temperature"},
+		RosPublisher "/bms/current" { RefPublisher "cob4_3./battery_monitor./bms./bms/current"},
+		RosPublisher "/bms/full_charge_capacity" { RefPublisher "cob4_3./battery_monitor./bms./bms/full_charge_capacity"},
+		RosPublisher "/bms/remaining_capacity" { RefPublisher "cob4_3./battery_monitor./bms./bms/remaining_capacity"},
+		RosPublisher "/diagnostics" { RefPublisher "cob4_3./battery_monitor./bms./diagnostics"},
+		RosPublisher "/bms/voltage" { RefPublisher "cob4_3./battery_monitor./bms./bms/voltage"}
+	}
+	RosSrvServers{
+		RosServiceServer "/bms/set_relative_remaining_capacity" { RefServer "cob4_3./battery_monitor./bms./bms/set_relative_remaining_capacity"},
+		RosServiceServer "/bms/set_current" { RefServer "cob4_3./battery_monitor./bms./bms/set_current"}
+	}
+	
+}

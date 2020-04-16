@@ -1,0 +1,338 @@
+/** 
+\class ROSRos_core::Std_msgs_BoolCore
+
+Structure of Communication Object:
+- data: Boolean 
+
+\class ROSRos_core::Std_msgs_ByteCore
+
+Structure of Communication Object:
+- data: UInt8 
+
+\class ROSRos_core::Std_msgs_ByteMultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: UInt8[*] 
+
+\class ROSRos_core::Std_msgs_ColorRGBACore
+
+Structure of Communication Object:
+- r: Float 
+- g: Float 
+- b: Float 
+- a: Float 
+
+\class ROSRos_core::Std_msgs_DurationCore
+
+Structure of Communication Object:
+- data: CommBasicObjects::CommTimeStamp 
+
+\class ROSRos_core::Std_msgs_EmptyCore
+
+Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
+
+\class ROSRos_core::Std_msgs_Float32Core
+
+Structure of Communication Object:
+- data: Float 
+
+\class ROSRos_core::Std_msgs_Float32MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Float[*] 
+
+\class ROSRos_core::Std_msgs_Float64Core
+
+Structure of Communication Object:
+- data: Double 
+
+\class ROSRos_core::Std_msgs_Float64MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Double[*] 
+
+\class ROSRos_core::Std_msgs_HeaderCore
+
+Structure of Communication Object:
+- seq: UInt32 
+- stamp: CommBasicObjects::CommTimeStamp 
+- frame_id: String 
+
+\class ROSRos_core::Std_msgs_Int16MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Int16[*] 
+
+\class ROSRos_core::Std_msgs_Int32MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Int32[*] 
+
+\class ROSRos_core::Std_msgs_Int64MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Int64[*] 
+
+\class ROSRos_core::Std_msgs_Int8MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: Int8[*] 
+
+\class ROSRos_core::Std_msgs_MultiArrayDimensionCore
+
+Structure of Communication Object:
+- label: String 
+- size: UInt32 
+- stride: UInt32 
+
+\class ROSRos_core::Std_msgs_MultiArrayLayoutCore
+
+Structure of Communication Object:
+- dim: ROSRos_core::Std_msgs_MultiArrayDimension[*] 
+- data_offset: UInt32 
+
+\class ROSRos_core::Std_msgs_TimeCore
+
+Structure of Communication Object:
+- data: CommBasicObjects::CommTimeStamp 
+
+\class ROSRos_core::Std_msgs_UInt16MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: UInt16[*] 
+
+\class ROSRos_core::Std_msgs_UInt32MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: UInt32[*] 
+
+\class ROSRos_core::Std_msgs_UInt64MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: UInt64[*] 
+
+\class ROSRos_core::Std_msgs_UInt8MultiArrayCore
+
+Structure of Communication Object:
+- layout: ROSRos_core::Std_msgs_MultiArrayLayout 
+- data: UInt8[*] 
+
+\class ROSRos_core::Std_srvs_EmptyRequestCore
+
+Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
+
+\class ROSRos_core::Std_srvs_EmptyResponseCore
+
+Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
+
+\class ROSRos_core::Std_srvs_SetBoolRequestCore
+
+Structure of Communication Object:
+- data: Boolean 
+
+\class ROSRos_core::Std_srvs_SetBoolResponseCore
+
+Structure of Communication Object:
+- success: Boolean 
+- message: String 
+
+\class ROSRos_core::Std_srvs_TriggerRequestCore
+
+Structure of Communication Object:
+- dummy: CommBasicObjects::CommVoid 
+
+\class ROSRos_core::Std_srvs_TriggerResponseCore
+
+Structure of Communication Object:
+- success: Boolean 
+- message: String 
+
+
+
+
+@defgroup ROSRos_core
+@ingroup commObjGroup
+@{
+\page ROSRos_corePage ROSRos_core
+Class Reference: ROSRos_core
+<hr>
+
+@section Std_msgs_Bool Std_msgs_Bool
+- data: Boolean  
+
+Class Reference: ROSRos_core::Std_msgs_BoolCore
+<hr>
+@section Std_msgs_Byte Std_msgs_Byte
+- data: UInt8  
+
+Class Reference: ROSRos_core::Std_msgs_ByteCore
+<hr>
+@section Std_msgs_ByteMultiArray Std_msgs_ByteMultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: UInt8[*]  
+
+Class Reference: ROSRos_core::Std_msgs_ByteMultiArrayCore
+<hr>
+@section Std_msgs_ColorRGBA Std_msgs_ColorRGBA
+- r: Float  
+- g: Float  
+- b: Float  
+- a: Float  
+
+Class Reference: ROSRos_core::Std_msgs_ColorRGBACore
+<hr>
+@section Std_msgs_Duration Std_msgs_Duration
+- data: @ref CommTimeStamp (CommObj) 
+
+Class Reference: ROSRos_core::Std_msgs_DurationCore
+<hr>
+@section Std_msgs_Empty Std_msgs_Empty
+- dummy: @ref CommVoid (CommObj) 
+
+Class Reference: ROSRos_core::Std_msgs_EmptyCore
+<hr>
+@section Std_msgs_Float32 Std_msgs_Float32
+- data: Float  
+
+Class Reference: ROSRos_core::Std_msgs_Float32Core
+<hr>
+@section Std_msgs_Float32MultiArray Std_msgs_Float32MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Float[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Float32MultiArrayCore
+<hr>
+@section Std_msgs_Float64 Std_msgs_Float64
+- data: Double  
+
+Class Reference: ROSRos_core::Std_msgs_Float64Core
+<hr>
+@section Std_msgs_Float64MultiArray Std_msgs_Float64MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Double[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Float64MultiArrayCore
+<hr>
+@section Std_msgs_Header Std_msgs_Header
+- seq: UInt32  
+- stamp: @ref CommTimeStamp (CommObj) 
+- frame_id: String  
+
+Class Reference: ROSRos_core::Std_msgs_HeaderCore
+<hr>
+@section Std_msgs_Int16MultiArray Std_msgs_Int16MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Int16[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Int16MultiArrayCore
+<hr>
+@section Std_msgs_Int32MultiArray Std_msgs_Int32MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Int32[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Int32MultiArrayCore
+<hr>
+@section Std_msgs_Int64MultiArray Std_msgs_Int64MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Int64[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Int64MultiArrayCore
+<hr>
+@section Std_msgs_Int8MultiArray Std_msgs_Int8MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: Int8[*]  
+
+Class Reference: ROSRos_core::Std_msgs_Int8MultiArrayCore
+<hr>
+@section Std_msgs_MultiArrayDimension Std_msgs_MultiArrayDimension
+- label: String  
+- size: UInt32  
+- stride: UInt32  
+
+Class Reference: ROSRos_core::Std_msgs_MultiArrayDimensionCore
+<hr>
+@section Std_msgs_MultiArrayLayout Std_msgs_MultiArrayLayout
+- dim: @ref Std_msgs_MultiArrayDimension[*] (CommObj) 
+- data_offset: UInt32  
+
+Class Reference: ROSRos_core::Std_msgs_MultiArrayLayoutCore
+<hr>
+@section Std_msgs_Time Std_msgs_Time
+- data: @ref CommTimeStamp (CommObj) 
+
+Class Reference: ROSRos_core::Std_msgs_TimeCore
+<hr>
+@section Std_msgs_UInt16MultiArray Std_msgs_UInt16MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: UInt16[*]  
+
+Class Reference: ROSRos_core::Std_msgs_UInt16MultiArrayCore
+<hr>
+@section Std_msgs_UInt32MultiArray Std_msgs_UInt32MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: UInt32[*]  
+
+Class Reference: ROSRos_core::Std_msgs_UInt32MultiArrayCore
+<hr>
+@section Std_msgs_UInt64MultiArray Std_msgs_UInt64MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: UInt64[*]  
+
+Class Reference: ROSRos_core::Std_msgs_UInt64MultiArrayCore
+<hr>
+@section Std_msgs_UInt8MultiArray Std_msgs_UInt8MultiArray
+- layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
+- data: UInt8[*]  
+
+Class Reference: ROSRos_core::Std_msgs_UInt8MultiArrayCore
+<hr>
+@section Std_srvs_EmptyRequest Std_srvs_EmptyRequest
+- dummy: @ref CommVoid (CommObj) 
+
+Class Reference: ROSRos_core::Std_srvs_EmptyRequestCore
+<hr>
+@section Std_srvs_EmptyResponse Std_srvs_EmptyResponse
+- dummy: @ref CommVoid (CommObj) 
+
+Class Reference: ROSRos_core::Std_srvs_EmptyResponseCore
+<hr>
+@section Std_srvs_SetBoolRequest Std_srvs_SetBoolRequest
+- data: Boolean  
+
+Class Reference: ROSRos_core::Std_srvs_SetBoolRequestCore
+<hr>
+@section Std_srvs_SetBoolResponse Std_srvs_SetBoolResponse
+- success: Boolean  
+- message: String  
+
+Class Reference: ROSRos_core::Std_srvs_SetBoolResponseCore
+<hr>
+@section Std_srvs_TriggerRequest Std_srvs_TriggerRequest
+- dummy: @ref CommVoid (CommObj) 
+
+Class Reference: ROSRos_core::Std_srvs_TriggerRequestCore
+<hr>
+@section Std_srvs_TriggerResponse Std_srvs_TriggerResponse
+- success: Boolean  
+- message: String  
+
+Class Reference: ROSRos_core::Std_srvs_TriggerResponseCore
+<hr>
+
+
+@}
+*/
+

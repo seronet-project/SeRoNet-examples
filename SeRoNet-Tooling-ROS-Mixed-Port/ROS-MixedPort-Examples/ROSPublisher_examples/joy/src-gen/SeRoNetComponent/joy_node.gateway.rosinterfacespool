@@ -1,0 +1,5 @@
+RosInterfacesPool {
+	RosSubscriber joy_sub { topicName "joy" type "sensor_msgs.Joy" }
+	RosSubscriber diagnostics_sub { topicName "diagnostics" type "diagnostic_msgs.DiagnosticArray" }
+	RosPublisher joy_set_feedback_pub { topicName "joy/set_feedback" type "sensor_msgs.JoyFeedbackArray" }
+}

@@ -1,0 +1,12 @@
+ComponentDefinition ComponentROSBaseInit {
+
+	MixedPortROS _base_driver_init_srvcli
+
+	AnswerPort base_driver_initServiceAnsw implements ROSRos_core.TriggerQueryService {}
+
+	RequestHandler base_driver_init triggeredFrom base_driver_initServiceAnsw {
+		MixedPortROSLink _base_driver_init_srvcli
+	}
+
+
+}

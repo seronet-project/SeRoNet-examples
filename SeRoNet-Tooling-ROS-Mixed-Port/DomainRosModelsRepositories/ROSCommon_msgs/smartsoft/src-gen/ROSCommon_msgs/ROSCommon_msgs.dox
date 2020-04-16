@@ -1,0 +1,1952 @@
+/** 
+\class ROSCommon_msgs::Geometry_msgs_AccelCore
+
+Structure of Communication Object:
+- linear: ROSCommon_msgs::Geometry_msgs_Vector3 
+- angular: ROSCommon_msgs::Geometry_msgs_Vector3 
+
+\class ROSCommon_msgs::Geometry_msgs_AccelStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- accel: ROSCommon_msgs::Geometry_msgs_Accel 
+
+\class ROSCommon_msgs::Geometry_msgs_AccelWithCovarianceCore
+
+Structure of Communication Object:
+- accel: ROSCommon_msgs::Geometry_msgs_Accel 
+- covariance: Double[*] 
+
+\class ROSCommon_msgs::Geometry_msgs_AccelWithCovarianceStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- accel: ROSCommon_msgs::Geometry_msgs_AccelWithCovariance 
+
+\class ROSCommon_msgs::Geometry_msgs_InertiaCore
+
+Structure of Communication Object:
+- m: Double 
+- com: ROSCommon_msgs::Geometry_msgs_Vector3 
+- ixx: Double 
+- ixy: Double 
+- ixz: Double 
+- iyy: Double 
+- iyz: Double 
+- izz: Double 
+
+\class ROSCommon_msgs::Geometry_msgs_InertiaStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- inertia: ROSCommon_msgs::Geometry_msgs_Inertia 
+
+\class ROSCommon_msgs::Geometry_msgs_PointCore
+
+Structure of Communication Object:
+- x: Double 
+- y: Double 
+- z: Double 
+
+\class ROSCommon_msgs::Geometry_msgs_Point32Core
+
+Structure of Communication Object:
+- x: Float 
+- y: Float 
+- z: Float 
+
+\class ROSCommon_msgs::Geometry_msgs_PointStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- point: ROSCommon_msgs::Geometry_msgs_Point 
+
+\class ROSCommon_msgs::Geometry_msgs_PolygonCore
+
+Structure of Communication Object:
+- points: ROSCommon_msgs::Geometry_msgs_Point32[*] 
+
+\class ROSCommon_msgs::Geometry_msgs_PolygonStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- polygon: ROSCommon_msgs::Geometry_msgs_Polygon 
+
+\class ROSCommon_msgs::Geometry_msgs_PoseCore
+
+Structure of Communication Object:
+- position: ROSCommon_msgs::Geometry_msgs_Point 
+- orientation: ROSCommon_msgs::Geometry_msgs_Quaternion 
+
+\class ROSCommon_msgs::Geometry_msgs_Pose2DCore
+
+Structure of Communication Object:
+- x: Double 
+- y: Double 
+- theta: Double 
+
+\class ROSCommon_msgs::Geometry_msgs_PoseArrayCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- poses: ROSCommon_msgs::Geometry_msgs_Pose[*] 
+
+\class ROSCommon_msgs::Geometry_msgs_PoseStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+
+\class ROSCommon_msgs::Geometry_msgs_PoseWithCovarianceCore
+
+Structure of Communication Object:
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+- covariance: Double[*] 
+
+\class ROSCommon_msgs::Geometry_msgs_PoseWithCovarianceStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- pose: ROSCommon_msgs::Geometry_msgs_PoseWithCovariance 
+
+\class ROSCommon_msgs::Geometry_msgs_QuaternionCore
+
+Structure of Communication Object:
+- x: Double 
+- y: Double 
+- z: Double 
+- w: Double 
+
+\class ROSCommon_msgs::Geometry_msgs_QuaternionStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- quaternion: ROSCommon_msgs::Geometry_msgs_Quaternion 
+
+\class ROSCommon_msgs::Geometry_msgs_TransformCore
+
+Structure of Communication Object:
+- translation: ROSCommon_msgs::Geometry_msgs_Vector3 
+- rotation: ROSCommon_msgs::Geometry_msgs_Quaternion 
+
+\class ROSCommon_msgs::Geometry_msgs_TransformStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- child_frame_id: String 
+- transform: ROSCommon_msgs::Geometry_msgs_Transform 
+
+\class ROSCommon_msgs::Geometry_msgs_TwistCore
+
+Structure of Communication Object:
+- linear: ROSCommon_msgs::Geometry_msgs_Vector3 
+- angular: ROSCommon_msgs::Geometry_msgs_Vector3 
+
+\class ROSCommon_msgs::Geometry_msgs_TwistStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- twist: ROSCommon_msgs::Geometry_msgs_Twist 
+
+\class ROSCommon_msgs::Geometry_msgs_TwistWithCovarianceCore
+
+Structure of Communication Object:
+- twist: ROSCommon_msgs::Geometry_msgs_Twist 
+- covariance: Double[*] 
+
+\class ROSCommon_msgs::Geometry_msgs_TwistWithCovarianceStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- twist: ROSCommon_msgs::Geometry_msgs_TwistWithCovariance 
+
+\class ROSCommon_msgs::Geometry_msgs_Vector3Core
+
+Structure of Communication Object:
+- x: Double 
+- y: Double 
+- z: Double 
+
+\class ROSCommon_msgs::Geometry_msgs_Vector3StampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- vector: ROSCommon_msgs::Geometry_msgs_Vector3 
+
+\class ROSCommon_msgs::Geometry_msgs_WrenchCore
+
+Structure of Communication Object:
+- force: ROSCommon_msgs::Geometry_msgs_Vector3 
+- torque: ROSCommon_msgs::Geometry_msgs_Vector3 
+
+\class ROSCommon_msgs::Geometry_msgs_WrenchStampedCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- wrench: ROSCommon_msgs::Geometry_msgs_Wrench 
+
+\class ROSCommon_msgs::Actionlib_msgs_GoalIDCore
+
+Structure of Communication Object:
+- stamp: CommBasicObjects::CommTimeStamp 
+- id: String 
+
+\class ROSCommon_msgs::Actionlib_msgs_GoalStatusCore
+
+Structure of Communication Object:
+- goal_id: ROSCommon_msgs::Actionlib_msgs_GoalID 
+- status: UInt8 
+- text: String 
+
+\class ROSCommon_msgs::Actionlib_msgs_GoalStatusArrayCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- status_list: ROSCommon_msgs::Actionlib_msgs_GoalStatus[*] 
+
+\class ROSCommon_msgs::Diagnostic_msgs_DiagnosticArrayCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- status: ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatus[*] 
+
+\class ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatusCore
+
+Structure of Communication Object:
+- level: UInt8 
+- name: String 
+- message: String 
+- hardware_id: String 
+- values: ROSCommon_msgs::Diagnostic_msgs_KeyValue[*] 
+
+\class ROSCommon_msgs::Diagnostic_msgs_KeyValueCore
+
+Structure of Communication Object:
+- key: String 
+- value: String 
+
+\class ROSCommon_msgs::Diagnostic_msgs_AddDiagnosticsRequestCore
+
+Structure of Communication Object:
+- load_namespace: String 
+
+\class ROSCommon_msgs::Diagnostic_msgs_AddDiagnosticsResponseCore
+
+Structure of Communication Object:
+- success: Boolean 
+- message: String 
+
+\class ROSCommon_msgs::Diagnostic_msgs_SelfTestRequestCore
+
+Structure of Communication Object:
+
+\class ROSCommon_msgs::Diagnostic_msgs_SelfTestResponseCore
+
+Structure of Communication Object:
+- id: String 
+- passed: UInt8 
+- status: ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatus[*] 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapActionCore
+
+Structure of Communication Object:
+- action_goal: ROSCommon_msgs::Nav_msgs_GetMapActionGoal 
+- action_result: ROSCommon_msgs::Nav_msgs_GetMapActionResult 
+- action_feedback: ROSCommon_msgs::Nav_msgs_GetMapActionFeedback 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapActionFeedbackCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- status: ROSCommon_msgs::Actionlib_msgs_GoalStatus 
+- feedback: ROSCommon_msgs::Nav_msgs_GetMapFeedback 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapActionGoalCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- goal_id: ROSCommon_msgs::Actionlib_msgs_GoalID 
+- goal: ROSCommon_msgs::Nav_msgs_GetMapGoal 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapActionResultCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- status: ROSCommon_msgs::Actionlib_msgs_GoalStatus 
+- result: ROSCommon_msgs::Nav_msgs_GetMapResult 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapFeedbackCore
+
+Structure of Communication Object:
+
+\class ROSCommon_msgs::Nav_msgs_GetMapGoalCore
+
+Structure of Communication Object:
+
+\class ROSCommon_msgs::Nav_msgs_GetMapResultCore
+
+Structure of Communication Object:
+- map: ROSCommon_msgs::Nav_msgs_OccupancyGrid 
+
+\class ROSCommon_msgs::Nav_msgs_GridCellsCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- cell_width: Float 
+- cell_height: Float 
+- cells: ROSCommon_msgs::Geometry_msgs_Point[*] 
+
+\class ROSCommon_msgs::Nav_msgs_MapMetaDataCore
+
+Structure of Communication Object:
+- map_load_time: CommBasicObjects::CommTimeStamp 
+- resolution: Float 
+- width: UInt32 
+- height: UInt32 
+- origin: ROSCommon_msgs::Geometry_msgs_Pose 
+
+\class ROSCommon_msgs::Nav_msgs_OccupancyGridCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- info: ROSCommon_msgs::Nav_msgs_MapMetaData 
+- data: Int8[*] 
+
+\class ROSCommon_msgs::Nav_msgs_OdometryCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- child_frame_id: String 
+- pose: ROSCommon_msgs::Geometry_msgs_PoseWithCovariance 
+- twist: ROSCommon_msgs::Geometry_msgs_TwistWithCovariance 
+
+\class ROSCommon_msgs::Nav_msgs_PathCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- poses: ROSCommon_msgs::Geometry_msgs_PoseStamped[*] 
+
+\class ROSCommon_msgs::Nav_msgs_GetMapRequestCore
+
+Structure of Communication Object:
+
+\class ROSCommon_msgs::Nav_msgs_GetMapResponseCore
+
+Structure of Communication Object:
+- map: ROSCommon_msgs::Nav_msgs_OccupancyGrid 
+
+\class ROSCommon_msgs::Nav_msgs_GetPlanRequestCore
+
+Structure of Communication Object:
+- start: ROSCommon_msgs::Geometry_msgs_PoseStamped 
+- goal: ROSCommon_msgs::Geometry_msgs_PoseStamped 
+- tolerance: Float 
+
+\class ROSCommon_msgs::Nav_msgs_GetPlanResponseCore
+
+Structure of Communication Object:
+- plan: ROSCommon_msgs::Nav_msgs_Path 
+
+\class ROSCommon_msgs::Nav_msgs_SetMapRequestCore
+
+Structure of Communication Object:
+- map: ROSCommon_msgs::Nav_msgs_OccupancyGrid 
+- initial_pose: ROSCommon_msgs::Geometry_msgs_PoseWithCovarianceStamped 
+
+\class ROSCommon_msgs::Nav_msgs_SetMapResponseCore
+
+Structure of Communication Object:
+- success: Boolean 
+
+\class ROSCommon_msgs::Sensor_msgs_BatteryStateCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- voltage: Float 
+- current: Float 
+- charge: Float 
+- capacity: Float 
+- design_capacity: Float 
+- percentage: Float 
+- power_supply_status: UInt8 
+- power_supply_health: UInt8 
+- power_supply_technology: UInt8 
+- present: Boolean 
+- cell_voltage: Float[*] 
+- location: String 
+- serial_number: String 
+
+\class ROSCommon_msgs::Sensor_msgs_CameraInfoCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- height: UInt32 
+- width: UInt32 
+- distortion_model: String 
+- D: Double[*] 
+- K: Double[*] 
+- R: Double[*] 
+- P: Double[*] 
+- binning_x: UInt32 
+- binning_y: UInt32 
+- roi: ROSCommon_msgs::Sensor_msgs_RegionOfInterest 
+
+\class ROSCommon_msgs::Sensor_msgs_ChannelFloat32Core
+
+Structure of Communication Object:
+- name: String 
+- values: Float[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_CompressedImageCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- format: String 
+- data: UInt8[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_FluidPressureCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- fluid_pressure: Double 
+- variance: Double 
+
+\class ROSCommon_msgs::Sensor_msgs_IlluminanceCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- illuminance: Double 
+- variance: Double 
+
+\class ROSCommon_msgs::Sensor_msgs_ImageCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- height: UInt32 
+- width: UInt32 
+- encoding: String 
+- is_bigendian: UInt8 
+- step: UInt32 
+- data: UInt8[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_ImuCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- orientation: ROSCommon_msgs::Geometry_msgs_Quaternion 
+- orientation_covariance: Double[*] 
+- angular_velocity: ROSCommon_msgs::Geometry_msgs_Vector3 
+- angular_velocity_covariance: Double[*] 
+- linear_acceleration: ROSCommon_msgs::Geometry_msgs_Vector3 
+- linear_acceleration_covariance: Double[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_JointStateCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- name: String[*] 
+- position: Double[*] 
+- velocity: Double[*] 
+- effort: Double[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_JoyCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- axes: Float[*] 
+- buttons: Int32[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_JoyFeedbackCore
+
+Structure of Communication Object:
+- type: UInt8 
+- id: UInt8 
+- intensity: Float 
+
+\class ROSCommon_msgs::Sensor_msgs_JoyFeedbackArrayCore
+
+Structure of Communication Object:
+- array: ROSCommon_msgs::Sensor_msgs_JoyFeedback[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_LaserEchoCore
+
+Structure of Communication Object:
+- echoes: Float[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_LaserScanCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- angle_min: Float 
+- angle_max: Float 
+- angle_increment: Float 
+- time_increment: Float 
+- scan_time: Float 
+- range_min: Float 
+- range_max: Float 
+- ranges: Float[*] 
+- intensities: Float[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_MagneticFieldCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- magnetic_field: ROSCommon_msgs::Geometry_msgs_Vector3 
+- magnetic_field_covariance: Double[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_MultiDOFJointStateCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- joint_names: String[*] 
+- transforms: ROSCommon_msgs::Geometry_msgs_Transform[*] 
+- twist: ROSCommon_msgs::Geometry_msgs_Twist[*] 
+- wrench: ROSCommon_msgs::Geometry_msgs_Wrench[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_MultiEchoLaserScanCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- angle_min: Float 
+- angle_max: Float 
+- angle_increment: Float 
+- time_increment: Float 
+- scan_time: Float 
+- range_min: Float 
+- range_max: Float 
+- ranges: ROSCommon_msgs::Sensor_msgs_LaserEcho[*] 
+- intensities: ROSCommon_msgs::Sensor_msgs_LaserEcho[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_NavSatFixCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- status: ROSCommon_msgs::Sensor_msgs_NavSatStatus 
+- latitude: Double 
+- longitude: Double 
+- altitude: Double 
+- position_covariance: Double[*] 
+- position_covariance_type: UInt8 
+
+\class ROSCommon_msgs::Sensor_msgs_NavSatStatusCore
+
+Structure of Communication Object:
+- status: Int8 
+- service: UInt16 
+
+\class ROSCommon_msgs::Sensor_msgs_PointCloudCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- points: ROSCommon_msgs::Geometry_msgs_Point32[*] 
+- channels: ROSCommon_msgs::Sensor_msgs_ChannelFloat32[*] 
+
+\class ROSCommon_msgs::Sensor_msgs_PointCloud2Core
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- height: UInt32 
+- width: UInt32 
+- fields: ROSCommon_msgs::Sensor_msgs_PointField[*] 
+- is_bigendian: Boolean 
+- point_step: UInt32 
+- row_step: UInt32 
+- data: UInt8[*] 
+- is_dense: Boolean 
+
+\class ROSCommon_msgs::Sensor_msgs_PointFieldCore
+
+Structure of Communication Object:
+- name: String 
+- offset: UInt32 
+- datatype: UInt8 
+- count: UInt32 
+
+\class ROSCommon_msgs::Sensor_msgs_RangeCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- radiation_type: UInt8 
+- field_of_view: Float 
+- min_range: Float 
+- max_range: Float 
+- range: Float 
+
+\class ROSCommon_msgs::Sensor_msgs_RegionOfInterestCore
+
+Structure of Communication Object:
+- x_offset: UInt32 
+- y_offset: UInt32 
+- height: UInt32 
+- width: UInt32 
+- do_rectify: Boolean 
+
+\class ROSCommon_msgs::Sensor_msgs_RelativeHumidityCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- relative_humidity: Double 
+- variance: Double 
+
+\class ROSCommon_msgs::Sensor_msgs_TemperatureCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- temperature: Double 
+- variance: Double 
+
+\class ROSCommon_msgs::Sensor_msgs_TimeReferenceCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- time_ref: CommBasicObjects::CommTimeStamp 
+- source: String 
+
+\class ROSCommon_msgs::Sensor_msgs_SetCameraInfoRequestCore
+
+Structure of Communication Object:
+- camera_info: ROSCommon_msgs::Sensor_msgs_CameraInfo 
+
+\class ROSCommon_msgs::Sensor_msgs_SetCameraInfoResponseCore
+
+Structure of Communication Object:
+- success: Boolean 
+- status_message: String 
+
+\class ROSCommon_msgs::Shape_msgs_MeshCore
+
+Structure of Communication Object:
+- triangles: ROSCommon_msgs::Shape_msgs_MeshTriangle[*] 
+- vertices: ROSCommon_msgs::Geometry_msgs_Point[*] 
+
+\class ROSCommon_msgs::Shape_msgs_MeshTriangleCore
+
+Structure of Communication Object:
+- vertex_indices: UInt32[*] 
+
+\class ROSCommon_msgs::Shape_msgs_PlaneCore
+
+Structure of Communication Object:
+- coef: Double[*] 
+
+\class ROSCommon_msgs::Shape_msgs_SolidPrimitiveCore
+
+Structure of Communication Object:
+- type: UInt8 
+- dimensions: Double[*] 
+
+\class ROSCommon_msgs::Stereo_msgs_DisparityImageCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- image: ROSCommon_msgs::Sensor_msgs_Image 
+- f: Float 
+- T: Float 
+- valid_window: ROSCommon_msgs::Sensor_msgs_RegionOfInterest 
+- min_disparity: Float 
+- max_disparity: Float 
+- delta_d: Float 
+
+\class ROSCommon_msgs::Trajectory_msgs_JointTrajectoryCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- joint_names: String[*] 
+- points: ROSCommon_msgs::Trajectory_msgs_JointTrajectoryPoint[*] 
+
+\class ROSCommon_msgs::Trajectory_msgs_JointTrajectoryPointCore
+
+Structure of Communication Object:
+- positions: Double[*] 
+- velocities: Double[*] 
+- accelerations: Double[*] 
+- effort: Double[*] 
+- time_from_start: CommBasicObjects::CommTimeStamp 
+
+\class ROSCommon_msgs::Trajectory_msgs_MultiDOFJointTrajectoryCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- joint_names: String[*] 
+- points: ROSCommon_msgs::Trajectory_msgs_MultiDOFJointTrajectoryPoint[*] 
+
+\class ROSCommon_msgs::Trajectory_msgs_MultiDOFJointTrajectoryPointCore
+
+Structure of Communication Object:
+- transforms: ROSCommon_msgs::Geometry_msgs_Transform[*] 
+- velocities: ROSCommon_msgs::Geometry_msgs_Twist[*] 
+- accelerations: ROSCommon_msgs::Geometry_msgs_Twist[*] 
+- time_from_start: CommBasicObjects::CommTimeStamp 
+
+\class ROSCommon_msgs::Visualization_msgs_ImageMarkerCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- ns: String 
+- id: Int32 
+- type: Int32 
+- action: Int32 
+- position: ROSCommon_msgs::Geometry_msgs_Point 
+- scale: Float 
+- outline_color: ROSRos_core::Std_msgs_ColorRGBA 
+- filled: UInt8 
+- fill_color: ROSRos_core::Std_msgs_ColorRGBA 
+- lifetime: CommBasicObjects::CommTimeStamp 
+- points: ROSCommon_msgs::Geometry_msgs_Point[*] 
+- outline_colors: ROSRos_core::Std_msgs_ColorRGBA[*] 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+- name: String 
+- description: String 
+- scale: Float 
+- menu_entries: ROSCommon_msgs::Visualization_msgs_MenuEntry[*] 
+- controls: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerControl[*] 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerControlCore
+
+Structure of Communication Object:
+- name: String 
+- orientation: ROSCommon_msgs::Geometry_msgs_Quaternion 
+- orientation_mode: UInt8 
+- interaction_mode: UInt8 
+- always_visible: Boolean 
+- markers: ROSCommon_msgs::Visualization_msgs_Marker[*] 
+- independent_marker_orientation: Boolean 
+- description: String 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerFeedbackCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- client_id: String 
+- marker_name: String 
+- control_name: String 
+- event_type: UInt8 
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+- menu_entry_id: UInt32 
+- mouse_point: ROSCommon_msgs::Geometry_msgs_Point 
+- mouse_point_valid: Boolean 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerInitCore
+
+Structure of Communication Object:
+- server_id: String 
+- seq_num: UInt64 
+- markers: ROSCommon_msgs::Visualization_msgs_InteractiveMarker[*] 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerPoseCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+- name: String 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerUpdateCore
+
+Structure of Communication Object:
+- server_id: String 
+- seq_num: UInt64 
+- type: UInt8 
+- markers: ROSCommon_msgs::Visualization_msgs_InteractiveMarker[*] 
+- poses: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerPose[*] 
+- erases: String[*] 
+
+\class ROSCommon_msgs::Visualization_msgs_MarkerCore
+
+Structure of Communication Object:
+- header: ROSRos_core::Std_msgs_Header 
+- ns: String 
+- id: Int32 
+- type: Int32 
+- action: Int32 
+- pose: ROSCommon_msgs::Geometry_msgs_Pose 
+- scale: ROSCommon_msgs::Geometry_msgs_Vector3 
+- color: ROSRos_core::Std_msgs_ColorRGBA 
+- lifetime: CommBasicObjects::CommTimeStamp 
+- frame_locked: Boolean 
+- points: ROSCommon_msgs::Geometry_msgs_Point[*] 
+- colors: ROSRos_core::Std_msgs_ColorRGBA[*] 
+- text: String 
+- mesh_resource: String 
+- mesh_use_embedded_materials: Boolean 
+
+\class ROSCommon_msgs::Visualization_msgs_MarkerArrayCore
+
+Structure of Communication Object:
+- markers: ROSCommon_msgs::Visualization_msgs_Marker[*] 
+
+\class ROSCommon_msgs::Visualization_msgs_MenuEntryCore
+
+Structure of Communication Object:
+- id: UInt32 
+- parent_id: UInt32 
+- title: String 
+- command: String 
+- command_type: UInt8 
+
+\class ROSCommon_msgs::Actionlib_msgs_GoalStatusType
+
+Structure of Enumeration:
+- PENDING 
+- ACTIVE 
+- PREEMPTED 
+- SUCCEEDED 
+- ABORTED 
+- REJECTED 
+- PREEMPTING 
+- RECALLING 
+- RECALLED 
+- LOST 
+
+\class ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatusType
+
+Structure of Enumeration:
+- OK 
+- WARN 
+- ERROR 
+- STALE 
+
+\class ROSCommon_msgs::Sensor_msgs_BatteryStateType
+
+Structure of Enumeration:
+- POWER_SUPPLY_STATUS_UNKNOWN 
+- POWER_SUPPLY_STATUS_CHARGING 
+- POWER_SUPPLY_STATUS_DISCHARGING 
+- POWER_SUPPLY_STATUS_NOT_CHARGING 
+- POWER_SUPPLY_STATUS_FULL 
+- POWER_SUPPLY_HEALTH_UNKNOWN 
+- POWER_SUPPLY_HEALTH_GOOD 
+- POWER_SUPPLY_HEALTH_OVERHEAT 
+- POWER_SUPPLY_HEALTH_DEAD 
+- POWER_SUPPLY_HEALTH_OVERVOLTAGE 
+- POWER_SUPPLY_HEALTH_UNSPEC_FAILURE 
+- POWER_SUPPLY_HEALTH_COLD 
+- POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE 
+- POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE 
+- POWER_SUPPLY_TECHNOLOGY_UNKNOWN 
+- POWER_SUPPLY_TECHNOLOGY_NIMH 
+- POWER_SUPPLY_TECHNOLOGY_LION 
+- POWER_SUPPLY_TECHNOLOGY_LIPO 
+- POWER_SUPPLY_TECHNOLOGY_LIFE 
+- POWER_SUPPLY_TECHNOLOGY_NICD 
+- POWER_SUPPLY_TECHNOLOGY_LIMN 
+
+\class ROSCommon_msgs::Sensor_msgs_JoyFeedbackType
+
+Structure of Enumeration:
+- TYPE_LED 
+- TYPE_RUMBLE 
+- TYPE_BUZZER 
+
+\class ROSCommon_msgs::Sensor_msgs_NavSatFixType
+
+Structure of Enumeration:
+- COVARIANCE_TYPE_UNKNOWN 
+- COVARIANCE_TYPE_APPROXIMATED 
+- COVARIANCE_TYPE_DIAGONAL_KNOWN 
+- COVARIANCE_TYPE_KNOWN 
+
+\class ROSCommon_msgs::Sensor_msgs_NavSatStatusType
+
+Structure of Enumeration:
+- STATUS_NO_FIX 
+- STATUS_FIX 
+- STATUS_SBAS_FIX 
+- STATUS_GBAS_FIX 
+- SERVICE_GPS 
+- SERVICE_GLONASS 
+- SERVICE_COMPASS 
+- SERVICE_GALILEO 
+
+\class ROSCommon_msgs::Sensor_msgs_PointFieldType
+
+Structure of Enumeration:
+- INT8 
+- UINT8 
+- INT16 
+- UINT16 
+- INT32 
+- UINT32 
+- FLOAT32 
+- FLOAT64 
+
+\class ROSCommon_msgs::Sensor_msgs_RangeType
+
+Structure of Enumeration:
+- ULTRASOUND 
+- INFRARED 
+
+\class ROSCommon_msgs::Shape_msgs_SolidPrimitiveType
+
+Structure of Enumeration:
+- BOX 
+- SPHERE 
+- CYLINDER 
+- CONE 
+- BOX_X 
+- BOX_Y 
+- BOX_Z 
+- SPHERE_RADIUS 
+- CYLINDER_HEIGHT 
+- CYLINDER_RADIUS 
+- CONE_HEIGHT 
+- CONE_RADIUS 
+
+\class ROSCommon_msgs::Visualization_msgs_ImageMarkerType
+
+Structure of Enumeration:
+- CIRCLE 
+- LINE_STRIP 
+- LINE_LIST 
+- POLYGON 
+- POINTS 
+- ADD 
+- REMOVE 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerControlType
+
+Structure of Enumeration:
+- INHERIT 
+- FIXED 
+- VIEW_FACING 
+- NONE 
+- MENU 
+- BUTTON 
+- MOVE_AXIS 
+- MOVE_PLANE 
+- ROTATE_AXIS 
+- MOVE_ROTATE 
+- MOVE_3D 
+- ROTATE_3D 
+- MOVE_ROTATE_3D 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerFeedbackType
+
+Structure of Enumeration:
+- KEEP_ALIVE 
+- POSE_UPDATE 
+- MENU_SELECT 
+- BUTTON_CLICK 
+- MOUSE_DOWN 
+- MOUSE_UP 
+
+\class ROSCommon_msgs::Visualization_msgs_InteractiveMarkerUpdateType
+
+Structure of Enumeration:
+- KEEP_ALIVE 
+- UPDATE 
+
+\class ROSCommon_msgs::Visualization_msgs_MarkerType
+
+Structure of Enumeration:
+- ARROW 
+- CUBE 
+- SPHERE 
+- CYLINDER 
+- LINE_STRIP 
+- LINE_LIST 
+- CUBE_LIST 
+- SPHERE_LIST 
+- POINTS 
+- TEXT_VIEW_FACING 
+- MESH_RESOURCE 
+- TRIANGLE_LIST 
+- ADD 
+- MODIFY 
+- DELETE 
+- DELETEALL 
+
+\class ROSCommon_msgs::Visualization_msgs_MenuEntryType
+
+Structure of Enumeration:
+- FEEDBACK 
+- ROSRUN 
+- ROSLAUNCH 
+
+
+
+
+@defgroup ROSCommon_msgs
+@ingroup commObjGroup
+@{
+\page ROSCommon_msgsPage ROSCommon_msgs
+Class Reference: ROSCommon_msgs
+<hr>
+
+@section Geometry_msgs_Accel Geometry_msgs_Accel
+- linear: @ref Geometry_msgs_Vector3 (CommObj) 
+- angular: @ref Geometry_msgs_Vector3 (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_AccelCore
+<hr>
+@section Geometry_msgs_AccelStamped Geometry_msgs_AccelStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- accel: @ref Geometry_msgs_Accel (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_AccelStampedCore
+<hr>
+@section Geometry_msgs_AccelWithCovariance Geometry_msgs_AccelWithCovariance
+- accel: @ref Geometry_msgs_Accel (CommObj) 
+- covariance: Double[*]  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_AccelWithCovarianceCore
+<hr>
+@section Geometry_msgs_AccelWithCovarianceStamped Geometry_msgs_AccelWithCovarianceStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- accel: @ref Geometry_msgs_AccelWithCovariance (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_AccelWithCovarianceStampedCore
+<hr>
+@section Geometry_msgs_Inertia Geometry_msgs_Inertia
+- m: Double  
+- com: @ref Geometry_msgs_Vector3 (CommObj) 
+- ixx: Double  
+- ixy: Double  
+- ixz: Double  
+- iyy: Double  
+- iyz: Double  
+- izz: Double  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_InertiaCore
+<hr>
+@section Geometry_msgs_InertiaStamped Geometry_msgs_InertiaStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- inertia: @ref Geometry_msgs_Inertia (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_InertiaStampedCore
+<hr>
+@section Geometry_msgs_Point Geometry_msgs_Point
+- x: Double  
+- y: Double  
+- z: Double  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PointCore
+<hr>
+@section Geometry_msgs_Point32 Geometry_msgs_Point32
+- x: Float  
+- y: Float  
+- z: Float  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_Point32Core
+<hr>
+@section Geometry_msgs_PointStamped Geometry_msgs_PointStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- point: @ref Geometry_msgs_Point (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PointStampedCore
+<hr>
+@section Geometry_msgs_Polygon Geometry_msgs_Polygon
+- points: @ref Geometry_msgs_Point32[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PolygonCore
+<hr>
+@section Geometry_msgs_PolygonStamped Geometry_msgs_PolygonStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- polygon: @ref Geometry_msgs_Polygon (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PolygonStampedCore
+<hr>
+@section Geometry_msgs_Pose Geometry_msgs_Pose
+- position: @ref Geometry_msgs_Point (CommObj) 
+- orientation: @ref Geometry_msgs_Quaternion (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PoseCore
+<hr>
+@section Geometry_msgs_Pose2D Geometry_msgs_Pose2D
+- x: Double  
+- y: Double  
+- theta: Double  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_Pose2DCore
+<hr>
+@section Geometry_msgs_PoseArray Geometry_msgs_PoseArray
+- header: @ref Std_msgs_Header (CommObj) 
+- poses: @ref Geometry_msgs_Pose[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PoseArrayCore
+<hr>
+@section Geometry_msgs_PoseStamped Geometry_msgs_PoseStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PoseStampedCore
+<hr>
+@section Geometry_msgs_PoseWithCovariance Geometry_msgs_PoseWithCovariance
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+- covariance: Double[*]  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PoseWithCovarianceCore
+<hr>
+@section Geometry_msgs_PoseWithCovarianceStamped Geometry_msgs_PoseWithCovarianceStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- pose: @ref Geometry_msgs_PoseWithCovariance (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_PoseWithCovarianceStampedCore
+<hr>
+@section Geometry_msgs_Quaternion Geometry_msgs_Quaternion
+- x: Double  
+- y: Double  
+- z: Double  
+- w: Double  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_QuaternionCore
+<hr>
+@section Geometry_msgs_QuaternionStamped Geometry_msgs_QuaternionStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- quaternion: @ref Geometry_msgs_Quaternion (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_QuaternionStampedCore
+<hr>
+@section Geometry_msgs_Transform Geometry_msgs_Transform
+- translation: @ref Geometry_msgs_Vector3 (CommObj) 
+- rotation: @ref Geometry_msgs_Quaternion (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TransformCore
+<hr>
+@section Geometry_msgs_TransformStamped Geometry_msgs_TransformStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- child_frame_id: String  
+- transform: @ref Geometry_msgs_Transform (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TransformStampedCore
+<hr>
+@section Geometry_msgs_Twist Geometry_msgs_Twist
+- linear: @ref Geometry_msgs_Vector3 (CommObj) 
+- angular: @ref Geometry_msgs_Vector3 (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TwistCore
+<hr>
+@section Geometry_msgs_TwistStamped Geometry_msgs_TwistStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- twist: @ref Geometry_msgs_Twist (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TwistStampedCore
+<hr>
+@section Geometry_msgs_TwistWithCovariance Geometry_msgs_TwistWithCovariance
+- twist: @ref Geometry_msgs_Twist (CommObj) 
+- covariance: Double[*]  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TwistWithCovarianceCore
+<hr>
+@section Geometry_msgs_TwistWithCovarianceStamped Geometry_msgs_TwistWithCovarianceStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- twist: @ref Geometry_msgs_TwistWithCovariance (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_TwistWithCovarianceStampedCore
+<hr>
+@section Geometry_msgs_Vector3 Geometry_msgs_Vector3
+- x: Double  
+- y: Double  
+- z: Double  
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_Vector3Core
+<hr>
+@section Geometry_msgs_Vector3Stamped Geometry_msgs_Vector3Stamped
+- header: @ref Std_msgs_Header (CommObj) 
+- vector: @ref Geometry_msgs_Vector3 (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_Vector3StampedCore
+<hr>
+@section Geometry_msgs_Wrench Geometry_msgs_Wrench
+- force: @ref Geometry_msgs_Vector3 (CommObj) 
+- torque: @ref Geometry_msgs_Vector3 (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_WrenchCore
+<hr>
+@section Geometry_msgs_WrenchStamped Geometry_msgs_WrenchStamped
+- header: @ref Std_msgs_Header (CommObj) 
+- wrench: @ref Geometry_msgs_Wrench (CommObj) 
+
+Class Reference: ROSCommon_msgs::Geometry_msgs_WrenchStampedCore
+<hr>
+@section Actionlib_msgs_GoalID Actionlib_msgs_GoalID
+- stamp: @ref CommTimeStamp (CommObj) 
+- id: String  
+
+Class Reference: ROSCommon_msgs::Actionlib_msgs_GoalIDCore
+<hr>
+@section Actionlib_msgs_GoalStatus Actionlib_msgs_GoalStatus
+- goal_id: @ref Actionlib_msgs_GoalID (CommObj) 
+- status: UInt8  
+- text: String  
+
+Class Reference: ROSCommon_msgs::Actionlib_msgs_GoalStatusCore
+<hr>
+@section Actionlib_msgs_GoalStatusArray Actionlib_msgs_GoalStatusArray
+- header: @ref Std_msgs_Header (CommObj) 
+- status_list: @ref Actionlib_msgs_GoalStatus[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Actionlib_msgs_GoalStatusArrayCore
+<hr>
+@section Diagnostic_msgs_DiagnosticArray Diagnostic_msgs_DiagnosticArray
+- header: @ref Std_msgs_Header (CommObj) 
+- status: @ref Diagnostic_msgs_DiagnosticStatus[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_DiagnosticArrayCore
+<hr>
+@section Diagnostic_msgs_DiagnosticStatus Diagnostic_msgs_DiagnosticStatus
+- level: UInt8  
+- name: String  
+- message: String  
+- hardware_id: String  
+- values: @ref Diagnostic_msgs_KeyValue[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatusCore
+<hr>
+@section Diagnostic_msgs_KeyValue Diagnostic_msgs_KeyValue
+- key: String  
+- value: String  
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_KeyValueCore
+<hr>
+@section Diagnostic_msgs_AddDiagnosticsRequest Diagnostic_msgs_AddDiagnosticsRequest
+- load_namespace: String  
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_AddDiagnosticsRequestCore
+<hr>
+@section Diagnostic_msgs_AddDiagnosticsResponse Diagnostic_msgs_AddDiagnosticsResponse
+- success: Boolean  
+- message: String  
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_AddDiagnosticsResponseCore
+<hr>
+@section Diagnostic_msgs_SelfTestRequest Diagnostic_msgs_SelfTestRequest
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_SelfTestRequestCore
+<hr>
+@section Diagnostic_msgs_SelfTestResponse Diagnostic_msgs_SelfTestResponse
+- id: String  
+- passed: UInt8  
+- status: @ref Diagnostic_msgs_DiagnosticStatus[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_SelfTestResponseCore
+<hr>
+@section Nav_msgs_GetMapAction Nav_msgs_GetMapAction
+- action_goal: @ref Nav_msgs_GetMapActionGoal (CommObj) 
+- action_result: @ref Nav_msgs_GetMapActionResult (CommObj) 
+- action_feedback: @ref Nav_msgs_GetMapActionFeedback (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapActionCore
+<hr>
+@section Nav_msgs_GetMapActionFeedback Nav_msgs_GetMapActionFeedback
+- header: @ref Std_msgs_Header (CommObj) 
+- status: @ref Actionlib_msgs_GoalStatus (CommObj) 
+- feedback: @ref Nav_msgs_GetMapFeedback (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapActionFeedbackCore
+<hr>
+@section Nav_msgs_GetMapActionGoal Nav_msgs_GetMapActionGoal
+- header: @ref Std_msgs_Header (CommObj) 
+- goal_id: @ref Actionlib_msgs_GoalID (CommObj) 
+- goal: @ref Nav_msgs_GetMapGoal (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapActionGoalCore
+<hr>
+@section Nav_msgs_GetMapActionResult Nav_msgs_GetMapActionResult
+- header: @ref Std_msgs_Header (CommObj) 
+- status: @ref Actionlib_msgs_GoalStatus (CommObj) 
+- result: @ref Nav_msgs_GetMapResult (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapActionResultCore
+<hr>
+@section Nav_msgs_GetMapFeedback Nav_msgs_GetMapFeedback
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapFeedbackCore
+<hr>
+@section Nav_msgs_GetMapGoal Nav_msgs_GetMapGoal
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapGoalCore
+<hr>
+@section Nav_msgs_GetMapResult Nav_msgs_GetMapResult
+- map: @ref Nav_msgs_OccupancyGrid (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapResultCore
+<hr>
+@section Nav_msgs_GridCells Nav_msgs_GridCells
+- header: @ref Std_msgs_Header (CommObj) 
+- cell_width: Float  
+- cell_height: Float  
+- cells: @ref Geometry_msgs_Point[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GridCellsCore
+<hr>
+@section Nav_msgs_MapMetaData Nav_msgs_MapMetaData
+- map_load_time: @ref CommTimeStamp (CommObj) 
+- resolution: Float  
+- width: UInt32  
+- height: UInt32  
+- origin: @ref Geometry_msgs_Pose (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_MapMetaDataCore
+<hr>
+@section Nav_msgs_OccupancyGrid Nav_msgs_OccupancyGrid
+- header: @ref Std_msgs_Header (CommObj) 
+- info: @ref Nav_msgs_MapMetaData (CommObj) 
+- data: Int8[*]  
+
+Class Reference: ROSCommon_msgs::Nav_msgs_OccupancyGridCore
+<hr>
+@section Nav_msgs_Odometry Nav_msgs_Odometry
+- header: @ref Std_msgs_Header (CommObj) 
+- child_frame_id: String  
+- pose: @ref Geometry_msgs_PoseWithCovariance (CommObj) 
+- twist: @ref Geometry_msgs_TwistWithCovariance (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_OdometryCore
+<hr>
+@section Nav_msgs_Path Nav_msgs_Path
+- header: @ref Std_msgs_Header (CommObj) 
+- poses: @ref Geometry_msgs_PoseStamped[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_PathCore
+<hr>
+@section Nav_msgs_GetMapRequest Nav_msgs_GetMapRequest
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapRequestCore
+<hr>
+@section Nav_msgs_GetMapResponse Nav_msgs_GetMapResponse
+- map: @ref Nav_msgs_OccupancyGrid (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetMapResponseCore
+<hr>
+@section Nav_msgs_GetPlanRequest Nav_msgs_GetPlanRequest
+- start: @ref Geometry_msgs_PoseStamped (CommObj) 
+- goal: @ref Geometry_msgs_PoseStamped (CommObj) 
+- tolerance: Float  
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetPlanRequestCore
+<hr>
+@section Nav_msgs_GetPlanResponse Nav_msgs_GetPlanResponse
+- plan: @ref Nav_msgs_Path (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_GetPlanResponseCore
+<hr>
+@section Nav_msgs_SetMapRequest Nav_msgs_SetMapRequest
+- map: @ref Nav_msgs_OccupancyGrid (CommObj) 
+- initial_pose: @ref Geometry_msgs_PoseWithCovarianceStamped (CommObj) 
+
+Class Reference: ROSCommon_msgs::Nav_msgs_SetMapRequestCore
+<hr>
+@section Nav_msgs_SetMapResponse Nav_msgs_SetMapResponse
+- success: Boolean  
+
+Class Reference: ROSCommon_msgs::Nav_msgs_SetMapResponseCore
+<hr>
+@section Sensor_msgs_BatteryState Sensor_msgs_BatteryState
+- header: @ref Std_msgs_Header (CommObj) 
+- voltage: Float  
+- current: Float  
+- charge: Float  
+- capacity: Float  
+- design_capacity: Float  
+- percentage: Float  
+- power_supply_status: UInt8  
+- power_supply_health: UInt8  
+- power_supply_technology: UInt8  
+- present: Boolean  
+- cell_voltage: Float[*]  
+- location: String  
+- serial_number: String  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_BatteryStateCore
+<hr>
+@section Sensor_msgs_CameraInfo Sensor_msgs_CameraInfo
+- header: @ref Std_msgs_Header (CommObj) 
+- height: UInt32  
+- width: UInt32  
+- distortion_model: String  
+- D: Double[*]  
+- K: Double[*]  
+- R: Double[*]  
+- P: Double[*]  
+- binning_x: UInt32  
+- binning_y: UInt32  
+- roi: @ref Sensor_msgs_RegionOfInterest (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_CameraInfoCore
+<hr>
+@section Sensor_msgs_ChannelFloat32 Sensor_msgs_ChannelFloat32
+- name: String  
+- values: Float[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_ChannelFloat32Core
+<hr>
+@section Sensor_msgs_CompressedImage Sensor_msgs_CompressedImage
+- header: @ref Std_msgs_Header (CommObj) 
+- format: String  
+- data: UInt8[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_CompressedImageCore
+<hr>
+@section Sensor_msgs_FluidPressure Sensor_msgs_FluidPressure
+- header: @ref Std_msgs_Header (CommObj) 
+- fluid_pressure: Double  
+- variance: Double  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_FluidPressureCore
+<hr>
+@section Sensor_msgs_Illuminance Sensor_msgs_Illuminance
+- header: @ref Std_msgs_Header (CommObj) 
+- illuminance: Double  
+- variance: Double  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_IlluminanceCore
+<hr>
+@section Sensor_msgs_Image Sensor_msgs_Image
+- header: @ref Std_msgs_Header (CommObj) 
+- height: UInt32  
+- width: UInt32  
+- encoding: String  
+- is_bigendian: UInt8  
+- step: UInt32  
+- data: UInt8[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_ImageCore
+<hr>
+@section Sensor_msgs_Imu Sensor_msgs_Imu
+- header: @ref Std_msgs_Header (CommObj) 
+- orientation: @ref Geometry_msgs_Quaternion (CommObj) 
+- orientation_covariance: Double[*]  
+- angular_velocity: @ref Geometry_msgs_Vector3 (CommObj) 
+- angular_velocity_covariance: Double[*]  
+- linear_acceleration: @ref Geometry_msgs_Vector3 (CommObj) 
+- linear_acceleration_covariance: Double[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_ImuCore
+<hr>
+@section Sensor_msgs_JointState Sensor_msgs_JointState
+- header: @ref Std_msgs_Header (CommObj) 
+- name: String[*]  
+- position: Double[*]  
+- velocity: Double[*]  
+- effort: Double[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_JointStateCore
+<hr>
+@section Sensor_msgs_Joy Sensor_msgs_Joy
+- header: @ref Std_msgs_Header (CommObj) 
+- axes: Float[*]  
+- buttons: Int32[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_JoyCore
+<hr>
+@section Sensor_msgs_JoyFeedback Sensor_msgs_JoyFeedback
+- type: UInt8  
+- id: UInt8  
+- intensity: Float  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_JoyFeedbackCore
+<hr>
+@section Sensor_msgs_JoyFeedbackArray Sensor_msgs_JoyFeedbackArray
+- array: @ref Sensor_msgs_JoyFeedback[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_JoyFeedbackArrayCore
+<hr>
+@section Sensor_msgs_LaserEcho Sensor_msgs_LaserEcho
+- echoes: Float[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_LaserEchoCore
+<hr>
+@section Sensor_msgs_LaserScan Sensor_msgs_LaserScan
+- header: @ref Std_msgs_Header (CommObj) 
+- angle_min: Float  
+- angle_max: Float  
+- angle_increment: Float  
+- time_increment: Float  
+- scan_time: Float  
+- range_min: Float  
+- range_max: Float  
+- ranges: Float[*]  
+- intensities: Float[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_LaserScanCore
+<hr>
+@section Sensor_msgs_MagneticField Sensor_msgs_MagneticField
+- header: @ref Std_msgs_Header (CommObj) 
+- magnetic_field: @ref Geometry_msgs_Vector3 (CommObj) 
+- magnetic_field_covariance: Double[*]  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_MagneticFieldCore
+<hr>
+@section Sensor_msgs_MultiDOFJointState Sensor_msgs_MultiDOFJointState
+- header: @ref Std_msgs_Header (CommObj) 
+- joint_names: String[*]  
+- transforms: @ref Geometry_msgs_Transform[*] (CommObj) 
+- twist: @ref Geometry_msgs_Twist[*] (CommObj) 
+- wrench: @ref Geometry_msgs_Wrench[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_MultiDOFJointStateCore
+<hr>
+@section Sensor_msgs_MultiEchoLaserScan Sensor_msgs_MultiEchoLaserScan
+- header: @ref Std_msgs_Header (CommObj) 
+- angle_min: Float  
+- angle_max: Float  
+- angle_increment: Float  
+- time_increment: Float  
+- scan_time: Float  
+- range_min: Float  
+- range_max: Float  
+- ranges: @ref Sensor_msgs_LaserEcho[*] (CommObj) 
+- intensities: @ref Sensor_msgs_LaserEcho[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_MultiEchoLaserScanCore
+<hr>
+@section Sensor_msgs_NavSatFix Sensor_msgs_NavSatFix
+- header: @ref Std_msgs_Header (CommObj) 
+- status: @ref Sensor_msgs_NavSatStatus (CommObj) 
+- latitude: Double  
+- longitude: Double  
+- altitude: Double  
+- position_covariance: Double[*]  
+- position_covariance_type: UInt8  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_NavSatFixCore
+<hr>
+@section Sensor_msgs_NavSatStatus Sensor_msgs_NavSatStatus
+- status: Int8  
+- service: UInt16  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_NavSatStatusCore
+<hr>
+@section Sensor_msgs_PointCloud Sensor_msgs_PointCloud
+- header: @ref Std_msgs_Header (CommObj) 
+- points: @ref Geometry_msgs_Point32[*] (CommObj) 
+- channels: @ref Sensor_msgs_ChannelFloat32[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_PointCloudCore
+<hr>
+@section Sensor_msgs_PointCloud2 Sensor_msgs_PointCloud2
+- header: @ref Std_msgs_Header (CommObj) 
+- height: UInt32  
+- width: UInt32  
+- fields: @ref Sensor_msgs_PointField[*] (CommObj) 
+- is_bigendian: Boolean  
+- point_step: UInt32  
+- row_step: UInt32  
+- data: UInt8[*]  
+- is_dense: Boolean  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_PointCloud2Core
+<hr>
+@section Sensor_msgs_PointField Sensor_msgs_PointField
+- name: String  
+- offset: UInt32  
+- datatype: UInt8  
+- count: UInt32  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_PointFieldCore
+<hr>
+@section Sensor_msgs_Range Sensor_msgs_Range
+- header: @ref Std_msgs_Header (CommObj) 
+- radiation_type: UInt8  
+- field_of_view: Float  
+- min_range: Float  
+- max_range: Float  
+- range: Float  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_RangeCore
+<hr>
+@section Sensor_msgs_RegionOfInterest Sensor_msgs_RegionOfInterest
+- x_offset: UInt32  
+- y_offset: UInt32  
+- height: UInt32  
+- width: UInt32  
+- do_rectify: Boolean  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_RegionOfInterestCore
+<hr>
+@section Sensor_msgs_RelativeHumidity Sensor_msgs_RelativeHumidity
+- header: @ref Std_msgs_Header (CommObj) 
+- relative_humidity: Double  
+- variance: Double  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_RelativeHumidityCore
+<hr>
+@section Sensor_msgs_Temperature Sensor_msgs_Temperature
+- header: @ref Std_msgs_Header (CommObj) 
+- temperature: Double  
+- variance: Double  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_TemperatureCore
+<hr>
+@section Sensor_msgs_TimeReference Sensor_msgs_TimeReference
+- header: @ref Std_msgs_Header (CommObj) 
+- time_ref: @ref CommTimeStamp (CommObj) 
+- source: String  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_TimeReferenceCore
+<hr>
+@section Sensor_msgs_SetCameraInfoRequest Sensor_msgs_SetCameraInfoRequest
+- camera_info: @ref Sensor_msgs_CameraInfo (CommObj) 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_SetCameraInfoRequestCore
+<hr>
+@section Sensor_msgs_SetCameraInfoResponse Sensor_msgs_SetCameraInfoResponse
+- success: Boolean  
+- status_message: String  
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_SetCameraInfoResponseCore
+<hr>
+@section Shape_msgs_Mesh Shape_msgs_Mesh
+- triangles: @ref Shape_msgs_MeshTriangle[*] (CommObj) 
+- vertices: @ref Geometry_msgs_Point[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Shape_msgs_MeshCore
+<hr>
+@section Shape_msgs_MeshTriangle Shape_msgs_MeshTriangle
+- vertex_indices: UInt32[*]  
+
+Class Reference: ROSCommon_msgs::Shape_msgs_MeshTriangleCore
+<hr>
+@section Shape_msgs_Plane Shape_msgs_Plane
+- coef: Double[*]  
+
+Class Reference: ROSCommon_msgs::Shape_msgs_PlaneCore
+<hr>
+@section Shape_msgs_SolidPrimitive Shape_msgs_SolidPrimitive
+- type: UInt8  
+- dimensions: Double[*]  
+
+Class Reference: ROSCommon_msgs::Shape_msgs_SolidPrimitiveCore
+<hr>
+@section Stereo_msgs_DisparityImage Stereo_msgs_DisparityImage
+- header: @ref Std_msgs_Header (CommObj) 
+- image: @ref Sensor_msgs_Image (CommObj) 
+- f: Float  
+- T: Float  
+- valid_window: @ref Sensor_msgs_RegionOfInterest (CommObj) 
+- min_disparity: Float  
+- max_disparity: Float  
+- delta_d: Float  
+
+Class Reference: ROSCommon_msgs::Stereo_msgs_DisparityImageCore
+<hr>
+@section Trajectory_msgs_JointTrajectory Trajectory_msgs_JointTrajectory
+- header: @ref Std_msgs_Header (CommObj) 
+- joint_names: String[*]  
+- points: @ref Trajectory_msgs_JointTrajectoryPoint[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Trajectory_msgs_JointTrajectoryCore
+<hr>
+@section Trajectory_msgs_JointTrajectoryPoint Trajectory_msgs_JointTrajectoryPoint
+- positions: Double[*]  
+- velocities: Double[*]  
+- accelerations: Double[*]  
+- effort: Double[*]  
+- time_from_start: @ref CommTimeStamp (CommObj) 
+
+Class Reference: ROSCommon_msgs::Trajectory_msgs_JointTrajectoryPointCore
+<hr>
+@section Trajectory_msgs_MultiDOFJointTrajectory Trajectory_msgs_MultiDOFJointTrajectory
+- header: @ref Std_msgs_Header (CommObj) 
+- joint_names: String[*]  
+- points: @ref Trajectory_msgs_MultiDOFJointTrajectoryPoint[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Trajectory_msgs_MultiDOFJointTrajectoryCore
+<hr>
+@section Trajectory_msgs_MultiDOFJointTrajectoryPoint Trajectory_msgs_MultiDOFJointTrajectoryPoint
+- transforms: @ref Geometry_msgs_Transform[*] (CommObj) 
+- velocities: @ref Geometry_msgs_Twist[*] (CommObj) 
+- accelerations: @ref Geometry_msgs_Twist[*] (CommObj) 
+- time_from_start: @ref CommTimeStamp (CommObj) 
+
+Class Reference: ROSCommon_msgs::Trajectory_msgs_MultiDOFJointTrajectoryPointCore
+<hr>
+@section Visualization_msgs_ImageMarker Visualization_msgs_ImageMarker
+- header: @ref Std_msgs_Header (CommObj) 
+- ns: String  
+- id: Int32  
+- type: Int32  
+- action: Int32  
+- position: @ref Geometry_msgs_Point (CommObj) 
+- scale: Float  
+- outline_color: @ref Std_msgs_ColorRGBA (CommObj) 
+- filled: UInt8  
+- fill_color: @ref Std_msgs_ColorRGBA (CommObj) 
+- lifetime: @ref CommTimeStamp (CommObj) 
+- points: @ref Geometry_msgs_Point[*] (CommObj) 
+- outline_colors: @ref Std_msgs_ColorRGBA[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_ImageMarkerCore
+<hr>
+@section Visualization_msgs_InteractiveMarker Visualization_msgs_InteractiveMarker
+- header: @ref Std_msgs_Header (CommObj) 
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+- name: String  
+- description: String  
+- scale: Float  
+- menu_entries: @ref Visualization_msgs_MenuEntry[*] (CommObj) 
+- controls: @ref Visualization_msgs_InteractiveMarkerControl[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerCore
+<hr>
+@section Visualization_msgs_InteractiveMarkerControl Visualization_msgs_InteractiveMarkerControl
+- name: String  
+- orientation: @ref Geometry_msgs_Quaternion (CommObj) 
+- orientation_mode: UInt8  
+- interaction_mode: UInt8  
+- always_visible: Boolean  
+- markers: @ref Visualization_msgs_Marker[*] (CommObj) 
+- independent_marker_orientation: Boolean  
+- description: String  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerControlCore
+<hr>
+@section Visualization_msgs_InteractiveMarkerFeedback Visualization_msgs_InteractiveMarkerFeedback
+- header: @ref Std_msgs_Header (CommObj) 
+- client_id: String  
+- marker_name: String  
+- control_name: String  
+- event_type: UInt8  
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+- menu_entry_id: UInt32  
+- mouse_point: @ref Geometry_msgs_Point (CommObj) 
+- mouse_point_valid: Boolean  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerFeedbackCore
+<hr>
+@section Visualization_msgs_InteractiveMarkerInit Visualization_msgs_InteractiveMarkerInit
+- server_id: String  
+- seq_num: UInt64  
+- markers: @ref Visualization_msgs_InteractiveMarker[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerInitCore
+<hr>
+@section Visualization_msgs_InteractiveMarkerPose Visualization_msgs_InteractiveMarkerPose
+- header: @ref Std_msgs_Header (CommObj) 
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+- name: String  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerPoseCore
+<hr>
+@section Visualization_msgs_InteractiveMarkerUpdate Visualization_msgs_InteractiveMarkerUpdate
+- server_id: String  
+- seq_num: UInt64  
+- type: UInt8  
+- markers: @ref Visualization_msgs_InteractiveMarker[*] (CommObj) 
+- poses: @ref Visualization_msgs_InteractiveMarkerPose[*] (CommObj) 
+- erases: String[*]  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerUpdateCore
+<hr>
+@section Visualization_msgs_Marker Visualization_msgs_Marker
+- header: @ref Std_msgs_Header (CommObj) 
+- ns: String  
+- id: Int32  
+- type: Int32  
+- action: Int32  
+- pose: @ref Geometry_msgs_Pose (CommObj) 
+- scale: @ref Geometry_msgs_Vector3 (CommObj) 
+- color: @ref Std_msgs_ColorRGBA (CommObj) 
+- lifetime: @ref CommTimeStamp (CommObj) 
+- frame_locked: Boolean  
+- points: @ref Geometry_msgs_Point[*] (CommObj) 
+- colors: @ref Std_msgs_ColorRGBA[*] (CommObj) 
+- text: String  
+- mesh_resource: String  
+- mesh_use_embedded_materials: Boolean  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_MarkerCore
+<hr>
+@section Visualization_msgs_MarkerArray Visualization_msgs_MarkerArray
+- markers: @ref Visualization_msgs_Marker[*] (CommObj) 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_MarkerArrayCore
+<hr>
+@section Visualization_msgs_MenuEntry Visualization_msgs_MenuEntry
+- id: UInt32  
+- parent_id: UInt32  
+- title: String  
+- command: String  
+- command_type: UInt8  
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_MenuEntryCore
+<hr>
+@section Actionlib_msgs_GoalStatusType Actionlib_msgs_GoalStatusType
+- PENDING 
+- ACTIVE 
+- PREEMPTED 
+- SUCCEEDED 
+- ABORTED 
+- REJECTED 
+- PREEMPTING 
+- RECALLING 
+- RECALLED 
+- LOST 
+
+Class Reference: ROSCommon_msgs::Actionlib_msgs_GoalStatusType
+<hr>
+@section Diagnostic_msgs_DiagnosticStatusType Diagnostic_msgs_DiagnosticStatusType
+- OK 
+- WARN 
+- ERROR 
+- STALE 
+
+Class Reference: ROSCommon_msgs::Diagnostic_msgs_DiagnosticStatusType
+<hr>
+@section Sensor_msgs_BatteryStateType Sensor_msgs_BatteryStateType
+- POWER_SUPPLY_STATUS_UNKNOWN 
+- POWER_SUPPLY_STATUS_CHARGING 
+- POWER_SUPPLY_STATUS_DISCHARGING 
+- POWER_SUPPLY_STATUS_NOT_CHARGING 
+- POWER_SUPPLY_STATUS_FULL 
+- POWER_SUPPLY_HEALTH_UNKNOWN 
+- POWER_SUPPLY_HEALTH_GOOD 
+- POWER_SUPPLY_HEALTH_OVERHEAT 
+- POWER_SUPPLY_HEALTH_DEAD 
+- POWER_SUPPLY_HEALTH_OVERVOLTAGE 
+- POWER_SUPPLY_HEALTH_UNSPEC_FAILURE 
+- POWER_SUPPLY_HEALTH_COLD 
+- POWER_SUPPLY_HEALTH_WATCHDOG_TIMER_EXPIRE 
+- POWER_SUPPLY_HEALTH_SAFETY_TIMER_EXPIRE 
+- POWER_SUPPLY_TECHNOLOGY_UNKNOWN 
+- POWER_SUPPLY_TECHNOLOGY_NIMH 
+- POWER_SUPPLY_TECHNOLOGY_LION 
+- POWER_SUPPLY_TECHNOLOGY_LIPO 
+- POWER_SUPPLY_TECHNOLOGY_LIFE 
+- POWER_SUPPLY_TECHNOLOGY_NICD 
+- POWER_SUPPLY_TECHNOLOGY_LIMN 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_BatteryStateType
+<hr>
+@section Sensor_msgs_JoyFeedbackType Sensor_msgs_JoyFeedbackType
+- TYPE_LED 
+- TYPE_RUMBLE 
+- TYPE_BUZZER 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_JoyFeedbackType
+<hr>
+@section Sensor_msgs_NavSatFixType Sensor_msgs_NavSatFixType
+- COVARIANCE_TYPE_UNKNOWN 
+- COVARIANCE_TYPE_APPROXIMATED 
+- COVARIANCE_TYPE_DIAGONAL_KNOWN 
+- COVARIANCE_TYPE_KNOWN 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_NavSatFixType
+<hr>
+@section Sensor_msgs_NavSatStatusType Sensor_msgs_NavSatStatusType
+- STATUS_NO_FIX 
+- STATUS_FIX 
+- STATUS_SBAS_FIX 
+- STATUS_GBAS_FIX 
+- SERVICE_GPS 
+- SERVICE_GLONASS 
+- SERVICE_COMPASS 
+- SERVICE_GALILEO 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_NavSatStatusType
+<hr>
+@section Sensor_msgs_PointFieldType Sensor_msgs_PointFieldType
+- INT8 
+- UINT8 
+- INT16 
+- UINT16 
+- INT32 
+- UINT32 
+- FLOAT32 
+- FLOAT64 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_PointFieldType
+<hr>
+@section Sensor_msgs_RangeType Sensor_msgs_RangeType
+- ULTRASOUND 
+- INFRARED 
+
+Class Reference: ROSCommon_msgs::Sensor_msgs_RangeType
+<hr>
+@section Shape_msgs_SolidPrimitiveType Shape_msgs_SolidPrimitiveType
+- BOX 
+- SPHERE 
+- CYLINDER 
+- CONE 
+- BOX_X 
+- BOX_Y 
+- BOX_Z 
+- SPHERE_RADIUS 
+- CYLINDER_HEIGHT 
+- CYLINDER_RADIUS 
+- CONE_HEIGHT 
+- CONE_RADIUS 
+
+Class Reference: ROSCommon_msgs::Shape_msgs_SolidPrimitiveType
+<hr>
+@section Visualization_msgs_ImageMarkerType Visualization_msgs_ImageMarkerType
+- CIRCLE 
+- LINE_STRIP 
+- LINE_LIST 
+- POLYGON 
+- POINTS 
+- ADD 
+- REMOVE 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_ImageMarkerType
+<hr>
+@section Visualization_msgs_InteractiveMarkerControlType Visualization_msgs_InteractiveMarkerControlType
+- INHERIT 
+- FIXED 
+- VIEW_FACING 
+- NONE 
+- MENU 
+- BUTTON 
+- MOVE_AXIS 
+- MOVE_PLANE 
+- ROTATE_AXIS 
+- MOVE_ROTATE 
+- MOVE_3D 
+- ROTATE_3D 
+- MOVE_ROTATE_3D 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerControlType
+<hr>
+@section Visualization_msgs_InteractiveMarkerFeedbackType Visualization_msgs_InteractiveMarkerFeedbackType
+- KEEP_ALIVE 
+- POSE_UPDATE 
+- MENU_SELECT 
+- BUTTON_CLICK 
+- MOUSE_DOWN 
+- MOUSE_UP 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerFeedbackType
+<hr>
+@section Visualization_msgs_InteractiveMarkerUpdateType Visualization_msgs_InteractiveMarkerUpdateType
+- KEEP_ALIVE 
+- UPDATE 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_InteractiveMarkerUpdateType
+<hr>
+@section Visualization_msgs_MarkerType Visualization_msgs_MarkerType
+- ARROW 
+- CUBE 
+- SPHERE 
+- CYLINDER 
+- LINE_STRIP 
+- LINE_LIST 
+- CUBE_LIST 
+- SPHERE_LIST 
+- POINTS 
+- TEXT_VIEW_FACING 
+- MESH_RESOURCE 
+- TRIANGLE_LIST 
+- ADD 
+- MODIFY 
+- DELETE 
+- DELETEALL 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_MarkerType
+<hr>
+@section Visualization_msgs_MenuEntryType Visualization_msgs_MenuEntryType
+- FEEDBACK 
+- ROSRUN 
+- ROSLAUNCH 
+
+Class Reference: ROSCommon_msgs::Visualization_msgs_MenuEntryType
+<hr>
+
+
+@}
+*/
+

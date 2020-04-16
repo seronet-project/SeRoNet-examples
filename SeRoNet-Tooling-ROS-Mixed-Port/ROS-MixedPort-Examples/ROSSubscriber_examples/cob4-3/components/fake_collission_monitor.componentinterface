@@ -1,0 +1,6 @@
+ComponentInterface { name /fake_collission_monitor
+	RosPublishers{
+		RosPublisher "/safety_controller/state_is_valid" { RefPublisher "cob4_3./battery_monitor./fake_collission_monitor./safety_controller/state_is_valid"}
+	}
+	
+}

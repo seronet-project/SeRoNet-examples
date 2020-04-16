@@ -1,0 +1,12 @@
+ComponentInterface { name /base/fake_driver
+	RosPublishers{
+		RosPublisher "/diagnostics" { RefPublisher "cob4_3./battery_monitor./base/fake_driver./diagnostics"}
+	}
+	RosSrvServers{
+		RosServiceServer "/base/driver/init" { RefServer "cob4_3./battery_monitor./base/fake_driver./base/driver/init"},
+		RosServiceServer "/base/driver/shutdown" { RefServer "cob4_3./battery_monitor./base/fake_driver./base/driver/shutdown"},
+		RosServiceServer "/base/driver/halt" { RefServer "cob4_3./battery_monitor./base/fake_driver./base/driver/halt"},
+		RosServiceServer "/base/driver/recover" { RefServer "cob4_3./battery_monitor./base/fake_driver./base/driver/recover"}
+	}
+	
+}

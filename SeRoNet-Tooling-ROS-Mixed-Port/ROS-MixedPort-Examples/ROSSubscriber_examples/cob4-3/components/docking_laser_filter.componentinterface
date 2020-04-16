@@ -1,0 +1,9 @@
+ComponentInterface { name /docking_laser_filter
+	RosPublishers{
+		RosPublisher "/station_detector/scan" { RefPublisher "cob4_3./battery_monitor./docking_laser_filter./station_detector/scan"}
+	}
+	RosSubscribers{
+		RosSubscriber "/scan_unified" { RefSubscriber "cob4_3./battery_monitor./docking_laser_filter./scan_unified"}
+	}
+	
+}

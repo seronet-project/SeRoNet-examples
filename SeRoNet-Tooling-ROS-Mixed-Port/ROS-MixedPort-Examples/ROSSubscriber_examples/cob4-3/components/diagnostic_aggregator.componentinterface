@@ -1,0 +1,13 @@
+ComponentInterface { name /diagnostic_aggregator
+	RosPublishers{
+		RosPublisher "/diagnostics_agg" { RefPublisher "cob4_3./battery_monitor./diagnostic_aggregator./diagnostics_agg"},
+		RosPublisher "/diagnostics_toplevel_state" { RefPublisher "cob4_3./battery_monitor./diagnostic_aggregator./diagnostics_toplevel_state"}
+	}
+	RosSubscribers{
+		RosSubscriber "/diagnostics" { RefSubscriber "cob4_3./battery_monitor./diagnostic_aggregator./diagnostics"}
+	}
+	RosSrvServers{
+		RosServiceServer "/diagnostics_agg/add_diagnostics" { RefServer "cob4_3./battery_monitor./diagnostic_aggregator./diagnostics_agg/add_diagnostics"}
+	}
+	
+}
