@@ -21,7 +21,7 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 - [de.fraunhofer.ipa.ros.communication.objects](https://github.com/ipa320/RosCommonObjects/tree/master/de.fraunhofer.ipa.ros.communication.objects)
 
-- [cob4-3](../ROSPublisher_examples/cob4-3)
+- [cob4-3](../ROSSubscriber_examples/cob4-3)
 
 **Component model projects:**
 
@@ -32,7 +32,7 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 ### ROS components
 
-For this example we selected a native ROS base platform concretely a [Care-O-bot 4](http://wiki.ros.org/Robots/cob4). However, **the component outcome of this tutorial is valid for any ROS component driver that required initialization (for example those using the [ros_canopen](http://wiki.ros.org/ros_canopen) driver**.
+For this example we selected a native ROS base platform concretely a [Care-O-bot 4](http://wiki.ros.org/Robots/cob4). However, **the component outcome of this tutorial is valid for any ROS component driver that required initialization (for example those using the [ros_canopen](http://wiki.ros.org/ros_canopen) driver)**.
 
 For this experiment we decided to use the version 3 of the Care-O-bot 4 family. To easily extract the model of this complex robot system and having already available the source code and a very realistic simulation environment, we used the [ros_graph_parser](https://github.com/ipa-led/ros_graph_parser) to get automatically the complete model.
 
@@ -87,13 +87,13 @@ The other SeRoNet component that we will use for this example is the [Cob4BaseIn
 
 ### Code implementation
 
-In this section, we will adapt the auto generated C++ code to transform the incoming SeRoNet  communication object update from a *base_driver_initServiceAnsw*  into a ROS service (std_srvs/Trigger) and call with this object the ROS service */base/driver/init*.
+In this section, we will adapt the auto generated C++ code to transform the incoming SeRoNet  service request from a *base_driver_initServiceAnsw*  Port into a ROS service (std_srvs/Trigger) that calls with that request message the ROS service */base/driver/init*.
 
 In case the *AutoCodeGeneration* ![AutoCodeGeneration_button](../ROSPublisher_examples/Screenshots/05-AutoCodeGeneration_button.png) button is disabled, you can select your project from the project Explorer  and press the *RunCodeGeneration*  ![ManualCodeGeneration_button](../ROSPublisher_examples/Screenshots/06-ManualCodeGeneration_button.png) , these two buttons are only available for the *Component Supplier* perspective.
 
 The code generator will create 3 folders to hold the C++ code implementation of your component:
 
-- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementation of the ROS Service (*_base_driver_init_srvcli* Port) to the *base/driver/init* service.
+- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementation of the ROS Service Client (*_base_driver_init_srvcli* Port) of the *base/driver/init* service.
 - smartsoft: this folder contains the code associated to the SeRoNet plain port and body of the component. For this example, it holds the implementation of the Push Port *base_driver_initServiceAnsw* and the service handler *base_driver_init*
 - opcua-backend: this is the code related to the OPC UA backend for the SeRoNet plain port. For this concrete example this code is not relevant.
 
@@ -101,7 +101,7 @@ For the ROS Mixed components the code generator is designed to completely implem
 
 That means that the user should be mostly interested on the code related  to the service handler, which can be found under *smartsoft/src*. There you we can find for this example the  source file (*smartsoft/src/Base_driver_init.cc*).
 
-The source code of the Base_driver_init. (*smartsoft/src/Base_driver_init..cc*) contains the method *handleQuery* which getting as input the current message from the SeRoNet middleware (type ROSRos_core::Std_srvs_TriggerRequest) tranform it to a ROS type (std_srvs/Trigger)  and send the data to ROS through the ROS service */base/driver/init* (implemented in the *ComponentROSBaseInitRosPortBaseClass* class; code -> *ROS/src-gen/ComponentROSBaseInitRosPortBaseClass.hh* ):
+The source code of the *Base_driver_init* (*smartsoft/src/Base_driver_init..cc*) contains the method *handleQuery* which getting as input the current message from the SeRoNet middleware (type ROSRos_core::Std_srvs_TriggerRequest) transform it to a ROS type (std_srvs/Trigger)  and send the data to ROS through a ROS service call to the service */base/driver/init* (implemented in the ComponentROSBaseInitRosPortExtension class; code -> *ROS/src-gen/ComponentROSBaseInitRosPortExtension.cc* ):
 
 ![Service Handler Source Code 01](Screenshots/06-servicehandler_Implementation.png)
 
@@ -143,7 +143,7 @@ mkdir $SMART_ROOT_ACE/etc
 cp $SMART_PACKAGE_PATH/SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/ROS-MixedPort-Examples/ROSServiceCall_examples/*.ini $SMART_ROOT_ACE/etc/.
 ```
 
-And lastly, in a two new terminal we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *SmartJoystickServer* device and our created ComponentRoscob4_3 as Follows:
+And lastly, in a two new terminals we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *ComponentROSBaseInit* and the *Cob4BaseInit* components as follows:
 
 ```
 cd $SMART_ROOT_ACE

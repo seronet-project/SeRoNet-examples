@@ -44,7 +44,7 @@ By default the tooling automatically auto generates the corresponding component 
 
 ![JoystickPortRelay](Screenshots/02-portRelay.gif)
 
-The result of this call is a *rospoolinterface* file. Complementarity and to make easier the relay of interfaces we incorporated an extra help function that automatically relays one of the ROS interfaces. The previous function through its pop-up dialog guides the user to generates not only the *rospoolinterface* model but also a suggestion of a SeRoNet component with a ROS mixed Port, for this example we will use the publisher for the topic **joy** . The resulted files will be generated under the folder *src-gen/SeRoNetComponent*.
+The result of this call is a *rospoolinterface* file. Complementarity, and to make easier the relay of interfaces, we incorporated an extra help function that automatically relays one of the ROS interfaces. The previous function through its pop-up dialog guides the user to generates not only the *rospoolinterface* model but also a suggestion of a SeRoNet component with a ROS mixed Port, for this example we will use the publisher for the topic **joy** . The resulted files will be generated under the folder *src-gen/SeRoNetComponent*.
 
 These two files can be used to create a new SeRoNet component. First, the perspective have to be changed to the *Component Supplier* one. This perspective will add the option to [create a new Component Project](https://wiki.servicerobotik-ulm.de/tutorials:develop-your-first-component:start). Using the help dialog menu you can give the following description to your new component project:
 
@@ -64,13 +64,13 @@ The next figure shows the resulted SeRoNet component:
 
 ### Code implementation
 
-In this section, we will adapt the auto generated C++ code to transform the incoming  ROS message update from a */joy* ROS topic publisher (through the port *joy_sub*) into a SeRoNet communication object and push this object to the SeRoNet output  port *joyOut*.
+In this section we will adapt the auto generated C++ code to transform the incoming ROS message update from a */joy* ROS topic publisher (through the port *joy_sub*) into a SeRoNet communication object and push this object to the SeRoNet output  port *joyOut*.
 
 In case the *AutoCodeGeneration* ![AutoCodeGeneration_button](Screenshots/05-AutoCodeGeneration_button.png) button is disabled, you can select your project from the project Explorer  and press the *RunCodeGeneration*  ![ManualCodeGeneration_button](Screenshots/06-ManualCodeGeneration_button.png) , these two buttons are only available for the *Component Supplier* perspective.
 
 The code generator will create 3 folders to hold the C++ code implementation of your component:
 
-- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementtion of the ROS Subscriber (*joy_sub* Port) to the */joy* topic publisher and its Callback function.
+- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementation of the ROS Subscriber (*joy_sub* Port) to the */joy* topic publisher and its Callback function.
 - smartsoft: this folder contains the code associated to the SeRoNet plain port and body of the component. For this example, it holds the implementation of the Push Port *joyOut* and the activity *joy_nodeActivity*
 
 - opcua-backend: this is the code related to the OPC UA backend for the SeRoNet plain port. For this concrete example this code is not relevant.
@@ -79,7 +79,7 @@ For the ROS Mixed components the code generator is designed to completely implem
 
 That means that the user should be mostly interested on the code related  to the activity, which can be found under *smartsoft/src*. There you we can find for this example the header file (*smartsoft/src/Joy_nodeActivity.hh*) and the source file (*smartsoft/src/Joy_nodeActivity.cc*).
 
-To protect the shared data and avoid conflicts from being simultaneously accessed by different threads we recomment the use of the [C++ library mutex](http://www.cplusplus.com/reference/mutex/mutex/). We will also need a public variable *joy_OutDataObject* to hold the data information (type *ROSCommon_msgs::Sensor_msgs_Joy* ) got by the input port. That means for the header file:
+To protect the shared data and avoid conflicts from being simultaneously accessed by different threads we recommend the use of the [C++ library mutex](http://www.cplusplus.com/reference/mutex/mutex/). We will also need a public variable *joy_OutDataObject* to hold the data information (type *ROSCommon_msgs::Sensor_msgs_Joy* ) got by the input port. That means for the header file:
 
 ![Activity Header Code](Screenshots/07-activity_header_code.png)
 
@@ -87,7 +87,7 @@ The source code of the *Joy_nodeActivity*  (*smartsoft/src/Joy_nodeActivity.cc*)
 
 ![Activity Source Code 01](Screenshots/08-NodeActivity_sub_cb.png)
 
-Finally the on_execute implementation must be updated to send to the output port *joyOut* the updated message *joy_OutDataObject*, to facilitate the debug of the software we recommended to add also a print instruction:
+Finally the *on_execute* implementation must be updated to send to the output port *joyOut* the updated message *joy_OutDataObject*, to facilitate the debug of the software we recommended to add also a print instruction:
 
 ![Activity Source Code 02](Screenshots/09-NodeActivity_on_execute.png)
 

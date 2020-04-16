@@ -22,7 +22,7 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 - [de.fraunhofer.ipa.ros.communication.objects](https://github.com/ipa320/RosCommonObjects/tree/master/de.fraunhofer.ipa.ros.communication.objects)
 
-- [cob4-3](cob4-3_simulation)
+- [cob4-3](cob4-3)
 
 **Component model projects:**
 
@@ -32,11 +32,11 @@ Some of the concepts explained in [SeRoNet Tooling Collection - ROS support](../
 
 ### ROS components
 
-For this example we selected a native ROS base platform concreteally a [Care-O-bot 4](http://wiki.ros.org/Robots/cob4). However, **the component outcome of this tutorial is valid for any ROS base platform** which cartesian velocity can be commanded from a joystick (i.e. the teleop node subscribes to a /joy[sensor_smsg/Joy] topic), and this will work independently of the use as reference the cob4-3 ROS project for these modeling steps and start your own robot during the [execution test](#execution).
+For this example we selected a native ROS base platform concretely a [Care-O-bot 4](http://wiki.ros.org/Robots/cob4). However, **the component outcome of this tutorial is valid for any ROS base platform** which cartesian velocity can be commanded from a joystick (i.e. the teleop node subscribes to a /joy[sensor_smsg/Joy] topic), and this will work independently of the use as reference the cob4-3 ROS project for these modeling steps and start your own robot during the [execution test](#execution).
 
 For this experiment we decided to use the version 3 of the Care-O-bot 4 family. To easily extract the model of this complex robot system and having already available the source code and a very realistic simulation environment, we used the [ros_graph_parser](https://github.com/ipa-led/ros_graph_parser) to get automatically the complete model.
 
-To apply this to other deployed robot, you have to run together (within the same ROS master) the ROS system to be analysed and the *ros_graph_parser* node using the following command line:
+To apply this to other deployed robot, you have to run together (within the same ROS master) the ROS system to be analyzed and the *ros_graph_parser* node using the following command line:
 
 ```
 rosrun ros_graph_parser java_snapshot MyRobot.ros MyRobot.rosystem MyRobotName MyRobotName
@@ -67,7 +67,7 @@ These two files can be used to create a new SeRoNet component. First, the perspe
 
 ![JoystickNewMixedPortComponent](Screenshots/04-NewSeRoNetComponent.gif)
 
-Once the *Component Project* is created switch again to the ROS developer perspective and move the two previously auto-generated files: *joy/src-gen/SeRoNetComponent/ComponentRoscob4_3.component* and *cob4-3/src-gen/SeRoNetComponent/cob4_3.gateway.rosinterfacespool* to the folder:  *ComponentRosjoy_node/model*.
+Once the *Component Project* is created switch again to the ROS developer perspective and move the two previously auto-generated files: *cob4-3/src-gen/SeRoNetComponent/ComponentRoscob4_3.component* and *cob4-3/src-gen/SeRoNetComponent/cob4_3.gateway.rosinterfacespool* to the folder:  *ComponentRosjoy_node/model*.
 
 The next figure shows the resulted SeRoNet component:
 
@@ -77,11 +77,11 @@ For this tutorial we have to make a minor modification of the auto-created model
 
 ![ComponentRoscob4_3](Screenshots/ComponentRoscob4_3.png)
 
-The other SeRoNet component that we will use for this example is the [SmartJoystickServer](https://github.com/Servicerobotics-Ulm/ComponentRepository/tree/master/SmartJoystickServer) the [SeRoNet workspace setup](../ROSMixedPortTutorials_WSsetup.md) should install this component automatically under the path *$SMART_PACKAGE_PATH/ComponentRepository* , you can import it to your workspace  (**File** => **Import** => **General** => **Existing Projects into Workspace** and click the **Next** button. In the following window, click the **Browse...** button and select your local folder **~/SOFTWARE/smartsoft/repos/ComponentRepository/SmartJoystickServer**) and build it on your system using the *Build Project* button ![Build Project button](Screenshots/build_button.png).
+The other SeRoNet component that we will use for this example is the [SmartJoystickServer](https://github.com/Servicerobotics-Ulm/ComponentRepository/tree/master/SmartJoystickServer) . The [SeRoNet workspace setup](../ROSMixedPortTutorials_WSsetup.md) should install this component automatically under the path *$SMART_PACKAGE_PATH/ComponentRepository* , you can import it to your workspace  (**File** => **Import** => **General** => **Existing Projects into Workspace** and click the **Next** button. In the following window, click the **Browse...** button and select your local folder **~/SOFTWARE/smartsoft/repos/ComponentRepository/SmartJoystickServer**) and build it on your system using the *Build Project* button ![Build Project button](Screenshots/build_button.png).
 
 ### Code implementation
 
-In this section, we will adapt the auto generated C++ code to transform the incoming SeRoNet  communication object update from a *joyIn*  into a ROS message (sensor_msgs/Joy) and push this object to the ROS topit */joy*.
+In this section, we will adapt the auto generated C++ code to transform the incoming SeRoNet  communication object update from a *joyIn*  into a ROS message (sensor_msgs/Joy) and push this object to the ROS topic */joy*.
 
 In case the *AutoCodeGeneration* ![AutoCodeGeneration_button](../ROSPublisher_examples/Screenshots/05-AutoCodeGeneration_button.png) button is disabled, you can select your project from the project Explorer  and press the *RunCodeGeneration*  ![ManualCodeGeneration_button](../ROSPublisher_examples/Screenshots/06-ManualCodeGeneration_button.png) , these two buttons are only available for the *Component Supplier* perspective.
 
@@ -93,9 +93,9 @@ The code generator will create 3 folders to hold the C++ code implementation of 
 
 For the ROS Mixed components the code generator is designed to completely implement the ports and prepare the Activity classes to be completed manually. This approach reduces considerably the integration effort for the user, who can concentrate on a particular area of the code to implement the logic of the component, consistently with the implementation of [SeRoNet plain components](../../../SeRoNet-Tooling-Hello-World/#creating-two-new-example-components).
 
-That means that the user should be mostly interested on the code related  to the activity, which can be found under *smartsoft/src*. There you we can find for this example the  source file (*smartsoft/src/Cob4_3Activity.cc*).
+That means that the user should be mostly interested on the code related  to the activity, which can be found under *smartsoft/src*. There you we can find for this example the activity source file (*smartsoft/src/Cob4_3Activity.cc*).
 
-The source code of the *Joy_nodeActivity*  (*smartsoft/src/Joy_nodeActivity.cc*) contains the method *on_joyIn* which getting as input the current message from the SeRoNet middleware (type *CommBasicObjects::CommJoystick*) tranform it to a ROS type (sensor_msgs/Joy)  and send the data to ROS through the ROS publisher *joy* (implemented in the *ComponentRoscob4_3RosPortBaseClass* class; code -> *ROS/src-gen/ComponentRoscob4_3RosPortBaseClass.hh* ):
+The source code of the *Cob4_3Activity.*  (*smartsoft/src/Cob4_3Activity.cc*) contains the method *on_joyIn* which getting as input the current message from the SeRoNet middleware (type *CommBasicObjects::CommJoystick*) transform it to a ROS type (sensor_msgs/Joy)  and send the data to ROS through the ROS publisher *joy* (implemented in the *ComponentRoscob4_3RosPortBaseClass* class; code -> *ROS/src-gen/ComponentRoscob4_3RosPortBaseClass.hh* ):
 
 ![Activity Source Code 01](Screenshots/05-NodeActivity_JoyIn.png)
 
@@ -141,14 +141,14 @@ Alternatively to test quickly the tutorial you can simply subscribe to the */joy
 rostopic echo /joy
 ```
 
-To configure the connection ACE at startup searches for an according configuration file for every component within a local folder named etc. For instance, for the SmartJoystickServer component, an ini-file named *SmartJoystickServer.ini* can be created within the folder *$SMART_ROOT_ACE/etc*:
+To configure the connection, ACE at startup searches for an according configuration file for every component within a local folder named etc. For instance, for the SmartJoystickServer component, an ini-file named *SmartJoystickServer.ini* can be created within the folder *$SMART_ROOT_ACE/etc*:
 
 ```
 mkdir $SMART_ROOT_ACE/etc
-cp $SMART_PACKAGE_PATH/SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/ROS-MixedPort-Examples/ROSSubscriber_examples/*.init $SMART_ROOT_ACE/etc/.
+cp $SMART_PACKAGE_PATH/SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/ROS-MixedPort-Examples/ROSSubscriber_examples/*.ini $SMART_ROOT_ACE/etc/.
 ```
 
-And lastly, in a two new terminal we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *SmartJoystickServer* device and our created ComponentRoscob4_3 as Follows:
+And lastly, in a two new terminal we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *SmartJoystickServer* device and our created *ComponentRoscob4_3* as follows:
 
 ```
 cd $SMART_ROOT_ACE

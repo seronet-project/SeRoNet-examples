@@ -31,7 +31,7 @@ First, the perspective have to be changed to the *Component Supplier* one. This 
 - Model type: **ComponentDefinition** and **ComponentDatasheet**
 - Dependencies: **ROSRos_core** and **CommBasicObjects**
 
-Once the *Component Project* is created we can copy the [GetStringROS.rosinterfacespool](GetStringROS.rosinterfacespool) file available within this repository to the folder *GetStringROS/model*. This file describes the mirror port of a **rosservice call** command for ROS and serves as reference to describe the ROS Mixed Port:
+Once the *Component Project* is created we can copy the [GetStringROS.rosinterfacespool](GetStringROS.rosinterfacespool) file available within this repository to the folder *GetStringROS/model*. This file describes the mirror port of a **rosservice call** console command for ROS and serves as reference to describe the ROS Mixed Port:
 ```
 RosInterfacesPool {
 	RosSrvServer _set_bool { srvName "/SetBool" type "std_srvs.SetBool" }
@@ -40,9 +40,9 @@ RosInterfacesPool {
 
 ![New SeRoNet Component](Screenshots/01-NewSeRoNetComponent.gif)
 
-Where the name of the ROS service is */SetBool*, the type [std_srvs/SetBool](http://docs.ros.org/melodic/api/std_srvs/html/srv/SetBool.html) and the reference Port for SeRoNet *_set_bool*. Now we can modify the component file *GetStringROS/model/GetStringROS.component* to relay the ROS Port. We can open the graphical editor for the components and add the following elements:
+Where the name of the ROS service is */SetBool*, the type [std_srvs/SetBool](http://docs.ros.org/melodic/api/std_srvs/html/srv/SetBool.html) and the reference Port for SeRoNet  *_set_bool*. Now we can modify the component file *GetStringROS/model/GetStringROS.component* to relay the ROS Port. We can open the graphical editor for the components and add the following elements:
 
-- New *RequestPort* using the CommunicationService ROSRos_core.SetBoolQueryService 
+- New *RequestPort* that use as object the CommunicationService ROSRos_core.SetBoolQueryService 
 - New *ROS MixedPort* for the ROS Srv Server *_set_bool*
 - New *Activity* with the name *SetBool_activity*
 - New *RequestPortLink* from the *SetBool_activity* to the *SetBoolQueryServiceReq* port
@@ -77,13 +77,13 @@ The other SeRoNet component that we will use for this example is the [StringServ
 
 ### Code implementation
 
-In this section, we will adapt the auto generated C++ code to transform the incoming ROS service call */SetBool* (std_srvs/SetBool) into a SeRoNet communication object that trigger a call to the *StringServiceQuery* Handler
+In this section, we will adapt the auto generated C++ code to transform the incoming ROS service call */SetBool* (std_srvs/SetBool) into a SeRoNet communication object that trigger a call to the *StringServiceQuery* SeRoNet plain component.
 
 In case the *AutoCodeGeneration* ![AutoCodeGeneration_button](../ROSPublisher_examples/Screenshots/05-AutoCodeGeneration_button.png) button is disabled, you can select your project from the project Explorer  and press the *RunCodeGeneration*  ![ManualCodeGeneration_button](../ROSPublisher_examples/Screenshots/06-ManualCodeGeneration_button.png) , these two buttons are only available for the *Component Supplier* perspective.
 
 The code generator will create 3 folders to hold the C++ code implementation of your component:
 
-- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementation of the ROS Service server (*_set_bool* Port) to the */SetBool* service.
+- ROS : this is the code related to the ROS Mixed Port. For this concrete case, it holds the implementation of the */SetBool* ROS Service server (*_set_bool* Port) and its callback function.
 - smartsoft: this folder contains the code associated to the SeRoNet plain port and body of the component. For this example, it holds the implementation of the Request Port *SetBoolQueryServiceReq* and the activity  *SetBool_activity*
 - opcua-backend: this is the code related to the OPC UA backend for the SeRoNet plain port. For this concrete example this code is not relevant.
 
@@ -91,7 +91,7 @@ For the ROS Mixed components the code generator is designed to completely implem
 
 That means that the user should be mostly interested on the code related  to the service handler, which can be found under *smartsoft/src*. There you we can find for this example the  source file (*smartsoft/src/SetBool_activity.cc*).
 
-The source code of the *SetBool_activity* (*smartsoft/src/SetBool_activity.cc*) contains the method *set_bool_callServiceQuery* which getting as input the request message from the ROS service call  */SetBool* (type std_srvs/SetBool) tranform it to a SeRoNet request service (*Std_srvs_SetBoolRequest*) and query the message through the *SetBoolQueryServiceReq* port. The answer got from the *StringServiceQuery* component is transformed to a ROS service response (std_srvs/SetBool) and send back to the ROS middleware as answer from the service */SetBool* (implementation can be found in the source class GetStringROSRosPortExtension; code -> *ROS/src-gen/GetStringROSRosPortExtension.cc*):
+The source code of the *SetBool_activity* (*smartsoft/src/SetBool_activity.cc*) contains the method *_set_bool_callServiceQuery* which getting as input the request message from the ROS service call  */SetBool* (type std_srvs/SetBool) transform it to a SeRoNet request service (*Std_srvs_SetBoolRequest*) and query the message through the *SetBoolQueryServiceReq* port. The answer got from the *StringServiceQuery* component is transformed to a ROS service (std_srvs/SetBool) response message and send back to the ROS middleware as answer of the service */SetBool* (implementation can be found in the source class *GetStringROSRosPortExtension*; code -> *ROS/src-gen/GetStringROSRosPortExtension.cc*):
 
 ![Service Handler Source Code 01](Screenshots/03-activity_Implementation.png)
 
@@ -105,14 +105,14 @@ The first step, before we execute the code, is build the software. Unfortunately
 
 ```
 source /opt/ros/*DISTRO*/setup.bash
-cd *YourWSPath*/GetStringROSRos
+cd *YourWSPath*/GetStringROS
 cd smartsoft
 mkdir build
 cd build
 cmake ..
 make
 ```
-The previous commands have to create a SeRoNet executable file for the GetStringROSRos under the folder *$SMART_ROOT_ACE/bin*, which execution will subscribe to the ROS service call */SetBool* and relay the command got to the SeRoNet *StringServiceQuery* component.
+The previous commands have to create a SeRoNet executable file for the *GetStringROS* under the folder *$SMART_ROOT_ACE/bin*, which execution will get the ROS service */SetBool* call request and relay the command got to the SeRoNet *StringServiceQuery* component.
 
 As usual, open a new terminal window and start the ROS master:
 
@@ -120,14 +120,14 @@ As usual, open a new terminal window and start the ROS master:
 roscore
 ```
 
-To configure the connection ACE at startup searches for an according configuration file for every component within a local folder named etc. For instance, for the *GetStringROSRos* component, an ini-file named *GetStringROSRos..ini* can be created within the folder *$SMART_ROOT_ACE/etc*:
+To configure the connection ACE at startup searches for an according configuration file for every component within a local folder named etc. For instance, for the *GetStringROSRos* component, an ini-file named *GetStringROSRos.ini* can be created within the folder *$SMART_ROOT_ACE/etc*:
 
 ```
 mkdir $SMART_ROOT_ACE/etc
 cp $SMART_PACKAGE_PATH/SeRoNet-examples/SeRoNet-Tooling-ROS-Mixed-Port/ROS-MixedPort-Examples/ROSClientCall_examples/*.ini $SMART_ROOT_ACE/etc/.
 ```
 
-And lastly, in a two new terminal we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *StringServiceQuery* device and our created *GetStringROSRos* as follows:
+And lastly, in a two new terminal we have to start the *ACE Naming Service* daemon to allow the communication or the ACE side, the *StringServiceQuery* device and our created *GetStringROS* as follows:
 
 ```
 cd $SMART_ROOT_ACE
