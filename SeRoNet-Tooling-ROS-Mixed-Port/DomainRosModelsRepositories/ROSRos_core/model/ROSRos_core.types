@@ -33,6 +33,10 @@ CommObject Std_msgs_Float32 {
 	data : Float
 }
 
+CommObject Std_msgs_String {
+	data : String
+}
+
 CommObject Std_msgs_Float32MultiArray {
 	layout : Std_msgs_MultiArrayLayout
 	data : Float[*]

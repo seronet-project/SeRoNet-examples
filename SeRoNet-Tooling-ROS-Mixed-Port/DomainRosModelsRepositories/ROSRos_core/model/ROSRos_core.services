@@ -87,6 +87,10 @@ ServiceDefRepository ROSRos_core version 1.0 {
 	ForkingServiceDefinition  UInt8MultiArrayService {
 		PushPattern <DataType=ROSRos_core.Std_msgs_UInt8MultiArray>
 	}
+	
+	ForkingServiceDefinition  StringService {
+		PushPattern <DataType=ROSRos_core.Std_msgs_String>
+	}
 
 	RequestAnswerServiceDefinition EmptyQueryService {
 		QueryPattern <

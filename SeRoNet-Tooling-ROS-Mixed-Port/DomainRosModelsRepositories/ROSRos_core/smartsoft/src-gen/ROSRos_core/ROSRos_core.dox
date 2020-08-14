@@ -38,6 +38,11 @@ Structure of Communication Object:
 Structure of Communication Object:
 - data: Float 
 
+\class ROSRos_core::Std_msgs_StringCore
+
+Structure of Communication Object:
+- data: String 
+
 \class ROSRos_core::Std_msgs_Float32MultiArrayCore
 
 Structure of Communication Object:
@@ -208,6 +213,11 @@ Class Reference: ROSRos_core::Std_msgs_EmptyCore
 - data: Float  
 
 Class Reference: ROSRos_core::Std_msgs_Float32Core
+<hr>
+@section Std_msgs_String Std_msgs_String
+- data: String  
+
+Class Reference: ROSRos_core::Std_msgs_StringCore
 <hr>
 @section Std_msgs_Float32MultiArray Std_msgs_Float32MultiArray
 - layout: @ref Std_msgs_MultiArrayLayout (CommObj) 
